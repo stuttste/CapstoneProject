@@ -17,7 +17,7 @@ sec_session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>G3Capstone Staging</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="global.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<script rel = "Code" type="javascript" href="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
 	<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
 </head>
