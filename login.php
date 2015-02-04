@@ -39,19 +39,18 @@ if (login_check($mysqli) == true) {
 						   onclick="formhash(this.form, this.form.password);"
 						   class="btn btn-lg btn-primary btn-block" /> 
 				</form>
-			<h6 style="text-align:right">Don't have an account? <a href="register.php">Register</a></h6>
-			</div>
-		</div>
  
 <?php
         if (login_check($mysqli) == true) {
-                        echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
+                        echo '<h6>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</h6>';
  
-            echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
+            echo '<h6>Do you want to change user? <a href="includes/logout.php">Log out</a>.</h6>';
         } else {
-                        echo '<p>Currently logged ' . $logged . '.</p>';
-                        echo "<p>If you don't have a login, please <a href='register.php'>register</a></p>";
+                        echo '<h6>Currently logged ' . $logged . '.</h6>';
+                        echo "<h6>If you don't have a login, please <a href='register.php'>register</a></h6>";
                 }
 ?>      
+			</div>
+		</div>
     </body>
 </html>
