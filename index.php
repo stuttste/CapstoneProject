@@ -5,7 +5,7 @@ include_once 'includes/functions.php';
 sec_session_start();
 
  if (login_check($mysqli) == false) {
-	header('Location: g3cap.tk/staging/login.php');
+	header('Location: login.php');
 	die();
 }
 ?>
