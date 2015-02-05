@@ -25,14 +25,7 @@ sec_session_start();
 		
 		
 			<div class="docs-header" id="content">
-				<div class="container">
-					<h1>Capstone Project <small>Group 3</small></h1>
-					<p>Just a little show of what bootstrap can do!!!</p>
-				</div>
-			</div>
-			
-			<div class="container">
-				<nav class = "navbar navbar-default">
+				<nav class = "navbar navbar-inverse">
 						<ul class="nav navbar-nav">
 							<li><a href="index.html">Homepage</a></li>
 							<li><a href="index.html">Page2</a></li>
@@ -41,6 +34,14 @@ sec_session_start();
 							<li><a href="index.html">Page5</a></li>
 						</ul>
 				</nav>
+				<div class="container">
+					<h1>Capstone Project <small>Group 3</small></h1>
+					<p>Just a little show of what bootstrap can do!!!</p>
+				</div>
+			</div>
+			
+			<div class="container">
+				
 			</div>
 			
 		<div class="container">
