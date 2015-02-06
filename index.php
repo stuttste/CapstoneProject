@@ -48,7 +48,7 @@ sec_session_start();
 			<div class="page-header"><h1>This should be the staging area!!!!</h1></div>
 			<div class="vic"><h1>Attempt at using GitHub.</h1></div>
 			<div class="row">
-				<div class="col-md-8">Extremely awesome coloring website <a href="http://www.lavishbootstrap.com/">here</a>!</div>
+				<div class="col-md-8">Extremely awesome coloring website! Nice job <a href="http://www.lavishbootstrap.com/">here</a>!</div>
 			</div>
 		</div>
 	</body>
