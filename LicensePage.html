@@ -1,15 +1,3 @@
-<?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
- 
-sec_session_start();
-
- if (login_check($mysqli) == false) {
-	header('Location: login.php');
-	die();
-}
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,8 +24,7 @@ sec_session_start();
 						</ul>
 				</nav>
 				<div class="container">
-					<h1>Capstone Project <small>Group 3</small></h1>
-					<p>Just a little show of what bootstrap can do!!!</p>
+					<h1>License Page</h1>
 				</div>
 			</div>
 			
@@ -46,11 +33,6 @@ sec_session_start();
 			</div>
 			
 		<div class="container">
-			<div class="page-header"><h1>This should be the staging area!!!!</h1></div>
-			<div class="vic"><h1>Attempt at using GitHub.</h1></div>
-			<div class="row">
-				<div class="col-md-8">Extremely awesome coloring website! Nice job <a href="http://www.lavishbootstrap.com/">here</a>!</div>
-			</div>
 		</div>
 	</body>
 </html>
