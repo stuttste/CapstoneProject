@@ -25,9 +25,19 @@ sec_session_start();
 		
 		
 			<div class="docs-header" id="content">
-				<nav class = "navbar navbar-inverse">
+				 <div id="sidebar-wrapper">
+				 <ul id="sidebar_menu" class="sidebar-nav">
+					<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+				</ul>
+				<ul class="sidebar-nav" id="sidebar">     
+					<li><a>Link1<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+					<li><a>link2<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+				</ul>
+			</div>
+			
+				<!--><nav class = "navbar navbar-inverse">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Homepage</a></li>
+							<li><a href="index.php">User Tools</a></li>
 							<li><a href="UserSubmit.html">User Submission</a></li>
 							<li><a href="AdminToolsPage.html">Administration Tools</a></li>
 							<li><a href="CutPage.html">Cut Results</a></li>
@@ -35,6 +45,7 @@ sec_session_start();
 							<li><a href="LicensePage.html">License Page</a></li>
 						</ul>
 				</nav>
+				<!-->
 				<div class="container">
 					<h1>Capstone Project <small>Group 3</small></h1>
 					<p>Just a little show of what bootstrap can do!!!</p>
