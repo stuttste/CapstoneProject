@@ -23,19 +23,58 @@ sec_session_start();
 </head>
 	<body>
 		
-		
-			<div class="docs-header" id="content">
-				 <div id="sidebar-wrapper">
-				 <ul id="sidebar_menu" class="sidebar-nav">
-					<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
-				</ul>
-				<ul class="sidebar-nav" id="sidebar">     
-					<li><a>Link1<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-					<li><a>link2<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-				</ul>
+		<nav class="navbar navbar-inverse sidebar" role="navigation">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Brand</a>
+				</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+						<li ><a href="#">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+						<li ><a href="#">Messages<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
+								<ul class="dropdown-menu forAnimate" role="menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+									<li class="divider"></li>
+									<li><a href="#">One more separated link</a></li>
+								</ul>
+						</li>
+							<li><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+							<li ><a href="#">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+							<li ><a href="#">Messages<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
+									<ul class="dropdown-menu forAnimate" role="menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+										<li class="divider"></li>
+										<li><a href="#">One more separated link</a></li>
+									</ul>
+							</li>
+					</ul>
+				</div>
 			</div>
-			
-				<!--><nav class = "navbar navbar-inverse">
+		</nav>
+			<div class="docs-header" id="content">
+				 			
+				<!--<nav class = "navbar navbar-inverse">
 						<ul class="nav navbar-nav">
 							<li><a href="index.php">User Tools</a></li>
 							<li><a href="UserSubmit.html">User Submission</a></li>
@@ -44,8 +83,8 @@ sec_session_start();
 							<li><a href="EditAccount.html">Edit Acount</a></li>
 							<li><a href="LicensePage.html">License Page</a></li>
 						</ul>
-				</nav>
-				<!-->
+				</nav>-->
+				
 				<div class="container">
 					<h1>Capstone Project <small>Group 3</small></h1>
 					<p>Just a little show of what bootstrap can do!!!</p>
