@@ -40,3 +40,8 @@
     margin-right: 380px;
   }
 }
+
+.form-control{
+	width: 20%;
+	rows: 5;
+}
