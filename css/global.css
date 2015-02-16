@@ -41,8 +41,8 @@
   }
 }
 
-.form-control{
+.form-group{
 	display:inline-block;
 	width: 20%;
-	rows: 5;
+	
 }

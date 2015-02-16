@@ -54,18 +54,30 @@ sec_session_start();
 			</div>
 			
 			<div class="container">
+				<div class="form-group">
 					<label for="comment">Phage:</label>
-					<textarea class ="form-control col-xs-12" id="comment">
-					</textarea>
+					<div class="col-xs-12">
+						<textarea  id="comment"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
 					<label for="comment">Cluster:</label>
-					<textarea class ="form-control col-xs-12" id="comment">
-					</textarea>
+					<div class="col-xs-12">
+						<textarea  id="comment"></textarea>
+					</div>
+				</div>	
+				<div class="form-group">	
 					<label for="comment">SubCluster:</label>
-					<textarea class ="form-control col-xs-12" id="comment">
-					</textarea>
+					<div class="col-xs-12">
+						<textarea  id="comment"></textarea>
+					</div>
+				</div>	
+				<div class="form-group">	
 					<label for="comment">Enzyme:</label>
-					<textarea class ="form-control col-xs-12" id="comment">
-					</textarea>
+					<div class="col-xs-12">
+						<textarea  id="comment"></textarea>
+					</div>
+				</div>
 			</div>
 	</body>
 </html>
