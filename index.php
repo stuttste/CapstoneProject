@@ -55,16 +55,16 @@ sec_session_start();
 			
 			<div class="container">
 					<label for="comment">Phage:</label>
-					<textarea class ="col-xs-12" rows="5" id="comment">
+					<textarea class ="col-xs-12" rows="5" width="10" id="comment">
 					</textarea>
 					<label for="comment">Cluster:</label>
-					<textarea class ="form-control" rows="5" id="comment">
+					<textarea class ="col-xs-12" rows="5" width="10" id="comment">
 					</textarea>
 					<label for="comment">SubCluster:</label>
-					<textarea class ="form-control" rows="5" id="comment">
+					<textarea class ="col-xs-12" rows="5" width="10" id="comment">
 					</textarea>
 					<label for="comment">Enzyme:</label>
-					<textarea class ="form-control" rows="5" id="comment">
+					<textarea class ="col-xs-12" rows="5" width="10" id="comment">
 					</textarea>
 			</div>
 	</body>
