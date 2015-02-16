@@ -39,17 +39,6 @@ sec_session_start();
 		</nav>
 			<div class="docs-header" id="content">
 				 			
-				<!--<nav class = "navbar navbar-inverse">
-						<ul class="nav navbar-nav">
-							<li><a href="index.php">User Tools</a></li>
-							<li><a href="UserSubmit.html">User Submission</a></li>
-							<li><a href="AdminToolsPage.html">Administration Tools</a></li>
-							<li><a href="CutPage.html">Cut Results</a></li>
-							<li><a href="EditAccount.html">Edit Acount</a></li>
-							<li><a href="LicensePage.html">License Page</a></li>
-						</ul>
-				</nav>-->
-				
 				<div class="container">
 					<h1>Capstone Project <small>Group 3</small></h1>
 					<p>Just a little show of what bootstrap can do!!!</p>
@@ -57,15 +46,17 @@ sec_session_start();
 			</div>
 			
 			<div class="container">
-				
+				<div class="page-header"><h1>This should be the staging area!!!!</h1></div>
+				<div class="vic"><h1>Attempt at using GitHub.</h1></div>
+				<div class="row">
+				<div class="col-md-8">Extremely awesome coloring website! Nice job <a href="http://www.lavishbootstrap.com/">here</a>!</div>
+				</div>
 			</div>
 			
-		<div class="container">
-			<div class="page-header"><h1>This should be the staging area!!!!</h1></div>
-			<div class="vic"><h1>Attempt at using GitHub.</h1></div>
-			<div class="row">
-				<div class="col-md-8">Extremely awesome coloring website! Nice job <a href="http://www.lavishbootstrap.com/">here</a>!</div>
+			<div class="container">
+					<label for="comment">Phage:</label>
+					<textarea class ="form-control" rows="5" id="comment">
+					</textarea>
 			</div>
-		</div>
 	</body>
 </html>
