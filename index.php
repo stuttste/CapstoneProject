@@ -53,7 +53,7 @@ sec_session_start();
 				</div>
 			</div>
 			
-			<div class="container">
+			<div class="col-xs-6">
 					<label for="comment">Phage:</label>
 					<textarea class ="form-control col-xs-12" id="comment">
 					</textarea>
