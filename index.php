@@ -57,6 +57,15 @@ sec_session_start();
 					<label for="comment">Phage:</label>
 					<textarea class ="form-control" rows="5" id="comment">
 					</textarea>
+					<label for="comment">Cluster:</label>
+					<textarea class ="form-control" rows="5" id="comment">
+					</textarea>
+					<label for="comment">SubCluster:</label>
+					<textarea class ="form-control" rows="5" id="comment">
+					</textarea>
+					<label for="comment">Enzyme:</label>
+					<textarea class ="form-control" rows="5" id="comment">
+					</textarea>
 			</div>
 	</body>
 </html>
