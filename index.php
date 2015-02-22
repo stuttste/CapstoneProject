@@ -38,22 +38,27 @@ sec_session_start();
 			</div>
 		</nav>
 		
-		<div class="bs-example">
+		<div class="maintabs">
 			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="tab" href="#sectionA">Section A</a></li>
-				<li><a data-toggle="tab" href="#sectionB">Section B</a></li>
+				<li class="active"><a data-toggle="tab" href="#description">Description</a></li>
+				<li><a data-toggle="tab" href="#petTool">PET Tool</a></li>
+				<li><a data-toggle="tab" href="#results">Results</a></li>
 			</ul>
 			
 			<div class="tab-content">
-				<div id="sectionA" class="tab-pane fade in active">
-					<h3>Section A</h3>
-					<p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+				<div id="description" class="tab-pane fade in active">
+					<h3>Description</h3>
+					
 				</div>
 				
-				<div id="sectionB" class="tab-pane fade">
-					<h3>Section B</h3>
-					<p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+				<div id="petTool" class="tab-pane fade">
+					<h3>Pet Tool</h3>
 				</div>
+				
+				<div id="results" class="tab-pane fade">
+					<h3>Results</h3>
+				</div>
+				
            </div>
 		</div>
 		
