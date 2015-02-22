@@ -105,9 +105,27 @@ sec_session_start();
 				
 					<div id="results" class="tab-pane">
 						<h3>Results</h3>
-						
+							<div class="resulttoptable">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Phage</th>
+											<th>Cluster</th>
+											<th>Subcluster</th>
+											<th>Percentage</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Top Phage</td>
+											<td>Top Phage Cluster</td>
+											<td>Top Phage Subcluster</td>
+											<td>Top Phage Percent</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 					</div>
-				
 				</div>
 			</div>
 		</div>
