@@ -22,18 +22,10 @@ sec_session_start();
 	<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
 </head>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-    $("#myTab a").click(function(e){
-    	e.preventDefault();
-    	$(this).tab('show');
-    });
-});
-</script>
 
 	<body>
 		
-		<!--<nav class="navbar navbar-inverse sidebar" role="navigation">
+		<nav class="navbar navbar-inverse sidebar" role="navigation">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 					<ul class="nav navbar-nav">
@@ -46,13 +38,13 @@ $(document).ready(function(){
 					</ul>
 				</div>
 			</div>
-		</nav> -->
+		</nav> 
 		
 		<div class="maintabs">
-			<ul class="nav nav-tabs" id="myTab">
-				<li class="active"><a href="#description">Description</a></li>
-				<li><a href="#petTool">PET Tool</a></li>
-				<li><a href="#results">Results</a></li>
+			<ul class="nav nav-tabs" id="myTab" data-tabs="tabs">
+				<li class="active"><a data-toggle="tab" href="#description">Description</a></li>
+				<li><a data-toggle="tab" href="#petTool">PET Tool</a></li>
+				<li><a data-toggle="tab" href="#results">Results</a></li>
 			</ul>
 			
 			<div class="tab-content">
