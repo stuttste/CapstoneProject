@@ -85,7 +85,7 @@ sec_session_start();
 								</div>
 							</form>
 							
-							<form class="form-horizontal">
+							<form class="form-inline">
 								<div class="form-group">
 									<label for="selectionbox">Label Placeholder:</label>
 									<textarea class="form-control" id="selectionbox" rows="10"></textarea>
