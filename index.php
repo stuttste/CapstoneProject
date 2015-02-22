@@ -84,6 +84,23 @@ sec_session_start();
 									<textarea class="form-control" id="enzyme" rows="10"></textarea>
 								</div>
 							</form>
+							
+							<form class="form-inline">
+								<div class="form-group">
+									<textarea class="form-control" id="selectionbox" rows="10"><textarea>
+								</div>
+								<div class="radio">
+									<label><input type="radio" name="phagebut">Phage</label>
+								</div>
+								<div class="radio">
+									<label><input type="radio" name="clusterbut">Cluster</label>
+								</div>
+								<div class="radio">
+									<label><input type="radio" name="subclusterbut">Subcluster</label>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control">
+								</div>
 					</div>
 				
 					<div id="results" class="tab-pane">
