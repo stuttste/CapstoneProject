@@ -27,7 +27,7 @@ sec_session_start();
 
 	<body>
 		
-		<!--<nav class="navbar navbar-inverse sidebar" role="navigation">
+		<nav class="navbar navbar-inverse sidebar" role="navigation">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 					<ul class="nav navbar-nav">
@@ -40,33 +40,9 @@ sec_session_start();
 					</ul>
 				</div>
 			</div>
-		</nav>--> 
+		</nav>
 		
-		<div class="container">
-			<div id="maintabs">
-				<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
-					<li class="active"><a href="#description" data-toggle="tab" >Description</a></li>
-					<li><a href="#petTool" data-toggle="tab" >PET Tool</a></li>
-					<li><a href="#results" data-toggle="tab" >Results</a></li>
-				</ul>
-			
-				<div id="mytabs" class="tab-content">
-					<div id="description" class="tab-pane active">
-						<h3>Description</h3>
-					</div>
-				
-					<div id="petTool" class="tab-pane">
-						<h3>Pet Tool</h3>
-						
-					</div>
-				
-					<div id="results" class="tab-pane">
-						<h3>Results</h3>
-					</div>
-				
-				</div>
-			</div>
-		</div>
+		
 
 		
 			<div class="docs-header" id="content">
