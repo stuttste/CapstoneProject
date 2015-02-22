@@ -33,15 +33,22 @@
     font-size: 60px;
     line-height: 1;
   }
-}
+
 @media (min-width: 992px) {
   .docs-header h1,
   .docs-header p {
     margin-right: 380px;
   }
-}
+
 
 .form-group{
 	display:inline-block;
 	width: 20%;
+}
+
+.btn-group{
+	position:absolute; 
+	bottom:0;  
+	margin-bottom:7px; 
+	left: 0;
 }
