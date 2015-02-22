@@ -102,18 +102,16 @@ sec_session_start();
 							
 							<form class="buttons">
 								<div class="btn-group"> 
-									
-										<button type="submit" class="btn btn-default">Submit</button>
+									<button type="button" class="btn btn-default">Cancel</button>
 											<div class="btn-group">
-												<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret">Result Number</span></button>
+												<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret">Results</span></button>
 														<ul class="dropdown-menu">
-														<li><a href="#">10</a></li>
-														<li><a href="#">25</a></li>
-														<li><a href="#">50</a></li>
-														<li><a href="#">ALL</a></li>
-													</ul>
+															<li><a href="#">10</a></li>
+															<li><a href="#">25</a></li>
+															<li><a href="#">50</a></li>
+															<li><a href="#">ALL</a></li>
+														</ul>
 											</div>
-									
 								</div>
 							</form>
 					</div>
