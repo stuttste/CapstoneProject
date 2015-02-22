@@ -37,6 +37,12 @@ sec_session_start();
 				</div>
 			</div>
 		</nav>
+		
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active"><a href="#">Main</a></li>
+			<li role="presentation"><a href="#">PET Tool</a></li>
+			<li role="presentation"><a href="#">Results</a></li>
+		</ul>
 			<div class="docs-header" id="content">
 				 			
 				<div class="container">
