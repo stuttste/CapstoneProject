@@ -40,29 +40,36 @@ sec_session_start();
 			</div>
 		</nav> 
 		
-		<div class="maintabs">
-			<ul class="nav nav-tabs" id="myTab" data-tabs="tabs">
-				<li class="active"><a data-toggle="tab" href="#description">Description</a></li>
-				<li><a data-toggle="tab" href="#petTool">PET Tool</a></li>
-				<li><a data-toggle="tab" href="#results">Results</a></li>
+		<div id="maintabs">
+			<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
+				<li class="active"><a href="#description" data-toggle="tab" >Description</a></li>
+				<li><a href="#petTool" data-toggle="tab" >PET Tool</a></li>
+				<li><a href="#results" data-toggle="tab" >Results</a></li>
 			</ul>
 			
-			<div class="tab-content">
-				<div id="description" class="tab-pane fade in active">
+			<div id="mytabs" class="tab-content">
+				<div id="description" class="tab-pane active">
 					<h3>Description</h3>
 				</div>
 				
-				<div id="petTool" class="tab-pane fade">
+				<div id="petTool" class="tab-pane">
 					<h3>Pet Tool</h3>
 						
 				</div>
 				
-				<div id="results" class="tab-pane fade">
+				<div id="results" class="tab-pane">
 					<h3>Results</h3>
 				</div>
 				
            </div>
 		</div>
+		
+			<script type="text/javascript">
+				jQuery(document).ready(function ($) {
+				$('#tabs').tab();
+				});
+			</script>    
+
 		
 			<div class="docs-header" id="content">
 				 			
