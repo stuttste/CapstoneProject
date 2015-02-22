@@ -87,16 +87,14 @@ sec_session_start();
 							
 							<form class="form-horizontal inline-block">
 								<div class="radio">
-									<label for="phagebutton">Phage</label>
-									<input type="radio" name="phage" id="phagebutton">
+									<label ><input type="radio" name="phage">Phage</label>
+									
 								</div>
 								<div class="radio">
-									<label for="clusterbutton">Cluster</label>
-									<input type="radio" name="clusterbut" id="clusterbutton">
+									<label><input type="radio" name="clusterbut">Cluster</label>
 								</div>
 								<div class="radio">
-									<label for="sublusterbutton">Subcluster</label>
-									<input type="radio" name="subclusterbut" id="subclusterbutton">
+									<label><input type="radio" name="subclusterbut">Subcluster</label>
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control">
