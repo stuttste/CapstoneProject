@@ -99,7 +99,7 @@ sec_session_start();
 										<input type="text" class="form-control">
 										<textarea class="form-control" id="selectionbox" rows="10"></textarea>
 									</div>
-									<div class="form-group">
+									<div class="form-group pull-right">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
 										<textarea class="form-control" id="enzselection" rows="10"></textarea>
@@ -110,7 +110,7 @@ sec_session_start();
 				
 					<div id="results" class="tab-pane">
 						<h3>Results</h3>
-						<p>results are here</p>
+						
 					</div>
 				
 				</div>
