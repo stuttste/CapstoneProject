@@ -99,20 +99,21 @@ sec_session_start();
 										<textarea class="form-control" id="enzselection" rows="10"></textarea>
 									</div>
 							</form>
-							
-							<div class="form-group"> 
-								<div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" class="btn btn-default">Submit</button>
-									<button type="button" class="btn btn-default">Action</button>
-									<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
-										<ul class="dropdown-menu">
-											<li><a href="#">10</a></li>
-											<li><a href="#">25</a></li>
-											<li><a href="#">50</a></li>
-											<li><a href="#">ALL</a></li>
-										</ul>
+							<form class="btn-group">
+								<div class="form-group"> 
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="submit" class="btn btn-default">Submit</button>
+										<button type="button" class="btn btn-default">Action</button>
+										<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+											<ul class="dropdown-menu">
+												<li><a href="#">10</a></li>
+												<li><a href="#">25</a></li>
+												<li><a href="#">50</a></li>
+												<li><a href="#">ALL</a></li>
+											</ul>
+									</div>
 								</div>
-							</div>
+							</form>
 					</div>
 				
 					<div id="results" class="tab-pane">
