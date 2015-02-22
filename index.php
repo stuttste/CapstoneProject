@@ -39,7 +39,7 @@ sec_session_start();
 		</nav>
 		
 		<div class="maintabs">
-			<ul class="nav nav-tabs">
+			<ul class="main nav-tabs">
 				<li class="active"><a data-toggle="tab" href="#description">Description</a></li>
 				<li><a data-toggle="tab" href="#petTool">PET Tool</a></li>
 				<li><a data-toggle="tab" href="#results">Results</a></li>
@@ -48,7 +48,6 @@ sec_session_start();
 			<div class="tab-content">
 				<div id="description" class="tab-pane fade in active">
 					<h3>Description</h3>
-					
 				</div>
 				
 				<div id="petTool" class="tab-pane fade">
