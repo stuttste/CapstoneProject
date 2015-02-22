@@ -38,11 +38,20 @@ sec_session_start();
 			</div>
 		</nav>
 		
-		<ul class="nav nav-tabs">
-			<li role="presentation" class="active"><a href="index.php">Main</a></li>
-			<li role="presentation"><a href="PETTool.html">PET Tool</a></li>
-			<li role="presentation"><a href="CutTool.html">Results</a></li>
-		</ul>
+		<div role="maintabpanel">
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active"><a href="index.php" aria-controls="index.php" role="tab" data-toggle="tab">Main</a></li>
+				<li role="presentation"><a href="PETTool.html" aria-controls="PETTool.html" role="tab" data-toggle="tab">PET Tool</a></li>
+				<li role="presentation"><a href="CutTool.html" aria-controls="CutTool.html" role="tab" data-toggle="tab">Results</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="index.php">...</div>
+				<div role="tabpanel" class="tab-pane" id="PETTool.html">...</div>
+				<div role="tabpanel" class="tab-pane" id="CutTool.html">...</div>
+			</div>
+		</div>
+		
 			<div class="docs-header" id="content">
 				 			
 				<div class="container">
@@ -59,31 +68,6 @@ sec_session_start();
 				</div>
 			</div>
 			
-			<div class="container">
-				<div class="form-group">
-					<label for="comment">Phage:</label>
-					<div class="col-xs-12">
-						<textarea  id="comment"></textarea>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="comment">Cluster:</label>
-					<div class="col-xs-12">
-						<textarea  id="comment"></textarea>
-					</div>
-				</div>	
-				<div class="form-group">	
-					<label for="comment">SubCluster:</label>
-					<div class="col-xs-12">
-						<textarea  id="comment"></textarea>
-					</div>
-				</div>	
-				<div class="form-group">	
-					<label for="comment">Enzyme:</label>
-					<div class="col-xs-12">
-						<textarea  id="comment"></textarea>
-					</div>
-				</div>
-			</div>
+			
 	</body>
 </html>
