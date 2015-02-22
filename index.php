@@ -86,19 +86,20 @@ sec_session_start();
 							</form>
 							
 							<form class="form-horizontal inline-block">
-								<div class="radio">
-									<label ><input type="radio" name="phage">Phage</label>
-									
-								</div>
-								<div class="radio">
-									<label><input type="radio" name="clusterbut">Cluster</label>
-								</div>
-								<div class="radio">
-									<label><input type="radio" name="subclusterbut">Subcluster</label>
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control">
-									<textarea class="form-control" id="selectionbox" rows="10"></textarea>
+								<div class="centering" style="margin:0;padding:0;>
+									<div class="radio">
+										<label ><input type="radio" name="phage">Phage</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" name="clusterbut">Cluster</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" name="subclusterbut">Subcluster</label>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control">
+										<textarea class="form-control" id="selectionbox" rows="10"></textarea>
+									</div>
 								</div>
 							</form>
 					</div>
