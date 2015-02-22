@@ -19,9 +19,9 @@ sec_session_start();
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<script rel = "Code" type="javascript" href="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
-	<!--<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
-	-->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+	<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
+	
+	
 	</head>
 
 
