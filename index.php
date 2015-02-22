@@ -63,7 +63,7 @@ sec_session_start();
 				
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
-							<form class="form-inline">
+							<form class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<textarea class="form-control" id="phage"></textarea>
