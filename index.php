@@ -102,7 +102,7 @@ sec_session_start();
 							
 							<form class="buttons">
 								<div class="btn-group"> 
-									<div class="col-sm-offset-2 col-sm-10">
+									
 										<button type="submit" class="btn btn-default">Submit</button>
 											<div class="btn-group">
 												<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret">Result Number</span></button>
@@ -113,7 +113,7 @@ sec_session_start();
 														<li><a href="#">ALL</a></li>
 													</ul>
 											</div>
-									</div>
+									
 								</div>
 							</form>
 					</div>
