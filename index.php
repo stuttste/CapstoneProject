@@ -21,6 +21,16 @@ sec_session_start();
 	<script rel = "Code" type="javascript" href="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
 	<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
 </head>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+    $("#myTab a").click(function(e){
+    	e.preventDefault();
+    	$(this).tab('show');
+    });
+});
+</script>
+
 	<body>
 		
 		<nav class="navbar navbar-inverse sidebar" role="navigation">
@@ -39,10 +49,10 @@ sec_session_start();
 		</nav>
 		
 		<div class="maintabs">
-			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="tab" href="#description">Description</a></li>
-				<li><a data-toggle="tab" href="#petTool">PET Tool</a></li>
-				<li><a data-toggle="tab" href="#results">Results</a></li>
+			<ul class="nav nav-tabs" id="myTab">
+				<li class="active"><a href="#description">Description</a></li>
+				<li><a href="#petTool">PET Tool</a></li>
+				<li><a href="#results">Results</a></li>
 			</ul>
 			
 			<div class="tab-content">
@@ -52,6 +62,7 @@ sec_session_start();
 				
 				<div id="petTool" class="tab-pane fade">
 					<h3>Pet Tool</h3>
+						
 				</div>
 				
 				<div id="results" class="tab-pane fade">
