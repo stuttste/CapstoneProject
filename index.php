@@ -66,22 +66,22 @@ sec_session_start();
 							<form class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<textarea class="form-control" id="phage"></textarea>
+									<textarea class="form-control" id="phage" rows="10"></textarea>
 								</div>
 								
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
-									<textarea class="form-control" id="cluster"></textarea>
+									<textarea class="form-control" id="cluster" rows="10"></textarea>
 								</div>
 								
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
-									<textarea class="form-control" id="subcluster"></textarea>
+									<textarea class="form-control" id="subcluster" rows="10"></textarea>
 								</div>
 								
 								<div class="form-group">
-									<label for="enzyme">Enzyme</label>
-									<textarea class="form-control" id="enzyme"></textarea>
+									<label for="enzyme">Enzyme:</label>
+									<textarea class="form-control" id="enzyme" rows="10"></textarea>
 								</div>
 							</form>
 					</div>
