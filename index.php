@@ -101,7 +101,7 @@ sec_session_start();
 							</form>
 							
 							<div class="form-group"> 
-								<div class="col-sm-offset-2 col-sm-10 pull-right">
+								<div class="col-sm-offset-2 col-sm-10">
 									<button type="submit" class="btn btn-default">Submit</button>
 									<button type="button" class="btn btn-default">Action</button>
 									<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
