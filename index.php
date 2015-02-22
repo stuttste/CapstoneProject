@@ -86,10 +86,6 @@ sec_session_start();
 							</form>
 							
 							<form class="form-inline">
-								<div class="form-group">
-									<label for="selectionbox">Label Placeholder:</label>
-									<textarea class="form-control" id="selectionbox" rows="10"></textarea>
-								</div>
 								<div class="form-horizontal inline-block">
 									<label for="phagebutton">Phage</label>
 									<input type="radio" name="phage" id="phagebutton">
@@ -104,6 +100,10 @@ sec_session_start();
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="selectionbox">Label Placeholder:</label>
+									<textarea class="form-control" id="selectionbox" rows="10"></textarea>
 								</div>
 							</form>
 					</div>
