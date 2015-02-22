@@ -90,15 +90,15 @@ sec_session_start();
 									<label for="selectionbox">Label Placeholder:</label>
 									<textarea class="form-control" id="selectionbox" rows="10"></textarea>
 								</div>
-								<div class="radio">
+								<div class="form-horizontal inline-block">
 									<label for="phagebutton">Phage</label>
 									<input type="radio" name="phage" id="phagebutton">
 								</div>
-								<div class="form-horizontal">
+								<div class="form-horizontal inline-block">
 									<label for="clusterbutton">Cluster</label>
 									<input type="radio" name="clusterbut" id="clusterbutton">
 								</div>
-								<div class="radio">
+								<div class="form-horizontal inline-block">
 									<label for="sublusterbutton">Subcluster</label>
 									<input type="radio" name="subclusterbut" id="subclusterbutton">
 								</div>
