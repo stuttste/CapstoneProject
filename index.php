@@ -27,7 +27,7 @@ sec_session_start();
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Homepage<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+						<li class="active"><a href="index.php">Homepage<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
 						<li ><a href="UserSubmit.html">User Submission<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="AdminToolsPage.html">Administration Tools<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="CutPage.html">Cut Results<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
@@ -39,9 +39,9 @@ sec_session_start();
 		</nav>
 		
 		<ul class="nav nav-tabs">
-			<li role="presentation" class="active"><a href="#">Main</a></li>
-			<li role="presentation"><a href="#">PET Tool</a></li>
-			<li role="presentation"><a href="#">Results</a></li>
+			<li role="presentation" class="active"><a href="index.php">Main</a></li>
+			<li role="presentation"><a href="PETTool.html">PET Tool</a></li>
+			<li role="presentation"><a href="CutTool.html">Results</a></li>
 		</ul>
 			<div class="docs-header" id="content">
 				 			
