@@ -56,15 +56,17 @@ sec_session_start();
 				<div id="mytabs" class="tab-content">
 					<div id="description" class="tab-pane active">
 						<h3>Description</h3>
+						<p>Hey</p>
 					</div>
 				
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
-						
+						<p>tables go here</p>
 					</div>
 				
 					<div id="results" class="tab-pane">
 						<h3>Results</h3>
+						<p>results are here</p>
 					</div>
 				
 				</div>
