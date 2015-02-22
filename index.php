@@ -98,18 +98,19 @@ sec_session_start();
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
 										<textarea class="form-control" id="enzselection" rows="10"></textarea>
 									</div>
-									  <div class="form-group"> 
-											<div class="col-sm-offset-2 col-sm-10 pull-right">
-												<button type="submit" class="btn btn-default">Submit</button>
-												<button type="button" class="btn btn-default">Action</button>
-												<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
-													<ul class="dropdown-menu">
-														<li><a href="#">10</a></li>
-														<li><a href="#">25</a></li>
-														<li><a href="#">50</a></li >
-														<li><a href="#">ALL</a></li >
-													</ul>
+									 <div class="form-group"> 
+										<div class="col-sm-offset-2 col-sm-10 pull-right">
+											<button type="submit" class="btn btn-default">Submit</button>
+											<button type="button" class="btn btn-default">Action</button>
+											<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+												<ul class="dropdown-menu">
+													<li><a href="#">10</a></li>
+													<li><a href="#">25</a></li>
+													<li><a href="#">50</a></li>
+													<li><a href="#">ALL</a></li>
+												</ul>
 										</div>
+									</div>
 								</form>
 					</div>
 				
