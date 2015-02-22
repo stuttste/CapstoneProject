@@ -39,7 +39,7 @@ sec_session_start();
 		</nav>
 		
 		<div class="maintabs">
-			<ul class="main nav-tabs">
+			<ul class="nav nav-tabs">
 				<li class="active"><a data-toggle="tab" href="#description">Description</a></li>
 				<li><a data-toggle="tab" href="#petTool">PET Tool</a></li>
 				<li><a data-toggle="tab" href="#results">Results</a></li>
