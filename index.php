@@ -63,25 +63,25 @@ sec_session_start();
 				
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
-							<form class="form-group">
+							<form class="form-inline">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<textarea class="form-control" rows="5" id="phage"></textarea>
+									<textarea class="form-control" id="phage"></textarea>
 								</div>
 								
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
-									<textarea class="form-control" rows="5" id="cluster"></textarea>
+									<textarea class="form-control" id="cluster"></textarea>
 								</div>
 								
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
-									<textarea class="form-control" rows="5" id="subcluster"></textarea>
+									<textarea class="form-control" id="subcluster"></textarea>
 								</div>
 								
 								<div class="form-group">
 									<label for="enzyme">Enzyme</label>
-									<textarea class="form-control" rows="5" id="enzyme"></textarea>
+									<textarea class="form-control" id="enzyme"></textarea>
 								</div>
 							</form>
 					</div>
