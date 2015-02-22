@@ -99,13 +99,12 @@ sec_session_start();
 										<input type="text" class="form-control">
 										<textarea class="form-control" id="selectionbox" rows="10"></textarea>
 									</div>
-									<div class ="pull-right">
-										<div class="form-group">
-											<label for="enzselection">Enzyme</label>
-											<input type="text" class="form-control" placeholder = "Select Enzyme">
-											<textarea class="form-control" id="enzselection" rows="10"></textarea>
-										</div>
+									<div class="form-group">
+										<label for="enzselection">Enzyme</label>
+										<input type="text" class="form-control" placeholder = "Select Enzyme">
+										<textarea class="form-control" id="enzselection" rows="10"></textarea>
 									</div>
+									
 								</form>
 					</div>
 				
