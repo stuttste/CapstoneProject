@@ -38,18 +38,23 @@ sec_session_start();
 			</div>
 		</nav>
 		
-		<div role="maintabpanel">
+		<div class="bs-example">
 			<ul class="nav nav-tabs">
-				<li role="presentation" class="active"><a href="index.php" aria-controls="index.php" role="tab" data-toggle="tab">Main</a></li>
-				<li role="presentation"><a href="PETTool.html" aria-controls="PETTool.html" role="tab" data-toggle="tab">PET Tool</a></li>
-				<li role="presentation"><a href="CutTool.html" aria-controls="CutTool.html" role="tab" data-toggle="tab">Results</a></li>
+				<li class="active"><a data-toggle="tab" href="#sectionA">Section A</a></li>
+				<li><a data-toggle="tab" href="#sectionB">Section B</a></li>
 			</ul>
-
+			
 			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="index.php">...</div>
-				<div role="tabpanel" class="tab-pane" id="PETTool.html">...</div>
-				<div role="tabpanel" class="tab-pane" id="CutTool.html">...</div>
-			</div>
+				<div id="sectionA" class="tab-pane fade in active">
+					<h3>Section A</h3>
+					<p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+				</div>
+				
+				<div id="sectionB" class="tab-pane fade">
+					<h3>Section B</h3>
+					<p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+				</div>
+           </div>
 		</div>
 		
 			<div class="docs-header" id="content">
