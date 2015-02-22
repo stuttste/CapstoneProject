@@ -94,7 +94,7 @@ sec_session_start();
 									<label for="phagebutton">Phage</label>
 									<input type="radio" name="phage" id="phagebutton">
 								</div>
-								<div class="radio">
+								<div class="form-horizontal">
 									<label for="clusterbutton">Cluster</label>
 									<input type="radio" name="clusterbut" id="clusterbutton">
 								</div>
