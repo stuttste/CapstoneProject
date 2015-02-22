@@ -86,7 +86,7 @@ sec_session_start();
 							</form>
 							
 							<form class="form-horizontal inline-block">
-								<div class="centering" style="margin:0;padding:0;>
+								<div class="centering" style="margin:0;padding:0;">
 									<div class="radio">
 										<label ><input type="radio" name="phage">Phage</label>
 									</div>
