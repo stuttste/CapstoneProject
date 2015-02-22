@@ -87,7 +87,7 @@ sec_session_start();
 							
 							<form class="form-inline">
 								<div class="form-group">
-									<textarea class="form-control" id="selectionbox" rows="10"><textarea>
+									<textarea class="form-control" id="selectionbox" rows="10"></textarea>
 								</div>
 								<div class="radio">
 									<label><input type="radio" name="phagebut">Phage</label>
@@ -101,6 +101,7 @@ sec_session_start();
 								<div class="form-group">
 									<input type="text" class="form-control">
 								</div>
+							</form>
 					</div>
 				
 					<div id="results" class="tab-pane">
