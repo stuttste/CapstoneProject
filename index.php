@@ -27,7 +27,7 @@ sec_session_start();
 
 	<body>
 		
-		<nav class="navbar navbar-inverse sidebar" role="navigation">
+		<!--<nav class="navbar navbar-inverse sidebar" role="navigation">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 					<ul class="nav navbar-nav">
@@ -40,7 +40,7 @@ sec_session_start();
 					</ul>
 				</div>
 			</div>
-		</nav> 
+		</nav>--> 
 		
 		<div class="container">
 			<div id="maintabs">
