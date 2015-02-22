@@ -46,7 +46,7 @@ sec_session_start();
 			</div>
 		</nav>
 		
-			<div class="container">
+		<div class="container">
 			<div id="maintabs">
 				<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
 					<li class="active"><a href="#description" data-toggle="tab" >Description</a></li>
@@ -94,24 +94,5 @@ sec_session_start();
 				</div>
 			</div>
 		</div>
-
-		
-			<div class="docs-header" id="content">
-				 			
-				<div class="container">
-					<h1>Capstone Project <small>Group 3</small></h1>
-					<p>Just a little show of what bootstrap can do!!!</p>
-				</div>
-			</div>
-			
-			<div class="container">
-				<div class="page-header"><h1>This should be the staging area!!!!</h1></div>
-				<div class="vic"><h1>Attempt at using GitHub.</h1></div>
-				<div class="row">
-				<div class="col-md-8">Extremely awesome coloring website! Nice job <a href="http://www.lavishbootstrap.com/">here</a>!</div>
-				</div>
-			</div>
-			
-			
 	</body>
 </html>
