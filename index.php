@@ -16,12 +16,15 @@ sec_session_start();
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>G3Capstone Staging</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.css">
+	<!--<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<script rel = "Code" type="javascript" href="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
 	<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
-	
-	
+	-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	</head>
 
 
@@ -42,7 +45,31 @@ sec_session_start();
 			</div>
 		</nav>
 		
-		
+			<div class="container">
+			<div id="maintabs">
+				<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
+					<li class="active"><a href="#description" data-toggle="tab" >Description</a></li>
+					<li><a href="#petTool" data-toggle="tab" >PET Tool</a></li>
+					<li><a href="#results" data-toggle="tab" >Results</a></li>
+				</ul>
+			
+				<div id="mytabs" class="tab-content">
+					<div id="description" class="tab-pane active">
+						<h3>Description</h3>
+					</div>
+				
+					<div id="petTool" class="tab-pane">
+						<h3>Pet Tool</h3>
+						
+					</div>
+				
+					<div id="results" class="tab-pane">
+						<h3>Results</h3>
+					</div>
+				
+				</div>
+			</div>
+		</div>
 
 		
 			<div class="docs-header" id="content">
