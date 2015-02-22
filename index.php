@@ -86,7 +86,6 @@ sec_session_start();
 							</form>
 							
 							<form class="form-horizontal inline-block">
-								<div class="centering" style="margin:0;padding:0;">
 									<div class="radio">
 										<label ><input type="radio" name="phage">Phage</label>
 									</div>
@@ -100,8 +99,14 @@ sec_session_start();
 										<input type="text" class="form-control">
 										<textarea class="form-control" id="selectionbox" rows="10"></textarea>
 									</div>
-								</div>
-							</form>
+									<div class ="pull-right">
+										<div class="form-group">
+											<label for="enzselection">Enzyme</label>
+											<input type="text" class="form-control" placeholder = "Select Enzyme">
+											<textarea class="form-control" id="enzselection" rows="10"></textarea>
+										</div>
+									</div>
+								</form>
 					</div>
 				
 					<div id="results" class="tab-pane">
