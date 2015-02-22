@@ -23,6 +23,7 @@ sec_session_start();
 	-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	</head>
@@ -56,12 +57,33 @@ sec_session_start();
 				<div id="mytabs" class="tab-content">
 					<div id="description" class="tab-pane active">
 						<h3>Description</h3>
-						<p>Hey</p>
+						<p>Description of Biology department</p>
+						<p>Instructions on how to use PET Tool here maybe</p>
 					</div>
 				
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
-						<p>tables go here</p>
+							<form class="form-group">
+								<div class="form-group">
+									<label for="phage">Phage:</label>
+									<textarea class="form-control" rows="5" id="phage"></textarea>
+								</div>
+								
+								<div class="form-group">
+									<label for="cluster">Cluster:</label>
+									<textarea class="form-control" rows="5" id="cluster"></textarea>
+								</div>
+								
+								<div class="form-group">
+									<label for="subcluster">Subcluster:</label>
+									<textarea class="form-control" rows="5" id="subcluster"></textarea>
+								</div>
+								
+								<div class="form-group">
+									<label for="enzyme">Enzyme</label>
+									<textarea class="form-control" rows="5" id="enzyme"></textarea>
+								</div>
+							</form>
 					</div>
 				
 					<div id="results" class="tab-pane">
