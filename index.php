@@ -42,6 +42,7 @@ sec_session_start();
 			</div>
 		</nav> 
 		
+		<div class="container">
 		<div id="maintabs">
 			<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
 				<li class="active"><a href="#description" data-toggle="tab" >Description</a></li>
@@ -65,7 +66,7 @@ sec_session_start();
 				
            </div>
 		</div>
-		
+		</div>
 			<div class="docs-header" id="content">
 				 			
 				<div class="container">
