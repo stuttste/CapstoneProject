@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 	<body>
 		
-		<nav class="navbar navbar-inverse sidebar" role="navigation">
+		<!--<nav class="navbar navbar-inverse sidebar" role="navigation">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 					<ul class="nav navbar-nav">
@@ -46,7 +46,7 @@ $(document).ready(function(){
 					</ul>
 				</div>
 			</div>
-		</nav>
+		</nav> -->
 		
 		<div class="maintabs">
 			<ul class="nav nav-tabs" id="myTab">
