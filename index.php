@@ -129,7 +129,7 @@ sec_session_start();
 							<h3>Table results in words</h3>
 							</div>
 							<div class="resultstable">
-								<table id="myTable">  
+								<table id="myTable" class="table table-striped">  
 									<thead>  
 										<tr>  
 											<th>ENO</th>  
@@ -218,8 +218,6 @@ sec_session_start();
 									$('#myTable').dataTable();
 									});
 								</script>
-								<table id="myTable" class="table table-striped">
-								</table>
 							</div>
 					</div>
 				</div>
