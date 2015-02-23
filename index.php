@@ -24,6 +24,8 @@ sec_session_start();
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+	<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	</head>
@@ -132,10 +134,10 @@ sec_session_start();
 								<table id="myTable" class="table table-striped">  
 									<thead>  
 										<tr>  
-											<th>ENO</th>  
-											<th>EMPName</th>  
-											<th>Country</th>  
-											<th>Salary</th>  
+											<th>Phage</th>  
+											<th>Cluster</th>  
+											<th>Subcluster</th>  
+											<th>Percentage</th>  
 										</tr>  
 									</thead>  
 									<tbody>  
