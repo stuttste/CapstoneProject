@@ -129,7 +129,7 @@ sec_session_start();
 							<h3>Table results in words</h3>
 							</div>
 							<div class="resultstable">
-								<table id="myTable" class="table table-striped">  
+								<table class="table table-bordered">  
 									<thead>  
 										<tr>  
 											<th>Phage</th>  
