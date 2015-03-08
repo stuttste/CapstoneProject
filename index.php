@@ -57,8 +57,9 @@ sec_session_start();
 				<div id="mytabs" class="tab-content">
 					<div id="description" class="tab-pane active">
 						<h3>Description</h3>
-						<p>Description of Biology department</p>
-						<p>Instructions on how to use PET Tool here maybe</p>
+						<p>This tool has been created for the ULM Biology department in order to assist researchers in identifying and comparing unknown phages to existing phages. This tool has been updated to provide functions that will help assist research in development and its previous version can be found at: http://ec2-54-245-31-145.us-west-2.compute.amazonaws.com/  </p> 
+
+						<p>Instructions</p>
 					</div>
 				
 					<div id="petTool" class="tab-pane">
