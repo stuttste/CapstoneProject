@@ -31,18 +31,229 @@
 			</div>
 		</nav>
 			
-			<div class="docs-header" id="content">
+		<div class="container">
 			
-				<div class="container">
-					<h1>Admin Tools Page</h1>
+			<div id="maintabs">
+				<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
+					<li class="active"><a href="#addDeletePhage" data-toggle="tab" >Add/Delete Phage</a></li>
+					<li><a href="#reviewUserSubmission" data-toggle="tab" >Review User Submission</a></li>
+					<li><a href="#acctManage" data-toggle="tab" >Account Management</a></li>
+				</ul>
+			
+				<div id="mytabs" class="tab-content">
+					<div id="addDeletePhage" class="tab-pane active">
+						<h3>Description</h3>
+						<p>Description goes here</p>
+						<h3>Add Phages and Enzymes</h3>
+						<div class="form-inline">
+							<label for="phageselection">Phage:</label>
+							<input type="text" class="form-control" placeholder = "Enter Phage">
+							
+							<label for="clusterselection">Cluster:</label>
+							<input type="text" class="form-control" placeholder = "Enter Cluster">
+							
+							<label for="subclustselection">SubCluster:</label>
+							<input type="text" class="form-control" placeholder = "Enter SubCluster">
+						</div>	
+						
+						<div class="form-inline">
+							<label for="enzymeEntry">Enzyme:</label>
+							<input type="text" class="form-control" placeholder = "Enter Enzyme">
+						</div>	
+						
+						<div>
+						<p>Import file button here</p>
+						</div>
+						
+						<h2>Line Divide Here</h2>
+						<h3>Delete Phage or Enzyme</h3>
+						
+						<form class="inline-block">
+								<div class="form-group">
+									<label for="phage">Phage:</label>
+									<textarea class="form-control" id="phage" rows="10"></textarea>
+								</div>
+								
+								<div class="form-group">
+									<label for="cluster">Cluster:</label>
+									<textarea class="form-control" id="cluster" rows="10"></textarea>
+								</div>
+								
+								<div class="form-group">
+									<label for="subcluster">Subcluster:</label>
+									<textarea class="form-control" id="subcluster" rows="10"></textarea>
+								</div>
+								
+								<div class="form-group">
+									<label for="enzyme">Enzyme:</label>
+									<textarea class="form-control" id="enzyme" rows="10"></textarea>
+								</div>
+							</form>
+					</div>
+				
+					<div id="reviewUserSubmission" class="tab-pane">
+						<h3>Review User Submission</h3>
+						<p>Description here</p>
+						
+							<div class="userSubTable">
+								<table class="table table-bordered">  
+									<thead>  
+										<tr>  
+											<th>Phage</th>  
+											<th>Cluster</th>  
+											<th>Subcluster</th>  
+											<th>Cut Range and Enzyme</th>  
+										</tr>  
+									</thead>  
+									<tbody>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+          								<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										</tbody>  
+								</table>  
+							</div>
+							
+							
+					</div>
+				
+					<div id="acctManage" class="tab-pane">
+						<h3>Account Management</h3>
+						<p>Description here</p>
+							<div class="resultstable">
+								<table class="table table-bordered">  
+									<thead>  
+										<tr>  
+											<th>Email</th>  
+											<th>Status</th>  
+											<th>(Toggle Button)</th>  
+											<th>Delete</th>  
+										</tr>  
+									</thead>  
+									<tbody>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+          								<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										<tr>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+											<td></td>  
+										</tr>  
+										</tbody>  
+								</table>  
+							</div>
+							</div>
+					</div>
 				</div>
 			</div>
-			
-			<div class="container">
-				
-			</div>
-			
-		<div class="container">
 		</div>
 	</body>
 </html>
