@@ -208,7 +208,5 @@ sec_session_start();
 			</div>
 		</div>
 	</body>
-	if (isset($_POST['phage'])) {
-			$sql = "SELECT `Name` FROM `PHAGE` LIMIT 0, 30 ";	
-	}
+	
 </html>
