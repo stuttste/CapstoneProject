@@ -67,7 +67,11 @@ sec_session_start();
 							<form class="inline-block" method="post" action="">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<textarea class="form-control" id="phage" rows="10"></textarea>
+									<textarea class="form-control" id="phage" rows="10">
+									<?php
+									$sql = "SELECT `Name` FROM `PHAGE`";
+									?>
+									</textarea>
 								</div>
 								
 								<div class="form-group">
