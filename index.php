@@ -64,7 +64,7 @@ sec_session_start();
 				
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
-							<form class="inline-block">
+							<form class="inline-block" method="post" action="">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<textarea class="form-control" id="phage" rows="10"></textarea>
@@ -88,7 +88,7 @@ sec_session_start();
 							
 							<form class="form-horizontal inline-block">
 									<div class="form-group pull-left">
-										<label ><input type="radio" name="phage">Phage</label>
+										<label ><input type="radio" name="phagebut">Phage</label>
 										<label><input type="radio" name="clusterbut">Cluster</label>
 										<label><input type="radio" name="subclusterbut">Subcluster</label>
 										<input type="text" class="form-control">
@@ -208,4 +208,7 @@ sec_session_start();
 			</div>
 		</div>
 	</body>
+	if (isset($_POST['phage'])) {
+			$sql = "SELECT `Name` FROM `PHAGE` LIMIT 0, 30 ";	
+	}
 </html>
