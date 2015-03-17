@@ -77,8 +77,9 @@ sec_session_start();
 						<p>Instructions</p>
 					</div>
 					
-					<div class="row">
+					
 					<div id="petTool" class="tab-pane">
+						<div class="row">
 						<h3>Pet Tool</h3>
 							<table class="table-responsive">
 								<table class="table table-bordered" id="phageTable">
