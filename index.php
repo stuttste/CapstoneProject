@@ -35,9 +35,9 @@ sec_session_start();
 			$(this).toggleClass('selected');
 		} );
 	 
-		$('#button').click( function () {
-			alert( table.rows('.selected').data().length +' row(s) selected' );
-		} );
+		//$('#button').click( function () {
+			//alert( table.rows('.selected').data().length +' row(s) selected' );
+		//} );
 	} );
 	</script>
 	</head>
