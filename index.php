@@ -174,7 +174,6 @@ sec_session_start();
 									</select>
 								</div>
 							
-							<div class="col-md-3">
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Cluster">
@@ -192,7 +191,6 @@ sec_session_start();
 									</select>
 								</div>
 							
-							<div class="col-md-3">
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Subcluster">
@@ -210,7 +208,6 @@ sec_session_start();
 									</select>
 								</div>
 							
-							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
