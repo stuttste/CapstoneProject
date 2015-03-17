@@ -125,7 +125,7 @@ sec_session_start();
 									<select multiple class="form-control" id="enzyme" rows="10"></select>
 								</div>
 							</form>
-							<div>
+							</div>
 						</div>
 							
 							<form class="inline-block">
