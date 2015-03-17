@@ -76,7 +76,8 @@ sec_session_start();
 
 						<p>Instructions</p>
 					</div>
-				
+					
+					<div class="row">
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
 							<table class="table-responsive">
@@ -95,7 +96,7 @@ sec_session_start();
 									</tbody>
 								</table>
 							</table>
-							
+						</div>
 							
 							<form class="inline-block" method="post" action="">
 							<!--
@@ -146,7 +147,7 @@ sec_session_start();
 									<input type="text" class="form-control" placeholder = "Select Cluster">
 									<select multiple class="form-control" id="cluster" rows="10">
 									<?php
-										if ($sql = $mysqli->prepare("SELECT DISTINCT `Cluster` FROM `PHAGE`")) {
+										if ($sql = $mysqli->prepare("SELECT DISTINCT `Cluster` FROM `PHAGE` ORDER BY `Cluster`")) {
 											$sql->execute();
 											$sql->bind_result($name);
 											while($sql->fetch()){
@@ -163,7 +164,7 @@ sec_session_start();
 									<input type="text" class="form-control" placeholder = "Select Subcluster">
 									<select multiple class="form-control" id="subcluster" rows="10">
 									<?php
-										if ($sql = $mysqli->prepare("SELECT DISTINCT `Subcluster` FROM `PHAGE`")) {
+										if ($sql = $mysqli->prepare("SELECT DISTINCT `Subcluster` FROM `PHAGE` ORDER BY `Subcluster`")) {
 											$sql->execute();
 											$sql->bind_result($name);
 											while($sql->fetch()){
