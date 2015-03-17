@@ -282,4 +282,18 @@ sec_session_start();
 		</div>
 	</body>
 	
+	<script type="text/javascript" class="init">
+		$(document).ready(function() {
+		var table = $('#phageTable').DataTable();
+	 
+		$('#phageTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('selected');
+		} );
+	 
+		$('#button').click( function () {
+			alert( table.rows('.selected').data().length +' row(s) selected' );
+		} );
+	} );
+	</script>
+	
 </html>
