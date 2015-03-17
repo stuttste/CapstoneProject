@@ -87,7 +87,7 @@ sec_session_start();
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
 						<div class="row">
-							<div class="col-md-9">
+							<div class="col-md-6">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="phageTable">
 									<thead>
@@ -131,7 +131,7 @@ sec_session_start();
 							</table>
 							</div>
 						
-							<div class="col-md-3">
+							<div class="col-md-6">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="enzymeTable">
 									<thead>
