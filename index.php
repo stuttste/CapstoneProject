@@ -87,7 +87,7 @@ sec_session_start();
 								</div>
 							</form>
 							
-							<form class="form-horizontal inline-block">
+							<form class="inline-block">
 									<div class="form-group">
 									<label for="phage">Phage:</label>
 									<select multiple class="form-control" id="phage" rows="10">
