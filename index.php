@@ -68,16 +68,6 @@ sec_session_start();
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<select multiple class="form-control" id="phage" rows="10">
-									<?php
-										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
-											$sql->execute();
-											$sql->bind_result($name);
-											while($sql->fetch()){
-													echo "<option>".$name."</option>";
-											}
-											$sql->close();
-										}
-									?>
 									</select>
 								</div>
 								
@@ -98,14 +88,55 @@ sec_session_start();
 							</form>
 							
 							<form class="form-horizontal inline-block">
-									<div class="form-group pull-left">
-										<label ><input type="radio" name="phagebut">Phage</label>
-										<label><input type="radio" name="clusterbut">Cluster</label>
-										<label><input type="radio" name="subclusterbut">Subcluster</label>
-										<input type="text" class="form-control">
-										<select multiple class="form-control" id="selectionbox" rows="10"></select>
-									</div>
-									<div class="form-group pull-right">
+									<div class="form-group">
+									<label for="phage">Phage:</label>
+									<select multiple class="form-control" id="phage" rows="10">
+									<?php
+										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
+											$sql->execute();
+											$sql->bind_result($name);
+											while($sql->fetch()){
+													echo "<option>".$name."</option>";
+											}
+											$sql->close();
+										}
+										?>
+									</select>
+								</div>
+								
+								<div class="form-group">
+									<label for="cluster">Cluster:</label>
+									<select multiple class="form-control" id="cluster" rows="10">
+									<?php
+										if ($sql = $mysqli->prepare("SELECT `Cluster` FROM `PHAGE`")) {
+											$sql->execute();
+											$sql->bind_result($name);
+											while($sql->fetch()){
+													echo "<option>".$name."</option>";
+											}
+											$sql->close();
+										}
+										?>
+									</select>
+								</div>
+								
+								<div class="form-group">
+									<label for="subcluster">Subcluster:</label>
+									<select multiple class="form-control" id="subcluster" rows="10">
+									<?php
+										if ($sql = $mysqli->prepare("SELECT `Subcluster` FROM `PHAGE`")) {
+											$sql->execute();
+											$sql->bind_result($name);
+											while($sql->fetch()){
+													echo "<option>".$name."</option>";
+											}
+											$sql->close();
+										}
+										?>
+									</select>
+								</div>
+								
+								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
 										<select multiple class="form-control" id="enzselection" rows="10">
