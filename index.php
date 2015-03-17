@@ -73,7 +73,7 @@ sec_session_start();
 											$sql->execute();
 											$sql->bind_result($name);
 											while($sql->fetch()){
-													print($name + "\n");
+													echo "<option>".$name."</option>";
 											}
 											$sql->close();
 										}
