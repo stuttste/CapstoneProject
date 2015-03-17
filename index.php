@@ -129,9 +129,11 @@ sec_session_start();
 									</tbody>
 								</table>
 							</table>
-							</div>
-						                <button type="button">Clear</button>
+										                <button type="button">Clear</button>
                 <button type="button">Reset</button>
+<br />
+</div>
+			
 							<div class="col-md-6">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="enzymeTable">
@@ -154,7 +156,9 @@ sec_session_start();
 							</table>
 							</div>
 						</div>
-						<br />
+			                <button type="button">Clear</button>
+                <button type="button">Reset</button>						
+<br />
 						<div class="row">
 							<div class="col-md-12">
 							<form class="inline-block">
@@ -173,7 +177,8 @@ sec_session_start();
 										}
 										?>
 									</select>
-								</div>
+<button type="button">Add Phage</button>									
+</div>
 							
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
@@ -190,7 +195,8 @@ sec_session_start();
 										}
 										?>
 									</select>
-								</div>
+<button type="button">Add Cluster</button>									
+</div>
 							
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
@@ -207,7 +213,8 @@ sec_session_start();
 										}
 										?>
 									</select>
-								</div>
+<button type="button">Add Subcluster</button>									
+</div>
 							
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
@@ -224,7 +231,8 @@ sec_session_start();
 												}
 											?>
 										</select>
-									</div>
+<button type="button">Add Enzyme</button>	 									
+</div>
 							</form>
 							</div>
 							</div>
