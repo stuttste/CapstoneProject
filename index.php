@@ -95,7 +95,10 @@ sec_session_start();
 									</tbody>
 								</table>
 							</table>
+							
+							
 							<form class="inline-block" method="post" action="">
+							<!--
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<select multiple class="form-control" id="phage" rows="10">
@@ -112,12 +115,13 @@ sec_session_start();
 									<label for="subcluster">Subcluster:</label>
 									<select multiple class="form-control" id="subcluster" rows="10"></select>
 								</div>
-								
+							-->
 								<div class="form-group">
 									<label for="enzyme">Enzyme:</label>
 									<select multiple class="form-control" id="enzyme" rows="10"></select>
 								</div>
 							</form>
+							
 							
 							<form class="inline-block">
 									<div class="form-group">
