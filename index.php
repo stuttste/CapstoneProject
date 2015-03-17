@@ -31,8 +31,13 @@ sec_session_start();
 	<script type="text/javascript" class="init">
 		$(document).ready(function() {
 		var table = $('#phageTable').DataTable();
+		var etable = $('#enzymeTable').DataTable();
 	 
 		$('#phageTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('active');
+		} );
+		
+		$('#enzymeTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
 		} );
 	 
@@ -127,7 +132,7 @@ sec_session_start();
 						
 							<div class="col-md-3">
 							<table class="table-responsive">
-								<table class="table table-bordered" id="phageTable">
+								<table class="table table-bordered" id="enzymeTable">
 									<thead>
 										<th>Enzyme</th>
 									</thead>
