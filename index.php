@@ -67,28 +67,28 @@ sec_session_start();
 							<form class="inline-block" method="post" action="">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<textarea class="form-control" id="phage" rows="10">
+									<select multiple class="form-control" id="phage" rows="10">
 									<?php
 									$sql = "SELECT `Name` FROM `PHAGE`";
 									$result = mysql_query($sql, $mysqli);
 									echo $result;
 									?>
-									</textarea>
+									</select>
 								</div>
 								
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
-									<textarea class="form-control" id="cluster" rows="10"></textarea>
+									<select multiple class="form-control" id="cluster" rows="10"></select>
 								</div>
 								
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
-									<textarea class="form-control" id="subcluster" rows="10"></textarea>
+									<select multiple class="form-control" id="subcluster" rows="10"></select>
 								</div>
 								
 								<div class="form-group">
 									<label for="enzyme">Enzyme:</label>
-									<textarea class="form-control" id="enzyme" rows="10"></textarea>
+									<select multiple class="form-control" id="enzyme" rows="10"></select>
 								</div>
 							</form>
 							
@@ -98,12 +98,12 @@ sec_session_start();
 										<label><input type="radio" name="clusterbut">Cluster</label>
 										<label><input type="radio" name="subclusterbut">Subcluster</label>
 										<input type="text" class="form-control">
-										<textarea class="form-control" id="selectionbox" rows="10"></textarea>
+										<select multiple class="form-control" id="selectionbox" rows="10"></select>
 									</div>
 									<div class="form-group pull-right">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
-										<textarea class="form-control" id="enzselection" rows="10"></textarea>
+										<select multiple class="form-control" id="enzselection" rows="10"></select>
 									</div>
 							</form>
 							
