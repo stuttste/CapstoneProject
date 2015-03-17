@@ -64,10 +64,27 @@ sec_session_start();
 				
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
+							<table class="table-responsive">
+								<table class="table table-bordered" id="phageTable">
+									<thead>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>Subcluster</th>
+									</thead>
+									<tbody id="phageTableBody">
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+									</tbody>
+								</table>
+							</table>
 							<form class="inline-block" method="post" action="">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<select multiple class="form-control" id="phage" rows="10">
+									
 									</select>
 								</div>
 								
@@ -143,16 +160,16 @@ sec_session_start();
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
 										<select multiple class="form-control" id="enzselection" rows="10">
-										<?php
-										if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
-											$sql->execute();
-											$sql->bind_result($name);
-											while($sql->fetch()){
-													echo "<option>".$name."</option>";
-											}
-											$sql->close();
-										}
-										?>
+											<?php
+												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
+													$sql->execute();
+													$sql->bind_result($name);
+													while($sql->fetch()){
+															echo "<option>".$name."</option>";
+													}
+													$sql->close();
+												}
+											?>
 										</select>
 									</div>
 							</form>
@@ -264,5 +281,19 @@ sec_session_start();
 			</div>
 		</div>
 	</body>
+	
+	<script type="text/javascript" class="init">
+		$(document).ready(function() {
+		var table = $('#phageTable').DataTable();
+	 
+		$('#phageTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('selected');
+		} );
+	 
+		$('#button').click( function () {
+			alert( table.rows('.selected').data().length +' row(s) selected' );
+		} );
+	} );
+	</script>
 	
 </html>
