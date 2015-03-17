@@ -69,9 +69,14 @@ sec_session_start();
 									<label for="phage">Phage:</label>
 									<select multiple class="form-control" id="phage" rows="10">
 									<?php
-									$sql = "SELECT `Name` FROM `PHAGE`";
-									$result = mysql_query($sql, $mysqli);
-									echo $result;
+										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
+											$sql->execute();
+											$sql->bind_result($name);
+											while($sql->fetch()){
+													print($name + "\n");
+											}
+											$sql->close();
+										}
 									?>
 									</select>
 								</div>
