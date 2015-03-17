@@ -26,6 +26,20 @@ sec_session_start();
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" class="init">
+		$(document).ready(function() {
+		var table = $('#phageTable').DataTable();
+	 
+		$('#phageTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('selected');
+		} );
+	 
+		$('#button').click( function () {
+			alert( table.rows('.selected').data().length +' row(s) selected' );
+		} );
+	} );
+	</script>
 	</head>
 
 
@@ -282,18 +296,6 @@ sec_session_start();
 		</div>
 	</body>
 	
-	<script type="text/javascript" class="init">
-		$(document).ready(function() {
-		var table = $('#phageTable').DataTable();
-	 
-		$('#phageTable tbody').on( 'click', 'tr', function () {
-			$(this).toggleClass('selected');
-		} );
-	 
-		$('#button').click( function () {
-			alert( table.rows('.selected').data().length +' row(s) selected' );
-		} );
-	} );
-	</script>
+	
 	
 </html>
