@@ -108,7 +108,18 @@ sec_session_start();
 									<div class="form-group pull-right">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
-										<select multiple class="form-control" id="enzselection" rows="10"></select>
+										<select multiple class="form-control" id="enzselection" rows="10">
+										<?php
+										if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
+											$sql->execute();
+											$sql->bind_result($name);
+											while($sql->fetch()){
+													echo "<option>".$name."</option>";
+											}
+											$sql->close();
+										}
+										?>
+										</select>
 									</div>
 							</form>
 							
