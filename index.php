@@ -130,7 +130,8 @@ sec_session_start();
 								</table>
 							</table>
 							</div>
-						
+						                <button type="button">Clear</button>
+                <button type="button">Reset</button>
 							<div class="col-md-6">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="enzymeTable">
