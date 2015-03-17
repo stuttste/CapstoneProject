@@ -79,8 +79,9 @@ sec_session_start();
 					
 					
 					<div id="petTool" class="tab-pane">
-						<div class="row">
 						<h3>Pet Tool</h3>
+						<div class="row">
+							<div class="col-md-4">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="phageTable">
 									<thead>
@@ -97,8 +98,9 @@ sec_session_start();
 									</tbody>
 								</table>
 							</table>
-						</div>
-							
+							</div>
+						
+							<div class="col-md-2">
 							<form class="inline-block" method="post" action="">
 							<!--
 								<div class="form-group">
@@ -123,7 +125,8 @@ sec_session_start();
 									<select multiple class="form-control" id="enzyme" rows="10"></select>
 								</div>
 							</form>
-							
+							<div>
+						</div>
 							
 							<form class="inline-block">
 									<div class="form-group">
