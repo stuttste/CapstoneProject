@@ -153,7 +153,8 @@ sec_session_start();
 							</table>
 							</div>
 						</div>
-							
+						<div class="row">
+							<div class="col-md-3">
 							<form class="inline-block">
 									<div class="form-group">
 									<label for="phage">Phage:</label>
@@ -171,7 +172,8 @@ sec_session_start();
 										?>
 									</select>
 								</div>
-								
+							</div>
+							<div class="col-md-3">
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Cluster">
@@ -188,7 +190,8 @@ sec_session_start();
 										?>
 									</select>
 								</div>
-								
+							</div>
+							<div class="col-md-3">
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Subcluster">
@@ -205,7 +208,8 @@ sec_session_start();
 										?>
 									</select>
 								</div>
-								
+							</div>
+							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
@@ -223,8 +227,8 @@ sec_session_start();
 										</select>
 									</div>
 							</form>
-							
-							
+							</div>
+							</div>
 					</div>
 				
 					<div id="results" class="tab-pane">
