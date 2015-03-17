@@ -90,6 +90,7 @@ sec_session_start();
 							<form class="inline-block">
 									<div class="form-group">
 									<label for="phage">Phage:</label>
+									<input type="text" class="form-control" placeholder = "Select Phage">
 									<select multiple class="form-control" id="phage" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
@@ -106,6 +107,7 @@ sec_session_start();
 								
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
+									<input type="text" class="form-control" placeholder = "Select Cluster">
 									<select multiple class="form-control" id="cluster" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Cluster` FROM `PHAGE`")) {
@@ -122,6 +124,7 @@ sec_session_start();
 								
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
+									<input type="text" class="form-control" placeholder = "Select Subcluster">
 									<select multiple class="form-control" id="subcluster" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Subcluster` FROM `PHAGE`")) {
