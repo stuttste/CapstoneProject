@@ -33,7 +33,7 @@ sec_session_start();
 		var table = $('#phageTable').DataTable();
 	 
 		$('#phageTable tbody').on( 'click', 'tr', function () {
-			$(this).toggleClass('selected');
+			$(this).toggleClass('active');
 		} );
 	 
 		//$('#button').click( function () {
@@ -79,8 +79,8 @@ sec_session_start();
 				
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
-							<table <!--class="table-responsive"-->>
-								<table <!--class="table table-bordered"--> id="phageTable">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="phageTable">
 									<thead>
 										<th>Phage</th>
 										<th>Cluster</th>
