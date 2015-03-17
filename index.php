@@ -70,7 +70,8 @@ sec_session_start();
 									<textarea class="form-control" id="phage" rows="10">
 									<?php
 									$sql = "SELECT `Name` FROM `PHAGE`";
-									mysql_query($sql, $mysqli);
+									$result = mysql_query($sql, $mysqli);
+									echo $result;
 									?>
 									</textarea>
 								</div>
