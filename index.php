@@ -81,7 +81,7 @@ sec_session_start();
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
 						<div class="row">
-							<div class="col-md-8">
+							<div class="col-md-9">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="phageTable">
 									<thead>
@@ -95,36 +95,56 @@ sec_session_start();
 											<td>Data</td>
 											<td>Here</td>
 										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
 									</tbody>
 								</table>
 							</table>
 							</div>
 						
-							<div class="col-md-4">
-							<form class="inline-block" method="post" action="">
-							<!--
-								<div class="form-group">
-									<label for="phage">Phage:</label>
-									<select multiple class="form-control" id="phage" rows="10">
+							<div class="col-md-3">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="phageTable">
+									<thead>
+										<th>Enzyme</th>
+									</thead>
+									<tbody id="phageTableBody">
+										<tr>
+											<td>Test</td>
+										</tr>
+										<tr>
+											<td>Data</td>
+										</tr>
+										<tr>
+											<td>Here</td>
+										</tr>
+									</tbody>
 									
-									</select>
-								</div>
-								
-								<div class="form-group">
-									<label for="cluster">Cluster:</label>
-									<select multiple class="form-control" id="cluster" rows="10"></select>
-								</div>
-								
-								<div class="form-group">
-									<label for="subcluster">Subcluster:</label>
-									<select multiple class="form-control" id="subcluster" rows="10"></select>
-								</div>
-							-->
-								<div class="form-group">
-									<label for="enzyme">Enzyme:</label>
-									<select multiple class="form-control" id="enzyme" rows="10"></select>
-								</div>
-							</form>
+								</table>
+							</table>
 							</div>
 						</div>
 							
