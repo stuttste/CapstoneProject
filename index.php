@@ -110,7 +110,7 @@ sec_session_start();
 									<input type="text" class="form-control" placeholder = "Select Cluster">
 									<select multiple class="form-control" id="cluster" rows="10">
 									<?php
-										if ($sql = $mysqli->prepare("SELECT `Cluster` FROM `PHAGE`")) {
+										if ($sql = $mysqli->prepare("SELECT DISTINCT `Cluster` FROM `PHAGE`")) {
 											$sql->execute();
 											$sql->bind_result($name);
 											while($sql->fetch()){
@@ -127,7 +127,7 @@ sec_session_start();
 									<input type="text" class="form-control" placeholder = "Select Subcluster">
 									<select multiple class="form-control" id="subcluster" rows="10">
 									<?php
-										if ($sql = $mysqli->prepare("SELECT `Subcluster` FROM `PHAGE`")) {
+										if ($sql = $mysqli->prepare("SELECT DISTINCT `Subcluster` FROM `PHAGE`")) {
 											$sql->execute();
 											$sql->bind_result($name);
 											while($sql->fetch()){
