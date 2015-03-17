@@ -81,7 +81,7 @@ sec_session_start();
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-8">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="phageTable">
 									<thead>
@@ -100,7 +100,7 @@ sec_session_start();
 							</table>
 							</div>
 						
-							<div class="col-md-2">
+							<div class="col-md-4">
 							<form class="inline-block" method="post" action="">
 							<!--
 								<div class="form-group">
