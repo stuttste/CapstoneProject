@@ -58,10 +58,10 @@ sec_session_start();
 			var selectedSubCluster = $('#subcluster option:selected').val();
 			$.each($('#phageTableBody tr'), function () {
 				if($(this).find('td:first').text() == "Test"){
-					$(this).find('td:first').text(selectedPhage));
-					$(this).find('td:nth-child(2)').text(selectedCluster));
-					$(this).find('td:nth-child(3)').text(selectedSubCluster));
-					return true;
+					$(this).find('td:first').text(selectedPhage);
+					$(this).find('td:nth-child(2)').text(selectedCluster);
+					$(this).find('td:nth-child(3)').text(selectedSubCluster);
+					return false;
 				}
 				
 			})
