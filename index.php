@@ -75,7 +75,8 @@ sec_session_start();
 				var xmlhttp;
 				var len;
 				
-				//selectedId = $('#phage option:selected').val();
+				selectedId = document.getElementById("phage").options.value
+				//$('#phage option:selected').val();
 				console.log(selectedId);
 				/*
 				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
