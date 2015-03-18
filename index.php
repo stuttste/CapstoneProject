@@ -101,7 +101,7 @@ sec_session_start();
 					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+selectedId,true);
 					xmlhttp.send();
 				//}
-		})
+		});
 		
 		$('#enzymeButton').click(function (){
 			var selectedEnzyme = $('#enzselection option:selected').val();
@@ -112,12 +112,11 @@ sec_session_start();
 				}
 				
 			})
-		})
+		});
 		
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
 		//} );
-	} );
 	</script>
 	</head>
 
