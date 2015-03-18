@@ -81,7 +81,7 @@ sec_session_start();
 				
 		});
 		
-		$('#enzymeButton').click(function (){
+		/*$('#enzymeButton').click(function (){
 			var selectedEnzyme = $('#enzselection option:selected').val();
 			$.each($('#enzymeTableBody tr'), function () {
 				if($(this).find('td:first').text() == "Test" || $(this).find('td:first').text() == "Data" || $(this).find('td:first').text() == "Here"){
@@ -90,7 +90,7 @@ sec_session_start();
 				}
 				
 			})
-		});
+		});*/
 		
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
