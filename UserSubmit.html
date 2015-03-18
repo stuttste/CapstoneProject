@@ -9,13 +9,13 @@ sec_session_start();
 	die();
 
 	
-	
-	
-$phage = $_GET['phage']
-$cluster= $_GET['cluster']
-$subcluster= $_GET['subclust']
-$cut= $_GET['cuts']	
-$enzyme = $_GET['enzyme']
+function upload()	
+{}
+$phage = $_POST['phage'];
+$cluster= $_POST['cluster'];
+$subcluster= $_POST['subclust'];
+$cut= $POST['cuts'];	
+$enzyme = $POST['enzyme'];
 	
 $sql =	 "INSERT INTO SUBMISSIONS ($phage,$cluster,$subcluster,$cut,$enzyme,$username)
 "
@@ -24,7 +24,7 @@ if (mysqli_query($mysqli, $sql)) {
 	
 	}
 	
-	
+}	
 ?>
 
 <!doctype html>
@@ -56,11 +56,11 @@ subclust=subc.value;
 enzyme=enzymec.value;
 cuts=cutc.value;
 
-window.location.href = "?name=" + phage; 
-window.location.href = "?name=" + cluster; 
-window.location.href = "?name=" + subclust; 
-window.location.href = "?name=" + enzyme; 
-window.location.href = "?name=" + cuts; 
+$.post({variable: phage});
+$.post({variable: subclust});
+$.post({variable: cluster);
+$.post({variable: cuts});
+$.post({variable: phage});
 
 
 
