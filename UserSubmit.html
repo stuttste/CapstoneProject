@@ -7,7 +7,24 @@ sec_session_start();
  if (login_check($mysqli) == false) {
 	header('Location: login.php');
 	die();
-}
+
+	
+	
+	
+$phage = $_GET['phage']
+$cluster= $_GET['cluster']
+$subcluster= $_GET['subclust']
+$cut= $_GET['cuts']	
+$enzyme = $_GET['enzyme']
+	
+$sql =	 "INSERT INTO SUBMISSIONS ($phage,$cluster,$subcluster,$cut,$enzyme,$username)
+"
+if (mysqli_query($mysqli, $sql)) {
+    echo "New record created successfully";	
+	
+	}
+	
+	
 ?>
 
 <!doctype html>
@@ -38,6 +55,15 @@ cluster=clustc.value;
 subclust=subc.value;
 enzyme=enzymec.value;
 cuts=cutc.value;
+
+window.location.href = "myphpfile.php?name=" + phage; 
+window.location.href = "myphpfile.php?name=" + cluster; 
+window.location.href = "myphpfile.php?name=" + subclust; 
+window.location.href = "myphpfile.php?name=" + enzyme; 
+window.location.href = "myphpfile.php?name=" + cuts; 
+
+
+
 var alertxt= "Attempting to submit to database. Your phage being submited is named:";
 alertxt=alertxt+phage;
 window.alert(alertxt);
