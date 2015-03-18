@@ -25,9 +25,35 @@ sec_session_start();
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-</head>
+
+	</head>
 	<body>
-		
+		 <script>
+	var phage,cluster,subclust,enzyme,cuts,username;	 
+function compileInfo()
+{
+// Will add if statements to check for empty strings in a later update after figuring out more
+;
+phage= phagec.value;
+cluster=clustc.value;
+subclust=subc.value;
+enzyme=enzymec.value;
+cuts=cutc.value;
+var alertxt= "Attempting to submit to database. Your phage being submited is named:";
+alertxt=alertxt+phage;
+window.alert(alertxt);
+//username= 
+//sendInfo(phage,cluster,subclust,enzyme,cuts,username);
+
+}
+function sendInfo(pha,clu,sub,enz,cut,use)
+{
+//
+//?php
+
+//?
+}
+</script> 
 		<nav class="navbar navbar-inverse sidebar" role="navigation">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
@@ -52,27 +78,27 @@ sec_session_start();
 			
 			<div class="form-inline">
 				<label for="phageselection">Phage:</label>
-				<input type="text" class="form-control" placeholder = "Enter Phage">
+				<input type="text" id= "phagec" class="form-control" placeholder = "Enter Phage">
 			</div>	
 			<div class="form-inline">			
 				<label for="cutrangeselection">Cut Range:</label>
-				<input type="text" class="form-control" placeholder = "Enter Cut Range">
+				<input type="text" id="cutc" class="form-control" placeholder = "Enter Cut Range">
 			</div>
 			<div class="form-inline">
 				<label for="clusterselection">Cluster:</label>
-				<input type="text" class="form-control" placeholder = "Enter Cluster">
+				<input type="text" id="clustc" class="form-control" placeholder = "Enter Cluster">
 			</div>
 			<div class="form-inline">
 				<label for="subclustselection">SubCluster:</label>
-				<input type="text" class="form-control" placeholder = "Enter SubCluster">
+				<input type="text" id="subc" class="form-control" placeholder = "Enter SubCluster">
 			</div>
 			
 			<div class="form-group">
 				<label for="enzselection">Enzyme</label>
 				<input type="text" class="form-control" placeholder = "Enter Enzyme Enzyme">
-				<textarea class="form-control" id="enzselection" rows="10"></textarea>
+				<textarea class="form-control" id="enzymec" rows="10"></textarea>
 			</div>
-			 <button type="button">Submit!</button> 
+			 <button type="button" onclick='compileInfo()' id="submit">Submit!</button> 
 			<div class="progresstable">
 				<h3>Submission Status</h3>
 				
