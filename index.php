@@ -167,9 +167,7 @@ sec_session_start();
 							</table>
 							</div>
 						</div>
-			                <button type="button">Clear</button>
-							<button type="button">Reset</button>						
-							<br />
+			                
 						<div class="row">
 							<div class="col-md-2">
 							<form class="inline-block">
