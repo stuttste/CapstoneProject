@@ -76,7 +76,7 @@ sec_session_start();
 				var len;
 				
 				selectedId = $('#phage option:selected').val();
-				alert(selectedId);
+				console.log(selectedId);
 				
 				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 					xmlhttp=new XMLHttpRequest();
