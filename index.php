@@ -72,14 +72,9 @@ sec_session_start();
 			$.each($('#enzymeTableBody tr'), function () {
 				if($(this).find('td:first').text() == "Test"){
 					$(this).find('td:first').text(selectedEnzyme);
-						if($(this).find('td:first').text() == "Data"){
-							$(this).find('td:first').text(selectedEnzyme);
-								if($(this).find('td:first').text() == "Here"){
-									$(this).find('td:first').text(selectedEnzyme);
-								}
-						}
+					return false;
 				}
-				return false:
+				
 			})
 		})
 		
