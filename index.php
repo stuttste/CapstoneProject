@@ -287,37 +287,37 @@ sec_session_start();
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
-											<th>Percentage</th>
+											<td>Percentage</td>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
-											<th>Percentage</th>
+											<td>Percentage</td>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
-											<th>Percentage</th>
+											<td>Percentage</td>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
-											<th>Percentage</th>
+											<td>Percentage</td>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
-											<th>Percentage</th>
+											<td>Percentage</td>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
-											<th>Percentage</th>
+											<td>Percentage</td>
 										</tr>
 									</tbody>
 								</table>
