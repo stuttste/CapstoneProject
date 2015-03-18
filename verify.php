@@ -28,7 +28,7 @@ include_once 'includes/functions.php';
 					$sql->execute();
 					$sql->bind_result($email);
 					while($sql->fetch()){
-						echo $email;
+						echo "<p>".$email."</p>";
 					}
 				$sql->close();
 				
