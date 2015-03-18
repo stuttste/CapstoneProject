@@ -7,7 +7,10 @@ sec_session_start();
  if (login_check($mysqli) == false) {
 	header('Location: login.php');
 	die();
-}
+
+
+	
+}	
 ?>
 
 <!doctype html>
@@ -38,6 +41,20 @@ cluster=clustc.value;
 subclust=subc.value;
 enzyme=enzymec.value;
 cuts=cutc.value;
+
+$.post(Usubmit.php,{variable: phage});
+$.post(Usubmit.php,{variable: subclust});
+$.post(Usubmit.php,{variable: cluster);
+$.post(Usubmit.php,{variable: cuts});
+$.post(Usubmit.php,{variable: phage});
+$.ajax({
+   url: 'Usubmit.php',
+   success: upload() {
+    
+   }
+});
+
+
 var alertxt= "Attempting to submit to database. Your phage being submited is named:";
 alertxt=alertxt+phage;
 window.alert(alertxt);
