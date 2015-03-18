@@ -27,13 +27,18 @@ include_once 'includes/functions.php';
 				if ($sql = $mysqli->query("SELECT `Email`, `Salt`, `Active` FROM `MEMBERS` WHERE `Email`='".$email."' AND `Salt`='".$hash."' AND `Active`='0'")) {
 					//$sql->execute();
 					$row_cnt=$sql->num_rows;
-					//while($sql->fetch()){
-						printf("Result set has %d rows. \n", $row_cnt);
-					//}
-				$sql->close();
+					
+					if($row_cnt>0){
+						$sql = $mysqli->query("UPDATE `MEMBERS` SET `Active` = 1 WHERE `Email`= '".$email."' AND `Salt` = '".$hash."' AND `Active`= 0");
+						echo '<div class="statusmsg">Your account has been activated, you can now login</div><br /><a href="login.php">Return to login page</a>';
+					} else{
+						echo '<div class="statusmsg">The url is either invalid or you already have activated your account.</div>';
+					}
+					
+					$sql->close();
 				
 			}else{
-				printf("Problem with the SQL");
+				echo '<div class="statusmsg">Invalid approach, please use the link that has been sent to your email.</div>';
 			}
 			}
 		?>
