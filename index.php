@@ -52,7 +52,20 @@ sec_session_start();
 			$(this).toggleClass('active');
 		} );
 	 
-	 
+		$('#phageButton').click(function (){
+			var selectedPhage = $('#phage option:selected').val();
+			var selectedCluster = $('#cluster option:selected').val();
+			var selectedSubCluster = $('#subcluster option:selected').val();
+			$.each($('#phageTableBody tr'), function () {
+				if($(this).find('td:first').text() == "Test"){
+					$(this).find('td:first').text(selectedPhage));
+					$(this).find('td:nth-child(2)').text(selectedCluster));
+					$(this).find('td:nth-child(3)').text(selectedSubCluster));
+					return true;
+				}
+				
+			})
+		})
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
 		//} );
@@ -186,7 +199,7 @@ sec_session_start();
 										}
 										?>
 									</select>
-									<button type="button">Add Phage</button>									
+									<button type="button" id ="phageButton">Add Phage</button>									
 								</div>
 							
 								<div class="form-group">
