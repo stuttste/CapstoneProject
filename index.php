@@ -51,6 +51,7 @@ sec_session_start();
 		$('#resultsTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
 		} );
+		)};
 	 
 		/*$('#phageButton').click(function (){
 			var selectedPhage = $('#phage option:selected').val();
@@ -75,6 +76,7 @@ sec_session_start();
 				var len;
 				
 				selectedId = $('#phage option:selected').val();
+				alert(selectedId);
 				
 				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 					xmlhttp=new XMLHttpRequest();
