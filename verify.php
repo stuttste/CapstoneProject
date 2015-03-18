@@ -15,15 +15,7 @@ include_once 'includes/functions.php';
 		<script src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
-		<script type= "text/JavaScript">
-			$(document).ready(function(){
-				var flag = document.getElementById("myValue");
-				alert(flag);
-				if(flag){
-					setInterval(function(){window.location.href = "http://g3cap.tk/staging/login.php"}, 5000);
-				}
-			});
-		</script>
+		
     </head>
     <body>
 		<?php
@@ -57,6 +49,15 @@ include_once 'includes/functions.php';
 			}
 			}
 		?>
+		<script type= "text/JavaScript">
+			$(document).ready(function(){
+				var flag = document.getElementById("myValue");
+				alert(flag);
+				if(flag){
+					setInterval(function(){window.location.href = "http://g3cap.tk/staging/login.php"}, 5000);
+				}
+			});
+		</script>
     </body>
 </html>
 
