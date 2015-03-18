@@ -171,7 +171,7 @@ sec_session_start();
 							<button type="button">Reset</button>						
 							<br />
 						<div class="row">
-							<div class="col-md-12">
+							<div class="col-md-6">
 							<form class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
