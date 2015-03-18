@@ -8,21 +8,7 @@ sec_session_start();
 	header('Location: login.php');
 	die();
 
-	
-function upload()	
-{}
-$phage = $_POST['phage'];
-$cluster= $_POST['cluster'];
-$subcluster= $_POST['subclust'];
-$cut= $POST['cuts'];	
-$enzyme = $POST['enzyme'];
-	
-$sql =	 "INSERT INTO SUBMISSIONS ($phage,$cluster,$subcluster,$cut,$enzyme,$username)
-"
-if (mysqli_query($mysqli, $sql)) {
-    echo "New record created successfully";	
-	
-	}
+
 	
 }	
 ?>
@@ -56,12 +42,17 @@ subclust=subc.value;
 enzyme=enzymec.value;
 cuts=cutc.value;
 
-$.post({variable: phage});
-$.post({variable: subclust});
-$.post({variable: cluster);
-$.post({variable: cuts});
-$.post({variable: phage});
-
+$.post(Usubmit.php,{variable: phage});
+$.post(Usubmit.php,{variable: subclust});
+$.post(Usubmit.php,{variable: cluster);
+$.post(Usubmit.php,{variable: cuts});
+$.post(Usubmit.php,{variable: phage});
+$.ajax({
+   url: 'Usubmit.php',
+   success: upload() {
+    
+   }
+});
 
 
 var alertxt= "Attempting to submit to database. Your phage being submited is named:";
