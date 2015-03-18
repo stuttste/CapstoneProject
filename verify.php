@@ -35,6 +35,7 @@ include_once 'includes/functions.php';
 			}else{
 				printf("Problem with the SQL");
 			}
+			}
 		?>
     </body>
 </html>
