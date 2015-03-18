@@ -52,7 +52,7 @@ sec_session_start();
 			$(this).toggleClass('active');
 		} );
 	 
-		$('#phageButton').click(function (){
+		/*$('#phageButton').click(function (){
 			var selectedPhage = $('#phage option:selected').val();
 			var selectedCluster = $('#cluster option:selected').val();
 			var selectedSubCluster = $('#subcluster option:selected').val();
@@ -65,6 +65,35 @@ sec_session_start();
 				}
 				
 			})
+		})*/
+		
+		$('#phageButton').click(function (){
+				var type;
+				var id;
+				var xmlhttp;
+				var len;
+				
+				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp=new XMLHttpRequest();
+				}else{// code for IE6, IE5
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				
+				for(var i = 0, len=document.getElementById("phage").options.length; i < len; i++){
+					
+					
+					id = document.getElementById("phage").options[i];
+					
+					xmlhttp.onreadystatechange=function(){
+						if (xmlhttp.readyState==4 && xmlhttp.status==200){
+							if(id.selected){
+								document.getElementById("phageTableBody").innerHTML=xmlhttp.responseText;
+							}
+						}
+					}
+					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+id.value,true);
+					xmlhttp.send();
+				}
 		})
 		
 		$('#enzymeButton').click(function (){
@@ -132,36 +161,7 @@ sec_session_start();
 										<th>Subcluster</th>
 									</thead>
 									<tbody id="phageTableBody">
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-										</tr>
+										<!-- Data gets plugged in here-->
 									</tbody>
 								</table>
 							</table>
@@ -177,15 +177,7 @@ sec_session_start();
 										<th>Enzyme</th>
 									</thead>
 									<tbody id="enzymeTableBody">
-										<tr>
-											<td>Test</td>
-										</tr>
-										<tr>
-											<td>Data</td>
-										</tr>
-										<tr>
-											<td>Here</td>
-										</tr>
+										<!-- Data gets plugged in here-->
 									</tbody>
 									
 								</table>
