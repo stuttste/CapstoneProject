@@ -52,7 +52,7 @@ sec_session_start();
 			$(this).toggleClass('active');
 		} );
 	 
-		$('#phageButton).click(function (){
+		$('#phageButton').click(function (){
 			$.each($('#phageTableBody tr'), function () {
 				this.find('td:first').text('Testing value change');
 			})
