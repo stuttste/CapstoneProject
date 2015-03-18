@@ -61,7 +61,7 @@ sec_session_start();
 					$(this).find('td:first').text(selectedPhage);
 					$(this).find('td:nth-child(2)').text(selectedCluster);
 					$(this).find('td:nth-child(3)').text(selectedSubCluster);
-					return true;
+					return false;
 				}
 				
 			})
