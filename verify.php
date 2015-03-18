@@ -12,7 +12,14 @@ include_once 'includes/functions.php';
 		<link rel="stylesheet" href="css/global.css">
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
-		
+		<script type= "text/JavaScript">
+			$(document).ready(function(){
+				var flag = $('value').get('text');
+				if($flag){
+					setInterval(function(){window.location.href = "http://g3cap.tk/staging/login.php"}, 5000);
+				}
+			});
+		</script>
     </head>
     <body>
 		<?php
@@ -20,6 +27,7 @@ include_once 'includes/functions.php';
 				// Verify data
 				$email = mysql_escape_string($_GET['email']); // Set email variable
 				$hash = mysql_escape_string($_GET['hash']); // Set hash variable
+				$flag = false;
 				
 				//$search = mysql_query("SELECT email, hash, active FROM MEMBERS WHERE email='".$email."' AND hash='".$hash."' AND active='0'") or die(mysql_error()); 
 				//$match  = mysql_num_rows($search);
@@ -30,16 +38,22 @@ include_once 'includes/functions.php';
 					
 					if($row_cnt>0){
 						$sql = $mysqli->query("UPDATE `MEMBERS` SET `Active` = 1 WHERE `Email`= '".$email."' AND `Salt` = '".$hash."' AND `Active`= 0");
-						echo '<div class="statusmsg">Your account has been activated, you can now login</div><br /><a href="login.php">Return to login page</a>';
+						echo '<div class="container"><h1>Your account has been activated, you can now login</h1></div><br /><a href="login.php">Return to login page</a>';
+						$flag = true;
 					} else{
-						echo '<div class="statusmsg">The url is either invalid or you already have activated your account.</div>';
+						echo '<div class="container"><h1>The url is either invalid or you already have activated your account.</h1></div><br /><a href="login.php">Return to login page</a>';
 					}
 					
 					$sql->close();
+					
+					
 				
 			}else{
-				echo '<div class="statusmsg">Invalid approach, please use the link that has been sent to your email.</div>';
+				echo '<div class="container"><h1>Invalid approach, please use the link that has been sent to your email.</h1></div><br /><a href="login.php">Return to login page</a>';
 			}
+			
+			
+				echo '<p id="value" style="visibility: hidden;">'.$flag.'</p>';
 			}
 		?>
     </body>

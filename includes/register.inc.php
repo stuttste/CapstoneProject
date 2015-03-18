@@ -99,7 +99,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
 				------------------------------
 				
 				Activation link:
-				http://g3cap.tk/verify.php?email='.$email.'&hash='.$random_salt.'
+				http://g3cap.tk/staging/verify.php?email='.$email.'&hash='.$random_salt.'
 				';
 				
 				$headers = 'From:stuttste@gmail.com'."\r\n";
