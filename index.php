@@ -75,8 +75,8 @@ sec_session_start();
 				var xmlhttp;
 				var len;
 				
-				selectedId = document.getElementById("phage").options.value;
-				console.log(selectedId);
+				selectedId = $('#phage option:selected').val();
+				alert(selectedId);
 				
 				
 		});
