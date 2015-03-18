@@ -53,9 +53,9 @@ sec_session_start();
 		} );
 	 
 		$('#phageButton').click(function (){
-			var selectedPhage = $('#phage option:selected).val();
-			var selectedCluster = $('#cluster option:selected).val();
-			var selectedSubCluster = $('#subcluster option:selected).val();
+			var selectedPhage = $('#phage option:selected').val();
+			var selectedCluster = $('#cluster option:selected').val();
+			var selectedSubCluster = $('#subcluster option:selected').val();
 			$.each($('#phageTableBody tr'), function () {
 				if($(this).find(td:first).text() == ""){
 					$(this).find('td:first').text(selectedPhage));
