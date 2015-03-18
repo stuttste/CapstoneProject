@@ -12,19 +12,27 @@ include_once 'includes/functions.php';
 		<link rel="stylesheet" href="css/global.css">
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
-		<script type="text/JavaScript">
+		<?php
 			if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
 				// Verify data
 				$email = mysql_escape_string($_GET['email']); // Set email variable
 				$hash = mysql_escape_string($_GET['hash']); // Set hash variable
 				
-				$search = mysql_query("SELECT email, hash, active FROM MEMBERS WHERE email='".$email."' AND hash='".$hash."' AND active='0'") or die(mysql_error()); 
-				$match  = mysql_num_rows($search);
-				alert($match);
+				//$search = mysql_query("SELECT email, hash, active FROM MEMBERS WHERE email='".$email."' AND hash='".$hash."' AND active='0'") or die(mysql_error()); 
+				//$match  = mysql_num_rows($search);
+				
+				if ($sql = $mysqli->prepare("SELECT `email`, `hash`, `active` FROM `MEMBERS` WHERE `email`='".$email."' AND `hash`='".$hash."' AND `active`='0'")) {
+					$sql->execute();
+					$sql->bind_result($name);
+					while($sql->fetch()){
+						echo $name;
+					}
+				$sql->close();
+				
 			}else{
 				// Invalid approach
 			}
-		</script>
+		?>
     </head>
     <body>
 	
