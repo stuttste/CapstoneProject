@@ -23,9 +23,9 @@ include_once 'includes/functions.php';
 				
 				if ($sql = $mysqli->prepare("SELECT `email`, `hash`, `active` FROM `MEMBERS` WHERE `email`='".$email."' AND `hash`='".$hash."' AND `active`='0'")) {
 					$sql->execute();
-					$sql->bind_result($name);
+					$sql->bind_result($email);
 					while($sql->fetch()){
-						echo $name;
+						echo $email;
 					}
 				$sql->close();
 				
