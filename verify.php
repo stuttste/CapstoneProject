@@ -12,6 +12,9 @@ include_once 'includes/functions.php';
 		<link rel="stylesheet" href="css/global.css">
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
+		
+    </head>
+    <body>
 		<?php
 			if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
 				// Verify data
@@ -33,9 +36,6 @@ include_once 'includes/functions.php';
 				// Invalid approach
 			}
 		?>
-    </head>
-    <body>
-	
     </body>
 </html>
 
