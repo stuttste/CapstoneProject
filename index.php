@@ -53,7 +53,7 @@ sec_session_start();
 		} );
 		)};
 	 
-		/*$('#phageButton').click(function (){
+		/*$('#phageButton1').click(function (){
 			var selectedPhage = $('#phage option:selected').val();
 			var selectedCluster = $('#cluster option:selected').val();
 			var selectedSubCluster = $('#subcluster option:selected').val();
