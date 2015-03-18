@@ -18,9 +18,17 @@ include_once 'includes/functions.php';
 				$email = mysql_escape_string($_GET['email']); // Set email variable
 				$hash = mysql_escape_string($_GET['hash']); // Set hash variable
 				
-				$search = mysql_query("SELECT email, hash, active FROM MEMBERS WHERE email='".$email."' AND hash='".$hash."' AND active='0'") or die(mysql_error()); 
-				$match  = mysql_num_rows($search);
-				alert($match);
+				//$search = mysql_query("SELECT email, hash, active FROM MEMBERS WHERE email='".$email."' AND hash='".$hash."' AND active='0'") or die(mysql_error()); 
+				//$match  = mysql_num_rows($search);
+				
+				if ($sql = $mysqli->prepare("SELECT `email`, `hash`, `active` FROM `MEMBERS` WHERE `email`='".$email."' AND `hash`='".$hash."' AND `active`='0'")) {
+					$sql->execute();
+					$sql->bind_result($name);
+					while($sql->fetch()){
+						alert(mysqli_num_rows($mysqli));
+					}
+				$sql->close();
+				
 			}else{
 				// Invalid approach
 			}
