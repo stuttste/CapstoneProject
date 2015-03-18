@@ -170,8 +170,8 @@ sec_session_start();
 			                <button type="button">Clear</button>
 							<button type="button">Reset</button>						
 							<br />
-						<div class="row">
-							<div class="col-md-6">
+						
+							<div class="col-md-4">
 							<form class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
@@ -246,7 +246,7 @@ sec_session_start();
 								</div>
 							</form>
 							</div>
-							</div>
+						
 					</div>
 				
 					<div id="results" class="tab-pane">
