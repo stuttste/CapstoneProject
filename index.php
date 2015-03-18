@@ -75,9 +75,9 @@ sec_session_start();
 				var xmlhttp;
 				var len;
 				
-				selectedId = $('#phage option:selected').val();
+				//selectedId = $('#phage option:selected').val();
 				console.log(selectedId);
-				
+				/*
 				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 					xmlhttp=new XMLHttpRequest();
 				}else{// code for IE6, IE5
@@ -99,7 +99,7 @@ sec_session_start();
 					}
 					alert("After If: " + selectedId);
 					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+selectedId,true);
-					xmlhttp.send();
+					xmlhttp.send();*/
 				//}
 		});
 		
