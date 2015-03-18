@@ -90,7 +90,7 @@ sec_session_start();
 					xmlhttp.onreadystatechange=function(){
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
-								//alert(id.value);
+								alert(selectedId);
 								document.getElementById("phageTableBody").innerHTML=xmlhttp.responseText;
 							//}
 						}
