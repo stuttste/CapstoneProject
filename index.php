@@ -33,7 +33,9 @@ sec_session_start();
 		$(document).ready(function() {
 		var table = $('#phageTable').DataTable();
 		var etable = $('#enzymeTable').DataTable();
-	 
+		var btable = $('#bestResultTable').DataTable();
+		var rtable = $('#resultsTable').DataTable();
+		
 		$('#phageTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
 		} );
@@ -41,6 +43,15 @@ sec_session_start();
 		$('#enzymeTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
 		} );
+		
+		$('#bestResultTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('active');
+		} );
+		
+		$('#resultsTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('active');
+		} );
+	 
 	 
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
@@ -129,10 +140,10 @@ sec_session_start();
 									</tbody>
 								</table>
 							</table>
-										                <button type="button">Clear</button>
-                <button type="button">Reset</button>
-<br />
-</div>
+									    <button type="button">Clear</button>
+										<button type="button">Reset</button>
+										<br />
+							</div>
 			
 							<div class="col-md-6">
 							<table class="table-responsive">
@@ -157,12 +168,12 @@ sec_session_start();
 							</div>
 						</div>
 			                <button type="button">Clear</button>
-                <button type="button">Reset</button>						
-<br />
+							<button type="button">Reset</button>						
+							<br />
 						<div class="row">
 							<div class="col-md-12">
 							<form class="inline-block">
-									<div class="form-group">
+								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<input type="text" class="form-control" placeholder = "Select Phage">
 									<select multiple class="form-control" id="phage" rows="10">
@@ -177,8 +188,8 @@ sec_session_start();
 										}
 										?>
 									</select>
-<button type="button">Add Phage</button>									
-</div>
+									<button type="button">Add Phage</button>									
+								</div>
 							
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
@@ -195,8 +206,8 @@ sec_session_start();
 										}
 										?>
 									</select>
-<button type="button">Add Cluster</button>									
-</div>
+									<button type="button">Add Cluster</button>									
+								</div>
 							
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
@@ -213,8 +224,8 @@ sec_session_start();
 										}
 										?>
 									</select>
-<button type="button">Add Subcluster</button>									
-</div>
+									<button type="button">Add Subcluster</button>									
+								</div>
 							
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
@@ -231,8 +242,8 @@ sec_session_start();
 												}
 											?>
 										</select>
-<button type="button">Add Enzyme</button>	 									
-</div>
+										<button type="button">Add Enzyme</button>	 									
+								</div>
 							</form>
 							</div>
 							</div>
@@ -240,102 +251,72 @@ sec_session_start();
 				
 					<div id="results" class="tab-pane">
 						<h3>Results</h3>
-							<div class="resulttoptable">
-								<table class="table table-bordered">
+							<div class="row">
+							<div class="col-md-6">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="bestResultTable">
 									<thead>
-										<tr>
-											<th>Phage</th>
-											<th>Cluster</th>
-											<th>Subcluster</th>
-											<th>Percentage</th>
-										</tr>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>Subcluster</th>
+										<th>Percentage</th>
 									</thead>
-									<tbody>
+									<tbody id="phageTableBody">
 										<tr>
-											<td>Top Phage</td>
-											<td>Top Phage Cluster</td>
-											<td>Top Phage Subcluster</td>
-											<td>Top Phage Percent</td>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+											<td>!</td>
 										</tr>
 									</tbody>
-								</table>
-							</div>
 							<div>
 							<h3>Table results in words</h3>
 							</div>
-							<div class="resultstable">
-								<table class="table table-bordered">  
-									<thead>  
-										<tr>  
-											<th>Phage</th>  
-											<th>Cluster</th>  
-											<th>Subcluster</th>  
-											<th>Percentage</th>  
-										</tr>  
-									</thead>  
-									<tbody>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-          								<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										<tr>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-											<td></td>  
-										</tr>  
-										</tbody>  
-								</table>  
+							<div class="row">
+							<div class="col-md-6">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="resultsTable">
+									<thead>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>Subcluster</th>
+									</thead>
+									<tbody id="phageTableBody">
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+										<tr>
+											<td>Test</td>
+											<td>Data</td>
+											<td>Here</td>
+										</tr>
+									</tbody>
+								</table>
+							</table>
+									   	<button type="button">Return</button>
+										<br />
 							</div>
 					</div>
 				</div>
