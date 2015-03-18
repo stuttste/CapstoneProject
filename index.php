@@ -95,6 +95,7 @@ sec_session_start();
 							//}
 						}
 					}
+					alert("After If: " + selectedId);
 					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+selectedId,true);
 					xmlhttp.send();
 				//}
