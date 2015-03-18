@@ -17,7 +17,7 @@ include_once 'includes/functions.php';
         <script type="text/JavaScript" src="js/forms.js"></script> 
 		<script type= "text/JavaScript">
 			$(document).ready(function(){
-				var flag = $('value').get('text');
+				var flag = $('myValue').get('text');
 				alert(flag);
 				if(flag){
 					setInterval(function(){window.location.href = "http://g3cap.tk/staging/login.php"}, 5000);
@@ -42,10 +42,10 @@ include_once 'includes/functions.php';
 					
 					if($row_cnt>0){
 						$sql = $mysqli->query("UPDATE `MEMBERS` SET `Active` = 1 WHERE `Email`= '".$email."' AND `Salt` = '".$hash."' AND `Active`= 0");
-						echo '<div class="state"><h1>Your account has been activated, you can now login</h1></div><br /><a href="login.php">Return to login page</a><p id="value" style="visibility: hidden;">'.$flag.'</p>';
+						echo '<div class="state"><h1>Your account has been activated, you can now login</h1></div><br /><a href="login.php">Return to login page</a><p id="myValue" style="visibility: hidden;">'.$flag.'</p>';
 						$flag = true;
 					} else{
-						echo '<div class="state"><h1>The url is either invalid or you already have activated your account.</h1></div><br /><a href="login.php">Return to login page</a><p id="value" style="visibility: hidden;">'.$flag.'</p>';
+						echo '<div class="state"><h1>The url is either invalid or you already have activated your account.</h1></div><br /><a href="login.php">Return to login page</a><p id="myValue" style="visibility: hidden;">'.$flag.'</p>';
 					}
 					
 					$sql->close();
@@ -53,7 +53,7 @@ include_once 'includes/functions.php';
 					
 				
 			}else{
-				echo '<div class="state"><h1>Invalid approach, please use the link that has been sent to your email.</h1></div><br /><a href="login.php">Return to login page</a><p id="value" style="visibility: hidden;">'.$flag.'</p>';
+				echo '<div class="state"><h1>Invalid approach, please use the link that has been sent to your email.</h1></div><br /><a href="login.php">Return to login page</a><p id="myValue" style="visibility: hidden;">'.$flag.'</p>';
 			}
 			}
 		?>
