@@ -48,7 +48,7 @@ include_once 'includes/functions.php';
 			}else{
 				echo '<div class="state">Invalid approach, please use the link that has been sent to your email.</div><br /> <a href="login.php">Return to login page</a>';
 			}
-			
+			}
 			//<div id="myValue" style="visibility: hidden;">'.$flag.'</div>
 		?>
 		<script type= "text/JavaScript">
