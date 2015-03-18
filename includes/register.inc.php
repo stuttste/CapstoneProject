@@ -75,7 +75,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
         // Create a random salt
         //$random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE)); // Did not work
         $random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
- 
+		
+		$normPass = $password;
         // Create salted password 
         $password = hash('sha512', $password . $random_salt);
  
@@ -85,8 +86,26 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
-            }
-        }
+            } else{
+				$to			= $email;
+				$subject 	= 'PET Account Verification';
+				$message	= '
+				Thanks for creating an account!
+				Before you can login, please follow the link below to activate your account.
+				
+				------------------------------
+				Email: '.$email.'
+				Password: '.$normPass.'
+				------------------------------
+				
+				Activation link:
+				http://g3cap.tk/verify.php?email='.$email.'&hash='.$random_salt.'
+				';
+				
+				$headers = 'From:stuttste@gmail.com'."\r\n";
+				mail($to, $subject, $message, $headers);
+			
+			}
         header('Location: ./register_success.php');
     }
 }
