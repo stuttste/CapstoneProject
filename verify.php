@@ -24,7 +24,7 @@ include_once 'includes/functions.php';
 				//$search = mysql_query("SELECT email, hash, active FROM MEMBERS WHERE email='".$email."' AND hash='".$hash."' AND active='0'") or die(mysql_error()); 
 				//$match  = mysql_num_rows($search);
 				
-				if ($sql = $mysqli->prepare("SELECT `Email`, `Hash`, `Active` FROM `MEMBERS` WHERE `Email`='".$email."' AND `Hash`='".$hash."' AND `Active`='0'")) {
+				if ($sql = $mysqli->prepare("SELECT `Email`, `Hash`, `Active` FROM `MEMBERS` WHERE `Email`='".$email."' AND `Salt`='".$hash."' AND `Active`='0'")) {
 					$sql->execute();
 					$row_cnt=$sql->num_rows;
 					while($sql->fetch()){
