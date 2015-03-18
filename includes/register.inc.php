@@ -86,7 +86,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
-            } else{
+            } /*else{
 				$to			= $email;
 				$subject 	= 'PET Account Verification';
 				$message	= '
@@ -105,7 +105,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
 				$headers = 'From:stuttste@gmail.com'."\r\n";
 				mail($to, $subject, $message, $headers);
 			
-			}
+			}*/
         header('Location: ./register_success.php');
     }
 }
