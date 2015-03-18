@@ -25,7 +25,7 @@ include_once 'includes/functions.php';
 					$sql->execute();
 					$sql->bind_result($name);
 					while($sql->fetch()){
-						alert(mysqli_num_rows($mysqli));
+						echo $name;
 					}
 				$sql->close();
 				
