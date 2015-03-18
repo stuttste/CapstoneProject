@@ -26,14 +26,14 @@ include_once 'includes/functions.php';
 				
 				if ($sql = $mysqli->prepare("SELECT `Email`, `Hash`, `Active` FROM `MEMBERS` WHERE `Email`='".$email."' AND `Hash`='".$hash."' AND `Active`='0'")) {
 					$sql->execute();
-					$sql->bind_result($email);
+					$row_cnt=$sql->num_rows;
 					while($sql->fetch()){
-						echo "<p>".$email."</p>";
+						printf("Result set has %d rows. \n", $row_cnt);
 					}
 				$sql->close();
 				
 			}else{
-				// Invalid approach
+				printf("Problem with the SQL");
 			}
 		?>
     </body>
