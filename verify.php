@@ -34,12 +34,12 @@ include_once 'includes/functions.php';
 					
 					if($row_cnt>0){
 						$sql = $mysqli->query("UPDATE `MEMBERS` SET `Active` = 1 WHERE `Email`= '".$email."' AND `Salt` = '".$hash."' AND `Active`= 0");
-						print '<div class="state"><h1>Your account has been activated, you can now login</h1></div><br />';
+						print '<div class="state">Your account has been activated, you can now login</div><br />';
 						print '<a href="login.php">Return to login page</a>';
 						//print '<div id="myValue" style="visibility: hidden;">'.$flag.'</div>';
 						$flag = true;
 					} else{
-						print '<div class="state"><h1>The url is either invalid or you already have activated your account.</h1></div><br />';
+						print '<div class="state">The url is either invalid or you already have activated your account.</div><br />';
 						print '<a href="login.php">Return to login page</a>';
 					};
 					
@@ -48,7 +48,7 @@ include_once 'includes/functions.php';
 					
 				
 			}else{
-				print '<div class="state"><h1>Invalid approach, please use the link that has been sent to your email.</h1></div><br />';
+				print '<div class="state">Invalid approach, please use the link that has been sent to your email.</div><br />';
 				print '<a href="login.php">Return to login page</a>';
 			};
 			
