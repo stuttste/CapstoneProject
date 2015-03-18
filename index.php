@@ -52,7 +52,11 @@ sec_session_start();
 			$(this).toggleClass('active');
 		} );
 	 
-	 
+		$('#phageButton).click(function (){
+			$.each($('#phageTableBody tr'), function () {
+				this.find('td:first').text('Testing value change');
+			})
+		})
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
 		//} );
@@ -186,7 +190,7 @@ sec_session_start();
 										}
 										?>
 									</select>
-									<button type="button">Add Phage</button>									
+									<button type="button" id ="phageButton">Add Phage</button>									
 								</div>
 							
 								<div class="form-group">
