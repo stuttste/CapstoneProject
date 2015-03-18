@@ -1,6 +1,12 @@
 ?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';	
+sec_session_start();
+
+ if (login_check($mysqli) == false) {
+	header('Location: login.php');
+	die();
+
 function upload()	
 {
 $phage = $_POST['phage'];
@@ -11,8 +17,8 @@ $enzyme = $POST['enzyme'];
 	
 $sql =	 "INSERT INTO SUBMISSIONS ($phage,$cluster,$subcluster,$cut,$enzyme,$username)
 "
-if (mysqli_query($mysqli, $sql)) {
-    echo "New record created successfully";		
+mysqli_query($mysqli, $sql)
+	
 }
 
 upload()
