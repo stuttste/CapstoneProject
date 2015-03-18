@@ -12,7 +12,7 @@ include_once 'includes/functions.php';
 		<link rel="stylesheet" href="css/global.css">
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
-		<script type="text/JavaScript">
+		<?php
 			if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
 				// Verify data
 				$email = mysql_escape_string($_GET['email']); // Set email variable
@@ -24,7 +24,7 @@ include_once 'includes/functions.php';
 			}else{
 				// Invalid approach
 			}
-		</script>
+		?>
     </head>
     <body>
 	
