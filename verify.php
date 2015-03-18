@@ -17,7 +17,7 @@ include_once 'includes/functions.php';
         <script type="text/JavaScript" src="js/forms.js"></script> 
 		<script type= "text/JavaScript">
 			$(document).ready(function(){
-				var flag = $('myValue').get('text');
+				var flag = document.getElementById("myValue");
 				alert(flag);
 				if(flag){
 					setInterval(function(){window.location.href = "http://g3cap.tk/staging/login.php"}, 5000);
