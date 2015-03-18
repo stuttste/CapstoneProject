@@ -66,6 +66,18 @@ sec_session_start();
 				
 			})
 		})
+		
+		$('#enzymeButton').click(function (){
+			var selectedEnzyme = $('#enzselection option:selected').val();
+			$.each($('#enzymeTableBody tr'), function () {
+				if($(this).find('td:first').text() == "Test"){
+					$(this).find('td:first').text(selectedEnzyme);
+					return false;
+				}
+				
+			})
+		})
+		enzselection
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
 		//} );
@@ -164,7 +176,7 @@ sec_session_start();
 									<thead>
 										<th>Enzyme</th>
 									</thead>
-									<tbody id="phageTableBody">
+									<tbody id="enzymeTableBody">
 										<tr>
 											<td>Test</td>
 										</tr>
@@ -253,7 +265,7 @@ sec_session_start();
 												}
 											?>
 										</select>
-										<button type="button">Add Enzyme</button>	 									
+										<button type="button" id="enzymeButton">Add Enzyme</button>	 									
 								</div>
 							</form>
 							</div>
