@@ -18,6 +18,7 @@ include_once 'includes/functions.php';
 		<script type= "text/JavaScript">
 			$(document).ready(function(){
 				var flag = $('value').get('text');
+				alert(flag);
 				if(flag){
 					setInterval(function(){window.location.href = "http://g3cap.tk/staging/login.php"}, 5000);
 				}
