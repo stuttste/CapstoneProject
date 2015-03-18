@@ -51,7 +51,7 @@ sec_session_start();
 		$('#resultsTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
 		} );
-		)};
+		});
 	 
 		/*$('#phageButton1').click(function (){
 			var selectedPhage = $('#phage option:selected').val();
