@@ -252,7 +252,7 @@ sec_session_start();
 					<div id="results" class="tab-pane">
 						<h3>Results</h3>
 							<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-12">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="bestResultTable">
 									<thead>
@@ -273,44 +273,51 @@ sec_session_start();
 							<h3>Table results in words</h3>
 							</div>
 							<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-12">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="resultsTable">
 									<thead>
 										<th>Phage</th>
 										<th>Cluster</th>
 										<th>Subcluster</th>
+										<th>Percentage</th>
 									</thead>
 									<tbody id="phageTableBody">
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
+											<th>Percentage</th>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
+											<th>Percentage</th>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
+											<th>Percentage</th>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
+											<th>Percentage</th>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
+											<th>Percentage</th>
 										</tr>
 										<tr>
 											<td>Test</td>
 											<td>Data</td>
 											<td>Here</td>
+											<th>Percentage</th>
 										</tr>
 									</tbody>
 								</table>
