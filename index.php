@@ -76,9 +76,10 @@ sec_session_start();
 				var len;
 				
 				selectedId = document.getElementById("phage").options.value
-				//$('#phage option:selected').val();
 				console.log(selectedId);
+				
 				/*
+				$('#phage option:selected').val();
 				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 					xmlhttp=new XMLHttpRequest();
 				}else{// code for IE6, IE5
@@ -100,8 +101,8 @@ sec_session_start();
 					}
 					alert("After If: " + selectedId);
 					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+selectedId,true);
-					xmlhttp.send();*/
-				//}
+					xmlhttp.send();
+				}*/
 		});
 		
 		$('#enzymeButton').click(function (){
