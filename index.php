@@ -68,7 +68,7 @@ sec_session_start();
 			})
 		})*/
 		
-		$('#phageButton').click(function (){
+		/*$('#phageButton').click(function (){
 				var type;
 				var id;
 				var selectedId;
@@ -79,7 +79,7 @@ sec_session_start();
 				alert(selectedId);
 				
 				
-		});
+		});*/
 		
 		/*$('#enzymeButton').click(function (){
 			var selectedEnzyme = $('#enzselection option:selected').val();
