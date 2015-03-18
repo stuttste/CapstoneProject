@@ -51,7 +51,6 @@ include_once 'includes/functions.php';
 				print '<div class="state"><h1>Invalid approach, please use the link that has been sent to your email.</h1></div><br />';
 				print '<a href="login.php">Return to login page</a><div id="myValue" style="visibility: hidden;">'.$flag.'</div>';
 			}
-			}
 		?>
 		<script type= "text/JavaScript">
 			$(document).ready(function(){
