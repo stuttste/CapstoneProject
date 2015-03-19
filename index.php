@@ -91,12 +91,10 @@ sec_session_start();
 					xmlhttp.onreadystatechange=function(){
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
-								alert(selectedId);
-								document.getElementById("phageTableBody").append(xmlhttp.responseText);
+								document.getElementById("phageTableBody").innerHTML.appendChild(xmlhttp.responseText);
 							//}
 						}
 					}
-					alert("After If: " + selectedId);
 					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+selectedId,true);
 					xmlhttp.send();
 				
