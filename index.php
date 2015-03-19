@@ -92,7 +92,7 @@ sec_session_start();
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
 								$(".odd").remove();
-								$("#phageTableBody").append(xmlhttp.responseText);
+								$("#phageTable").DataTable().row.add(xmlhttp.responseText).draw();
 							//}
 						}
 					}
