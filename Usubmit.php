@@ -18,11 +18,11 @@ if( isset($_POST['submit']) )
 	$subcluster = htmlentities($_POST['subc']);
 	$enzyme= htmlentities($_POST['enzymec']);
 	$cuts = htmlentities($_POST['cutc']);
- $username= 'test';
-$sql =	 "INSERT INTO SUBMISSIONS (INSERT INTO `MainDB`.`SUBMISSIONS` (`Name`, `Cluster`, `Subcluster`, `Enzyme`, `Cuts`, `Email`) VALUES ('$phage','$cluster','$subcluster','$enzyme','$cut','$username'));
+    $username= 'test';
+    $sql =	 "INSERT INTO SUBMISSIONS (INSERT INTO `MainDB`.`SUBMISSIONS` (`Name`, `Cluster`, `Subcluster`, `Enzyme`, `Cuts`, `Email`) VALUES ('$phage','$cluster','$subcluster','$enzyme','$cut','$username'));
 
 mysqli_query($mysqli, $sql);
-echo "your request is pending";
+echo 'your request is pending';
 }
 
 
