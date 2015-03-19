@@ -116,42 +116,7 @@ sec_session_start();
 			})
 		});*/
 
-		$('#enzymeButton').click(function (){
-				var type;
-				var id;
-				var selectedId;
-				var xmlhttp;
-				var len;
-				
-				selectedId = $('#enzselection option:selected').val();
-				
-				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-					xmlhttp=new XMLHttpRequest();
-				}else{// code for IE6, IE5
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				
-				//for(var i = 0, len=document.getElementById("phage").options.length; i < len; i++){
-					
-					
-					//id = document.getElementById("phage").options[i];
-					
-					xmlhttp.onreadystatechange=function(){
-						if (xmlhttp.readyState==4 && xmlhttp.status==200){
-							//if(id.selected){
-								var compStr = xmlhttp.responseText;
-								
-								$(".odd").remove();
-								$("#enzymeTable").DataTable().row.add(partStr).draw();
-							//}
-						}
-					}
-					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Enzyme&id="+selectedId,true);
-					xmlhttp.send();
-				
-				
-				
-		});
+		
 		
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
