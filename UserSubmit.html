@@ -47,12 +47,7 @@ $.post(Usubmit.php,{variable: subclust});
 $.post(Usubmit.php,{variable: cluster);
 $.post(Usubmit.php,{variable: cuts});
 $.post(Usubmit.php,{variable: phage});
-$.ajax({
-   url: 'Usubmit.php',
-   success: upload() {
-    
-   }
-});
+
 
 
 var alertxt= "Attempting to submit to database. Your phage being submited is named:";
@@ -88,7 +83,7 @@ function sendInfo(pha,clu,sub,enz,cut,use)
 					<p>This page allows one to request the addition of new phages or enzymes to the system. All submissions will be reviewed by an admin and you will be notified of the result of the review. After inputting the information, click submit below.</p>
 				</div>
 			</div>
-			
+			<form action="Usubmit.php" method="post">
 			<div class="form-inline">
 				<label for="phageselection">Phage:</label>
 				<input type="text" id= "phagec" class="form-control" placeholder = "Enter Phage">
@@ -111,7 +106,8 @@ function sendInfo(pha,clu,sub,enz,cut,use)
 				<input type="text" class="form-control" placeholder = "Enter Enzyme Enzyme">
 				<textarea class="form-control" id="enzymec" rows="10"></textarea>
 			</div>
-			 <button type="button" onclick='compileInfo()' id="submit">Submit!</button> 
+			 <button type="button" onclick ="" id="submit">Submit!</button> 
+			</form>
 			<div class="progresstable">
 				<h3>Submission Status</h3>
 				
