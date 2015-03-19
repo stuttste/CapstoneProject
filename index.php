@@ -91,7 +91,7 @@ sec_session_start();
 					xmlhttp.onreadystatechange=function(){
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
-								$("#odd").remove();
+								$(".odd").remove();
 								$("#phageTableBody").append(xmlhttp.responseText);
 							//}
 						}
