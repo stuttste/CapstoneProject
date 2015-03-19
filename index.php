@@ -93,7 +93,7 @@ sec_session_start();
 							//if(id.selected){
 								var tbl = document.createElement("tr");
 								alert(selectedId);
-								$('#phageTableBody').last().after(xmlhttp.responseText);
+								$('#phageTableBody').last(xmlhttp.responseText);
 							//}
 						}
 					}
