@@ -2,25 +2,32 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';	
 sec_session_start();
-
- if (login_check($mysqli) == false) {
-	header('Location: login.php');
-	die();
-
-function upload()	
+if( isset($_POST['submit']) )
 {
-$phage = $_POST['phage'];
-$cluster= $_POST['cluster'];
-$subcluster= $_POST['subclust'];
-$cut= $POST['cuts'];	
-$enzyme = $POST['enzyme'];
-$username= 'test';
-$sql =	 "INSERT INTO SUBMISSIONS (INSERT INTO `MainDB`.`SUBMISSIONS` (`Name`, `Cluster`, `Subcluster`, `Enzyme`, `Cuts`, `Email`) VALUES ('$phage','$cluster','$subcluster','$cut','$enzyme','$username'');
-"
+    
+    $phage = htmlentities($_POST['phagec']);
+	$cluster = htmlentities($_POST['clustc']);
+	$subcluster = htmlentities($_POST['subc']);
+	$enzyme= htmlentities($_POST['enzymec']);
+	$cuts = htmlentities($_POST['cutc']);
+ $username= 'test';
+$sql =	 "INSERT INTO SUBMISSIONS (INSERT INTO `MainDB`.`SUBMISSIONS` (`Name`, `Cluster`, `Subcluster`, `Enzyme`, `Cuts`, `Email`) VALUES ('$phage','$cluster','$subcluster','$enzyme','$cut','$username'');
+
 mysqli_query($mysqli, $sql)
+echo "your request is pending";
+}
+
+
+
+;
+
+function upload($a,$b)
+{
+
+
 	
 }
 
-upload()
+
 
 ?
