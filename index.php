@@ -92,7 +92,7 @@ sec_session_start();
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
 								var tbl = document.createElement("tr");
-								$('#phageTableBody').append("<p>lame</p>");
+								$('.table-bordered').append("<p>lame</p>");
 								$('#phageTableBody').append(xmlhttp.responseText);
 							//}
 						}
