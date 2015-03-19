@@ -140,7 +140,7 @@ sec_session_start();
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
 								var compStr = xmlhttp.responseText;
-								var partStr = compStr.split(", ");
+								
 								$(".odd").remove();
 								$("#enzymeTable").DataTable().row.add(partStr).draw();
 							//}
