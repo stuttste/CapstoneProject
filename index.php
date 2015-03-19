@@ -91,8 +91,7 @@ sec_session_start();
 					xmlhttp.onreadystatechange=function(){
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
-								var tbl = document.createElement("tr");
-								$('.table-bordered').append("<p>lame</p>");
+								$("#odd").remove();
 								$("#phageTableBody").append(xmlhttp.responseText);
 							//}
 						}
