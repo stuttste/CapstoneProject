@@ -15,7 +15,7 @@ $subcluster= $_POST['subclust'];
 $cut= $POST['cuts'];	
 $enzyme = $POST['enzyme'];
 	
-$sql =	 "INSERT INTO SUBMISSIONS ($phage,$cluster,$subcluster,$cut,$enzyme,$username)
+$sql =	 "INSERT INTO SUBMISSIONS (INSERT INTO `MainDB`.`SUBMISSIONS` (`Name`, `Cluster`, `Subcluster`, `Enzyme`, `Cuts`, `Email`) VALUES ('$phage','$cluster','$subcluster','$cut','$enzyme','$username'');
 "
 mysqli_query($mysqli, $sql)
 	
