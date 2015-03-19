@@ -215,6 +215,8 @@ sec_session_start();
 									<button type="button" id ="phageButton">Add Phage</button>									
 								</div>
 							
+							<div class="col-md-2">
+							
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Cluster">
@@ -232,7 +234,7 @@ sec_session_start();
 									</select>
 									<button type="button">Add Cluster</button>									
 								</div>
-							
+							</div>
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Subcluster">
@@ -250,7 +252,7 @@ sec_session_start();
 									</select>
 									<button type="button">Add Subcluster</button>									
 								</div>
-							
+							<div class="col-md-2">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme">
@@ -268,6 +270,7 @@ sec_session_start();
 										</select>
 										<button type="button" id="enzymeButton">Add Enzyme</button>	 									
 								</div>
+							</div>
 							</form>
 							</div>
 							</div>
