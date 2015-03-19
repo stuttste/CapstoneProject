@@ -105,6 +105,43 @@ sec_session_start();
 				
 		});
 		
+		$('#clusterButton').click(function (){
+				var type;
+				var id;
+				var selectedId;
+				var xmlhttp;
+				var len;
+				
+				selectedId = $('#cluster option:selected').val();
+				
+				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp=new XMLHttpRequest();
+				}else{// code for IE6, IE5
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				
+				//for(var i = 0, len=document.getElementById("phage").options.length; i < len; i++){
+					
+					
+					//id = document.getElementById("phage").options[i];
+					
+					xmlhttp.onreadystatechange=function(){
+						if (xmlhttp.readyState==4 && xmlhttp.status==200){
+							//if(id.selected){
+								var compStr = xmlhttp.responseText;
+								var partStr = compStr.split(", ");
+								//$(".odd").remove();
+								$("#phageTable").DataTable().row.add(partStr).draw();
+							//}
+						}
+					}
+					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Cluster&id="+selectedId,true);
+					xmlhttp.send();
+				
+				
+				
+		});
+		
 		/*$('#enzymeButton').click(function (){
 			var selectedEnzyme = $('#enzselection option:selected').val();
 			$.each($('#enzymeTableBody tr'), function () {
@@ -234,7 +271,7 @@ sec_session_start();
 										}
 										?>
 									</select>
-									<button type="button">Add Cluster</button>									
+									<button type="button" id = "clusterButton">Add Cluster</button>									
 								</div>
 							</div>
 							<div class="col-md-3">
