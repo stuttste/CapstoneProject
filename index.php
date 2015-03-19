@@ -216,7 +216,7 @@ sec_session_start();
 									</select>
 									<button type="button" id ="phageButton">Add Phage</button>									
 								</div>
-							
+							</div>
 							<div class="col-md-2">
 							
 								<div class="form-group">
@@ -274,7 +274,6 @@ sec_session_start();
 								</div>
 							</div>
 							</form>
-							</div>
 							</div>
 					</div>
 				
