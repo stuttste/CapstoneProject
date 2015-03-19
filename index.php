@@ -91,8 +91,10 @@ sec_session_start();
 					xmlhttp.onreadystatechange=function(){
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
+								var compStr = xmlhttp.responseText;
+								var partStr = compStr.split(", ");
 								$(".odd").remove();
-								$("#phageTable").DataTable().row.add(xmlhttp.responseText).draw();
+								$("#phageTable").DataTable().row.add(partStr).draw();
 							//}
 						}
 					}
