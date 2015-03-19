@@ -51,9 +51,9 @@ sec_session_start();
 		$('#resultsTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
 		} );
-		});
+		
 	 
-		$('#phageButton1').click(function (){
+		/*$('#phageButton1').click(function (){
 			var selectedPhage = $('#phage option:selected').val();
 			var selectedCluster = $('#cluster option:selected').val();
 			var selectedSubCluster = $('#subcluster option:selected').val();
@@ -66,9 +66,9 @@ sec_session_start();
 				}
 				
 			})
-		});
+		});*/
 		
-		/*$('#phageButton').click(function (){
+		$('#phageButton').click(function (){
 				var type;
 				var id;
 				var selectedId;
@@ -79,7 +79,7 @@ sec_session_start();
 				alert(selectedId);
 				
 				
-		});*/
+		});
 		
 		/*$('#enzymeButton').click(function (){
 			var selectedEnzyme = $('#enzselection option:selected').val();
@@ -95,6 +95,7 @@ sec_session_start();
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
 		//} );
+		});
 	</script>
 	</head>
 
