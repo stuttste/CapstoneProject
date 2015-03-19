@@ -93,7 +93,7 @@ sec_session_start();
 							//if(id.selected){
 								var tbl = document.createElement("tr");
 								$('.table-bordered').append("<p>lame</p>");
-								$('#phageTableBody').append(xmlhttp.responseText);
+								$("#phageTableBody").append(xmlhttp.responseText);
 							//}
 						}
 					}
