@@ -237,6 +237,7 @@ sec_session_start();
 									<button type="button">Add Cluster</button>									
 								</div>
 							</div>
+							<div class="col-md-2">
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Subcluster">
@@ -254,6 +255,7 @@ sec_session_start();
 									</select>
 									<button type="button">Add Subcluster</button>									
 								</div>
+							</div>
 							<div class="col-md-2">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
