@@ -92,8 +92,7 @@ sec_session_start();
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
 								var tbl = document.createElement("tr");
-								alert(selectedId);
-								$('#phageTableBody').last(xmlhttp.responseText);
+								$('#phageTableBody').append(xmlhttp.responseText);
 							//}
 						}
 					}
