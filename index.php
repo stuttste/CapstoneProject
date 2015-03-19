@@ -130,7 +130,7 @@ sec_session_start();
 							//if(id.selected){
 								var compStr = xmlhttp.responseText;
 								var partStr = compStr.split(", ");
-								//$(".odd").remove();
+								$(".odd").remove();
 								$("#phageTable").DataTable().row.add(partStr).draw();
 							//}
 						}
