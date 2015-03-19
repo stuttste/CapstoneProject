@@ -74,7 +74,6 @@ sec_session_start();
 				var selectedId;
 				var xmlhttp;
 				var len;
-				var tbl = document.createElement("tr");
 				
 				selectedId = $('#phage option:selected').val();
 				
@@ -92,7 +91,8 @@ sec_session_start();
 					xmlhttp.onreadystatechange=function(){
 						if (xmlhttp.readyState==4 && xmlhttp.status==200){
 							//if(id.selected){
-								document.getElementById("phageTableBody").appendChild(tbl.appendChild(document.createTextNode(xmlhttp.responseText)));
+								var tbl = document.createElement("tr");
+								$("phageTableBody").append(xmlhttp.responseText);
 							//}
 						}
 					}

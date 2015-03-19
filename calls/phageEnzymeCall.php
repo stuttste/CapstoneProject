@@ -18,11 +18,11 @@
 	
 	if($type='Phage' || $type='Cluster' || $type='Subcluster'){
 		while($row = $sql->fetch_assoc()){
-			echo '<td>'. $row["Name"] .'</td><td>'. $row["Cluster"] .'</td><td>'. $row["Subcluster"] .'</td>';
+			echo '<tr><td>'. $row["Name"] .'</td><td>'. $row["Cluster"] .'</td><td>'. $row["Subcluster"] .'</td></tr>';
 		}
 	}elseif($type='Enzyme'){
 		while($row = $sql->fetch_assoc()){
-			echo '<td>'. $row["Name"].'</td>';
+			echo '<tr><td>'. $row["Name"].'</td></tr>';
 		}
 		
 	
