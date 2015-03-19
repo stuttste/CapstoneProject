@@ -18,15 +18,11 @@
 	
 	if($type='Phage' || $type='Cluster' || $type='Subcluster'){
 		while($row = $sql->fetch_assoc()){
-			$element = $dom->createElement('tr', '<td>'. $row["Name"] .'</td><td>'. $row["Cluster"] .'</td><td>'. $row["Subcluster"] .'</td>');
-			$dom->appendChild($element);
-			echo $dom->saveXML();
+			echo '<td>'. $row["Name"] .'</td><td>'. $row["Cluster"] .'</td><td>'. $row["Subcluster"] .'</td>';
 		}
 	}elseif($type='Enzyme'){
 		while($row = $sql->fetch_assoc()){
-			$element = $dom->createElement('tr', '<td>'. $row["Name"] .'</td>');
-			$dom->appendChild($element);
-			echo $dom->saveXML();
+			echo '<td>'. $row["Name"].'</td>';
 		}
 		
 	
