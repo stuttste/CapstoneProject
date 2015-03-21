@@ -41,6 +41,15 @@ if (login_check($mysqli) == true) {
 						<input type="email" name="email" class="form-control" placeholder="Email address" />
 						<label for="inputPassword" class="sr-only">Password</label>
 						<input type="password" name="password" id="password" class="form-control" placeholder="Password"/>
+						<label for="inputIns" class="sr-only">Ins</label>
+						<input type='text' 
+							name='Ins' 
+							id='Ins' class="form-control" placeholder="Ins"/>
+						<label for="inputUsername" class="sr-only">Username</label>
+						<input type='text' 
+							name='username' 
+							id='username' class="form-control" placeholder="Username"/>
+						
 						<input type="button" 
 							   value="Login" 
 							   onclick="formhash(this.form, this.form.password);"
