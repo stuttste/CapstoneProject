@@ -41,14 +41,7 @@ if (login_check($mysqli) == true) {
 						<input type="email" name="email" class="form-control" placeholder="Email address" />
 						<label for="inputPassword" class="sr-only">Password</label>
 						<input type="password" name="password" id="password" class="form-control" placeholder="Password"/>
-						<label for="inputIns" class="sr-only">Ins</label>
-						<input type='text' 
-							name='Ins' 
-							id='Ins' class="form-control" placeholder="Ins"/>
-						<label for="inputUsername" class="sr-only">Username</label>
-						<input type='text' 
-							name='username' 
-							id='username' class="form-control" placeholder="Username"/>
+						
 						
 						<input type="button" 
 							   value="Login" 
@@ -107,6 +100,27 @@ if (login_check($mysqli) == true) {
 						<input type="password" 
 											 name="confirmpwd" 
 											 id="confirmpwd" class="form-control" placeholder="Retype Password" />
+											 <label for="Fname" class="sr-only">Fname</label>
+											 <input type='text' 
+							name='Fname' 
+							id='Fname' class="form-control" placeholder="First name"/>
+						<label for="inputUsername" class="sr-only">Fname</label>
+						 <label for="Fname" class="sr-only">Fname</label>
+											 <input type='text' 
+							name='Lname' 
+							id='Lname' class="form-control" placeholder="Last name"/>
+						<label for="inputUsername" class="sr-only">Fname</label>
+						 <label for="Lname" class="sr-only">Lname</label>
+											 <input type='text' 
+							name='State' 
+							id='State' class="form-control" placeholder="State"/>
+						<label for="State" class="sr-only">State</label>
+						 <label for="State" class="sr-only">State</label>
+											 <input type='text' 
+							name='Univ' 
+							id='Univ' class="form-control" placeholder="University"/>
+						<label for="Univ" class="sr-only">Univ</label>
+						
 					<input type="button" 
 						   value="Register" 
 						   onclick="return regformhash(this.form,
