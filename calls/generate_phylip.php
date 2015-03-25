@@ -101,6 +101,9 @@
 		
 		//That's it for the config files. Now to run Phylip.
 		
+		$commandStr = "cd ".$generalPath."outFiles";
+		echo exec($commandStr);
+		
 		$commandStr = $phylipPath."exe/pars < ".$generalPath.$parsInName." > /dev/null 2>&1";
 		echo exec($commandStr);
 		
