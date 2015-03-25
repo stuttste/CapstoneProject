@@ -36,6 +36,9 @@
 	if(!file_exists('confFiles')){
 			mkdir('confFiles');
 	}
+	if(!file_exists('outFiles')){
+			mkdir('outFiles');
+	}
 	
 	//The number of cut count entries must be equal to the number of phages.
 	//Please note I am not referring to the number of enzymes, I am referring to the number
@@ -99,7 +102,7 @@
 		//That's it for the config files. Now to run Phylip.
 		
 		$commandStr = $phylipPath."exe/pars < ".$generalPath.$parsInName." > /dev/null 2>&1";
-		exec($commandStr);
+		exec($commandStr) or die("Pars would not run!");
 		
 		$commandStr = $phylipPath."exe/consense < ".$generalPath.$consenseInName." > /dev/null 2>&1";
 		exec($commandStr);
