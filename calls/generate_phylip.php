@@ -17,7 +17,9 @@
 	if($phageCount == $cutCount){
 		
 		//Create our parsIn file. Specifies the phages and cuts for the tree.
-		
+		if(!file_exists('inputFiles')){
+			mkdir('inputFiles');
+		}
 		$fileIn = fopen("inputFiles/inFile".date("ymdHis").".txt", "w") or die("Unable to open input file!");
 		
 		$printStr = $phageCount." ".$enzCount."\n";
