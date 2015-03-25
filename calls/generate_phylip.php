@@ -10,8 +10,25 @@
 	$phageCount = count($phages);
 	$cutCount = count($cuts);
 	$enzCount = strlen($cuts[0]);
-	$generalPath = "/var/www/staging/calls/";
+	$generalPath = "/var/www/staging/calls/";	//Needed for config files.
+	$currDate = date("ymdHis");		//Do this now so all files will have the same date header.
 	
+	//Let's go ahead and define all the file names we will be using.
+	$fileInName = "inputFiles/inFile".$currDate.$userId.".txt";
+	$parsInName = "confFiles/parseIn".$currDate.$userId.".txt";
+	$consenseInName = "confFiles/consenseIn".$currDate.$userId.".txt";
+	$fileOutName = "outFiles/outFile".$currDate.$userId.".txt";
+	$treeOutName = "outFiles/treeOut".$currDate.$userId.".txt";
+	$treeOutName2 = "outFiles/treeOutSecond".$currDate.$userId.".txt"
+	
+	
+	//Make all the folders we will be needing.
+	if(!file_exists('inputFiles')){
+			mkdir('inputFiles');
+	}
+	if(!file_exists('confFiles')){
+			mkdir('confFiles');
+	}
 	
 	//The number of cut count entries must be equal to the number of phages.
 	//Please note I am not referring to the number of enzymes, I am referring to the number
@@ -19,11 +36,8 @@
 	
 	if($phageCount == $cutCount){
 		
-		//Create our parsIn file (and inputFiles dir if it doesn't exist). Specifies the phages and cuts for the tree.
-		if(!file_exists('inputFiles')){
-			mkdir('inputFiles');
-		}
-		$fileInName = "inputFiles/inFile".date("ymdHis").$userId.".txt";
+		//Create our parsIn file. Specifies the phages and cuts for the tree.
+		
 		$fileIn = fopen($fileInName, "w") or die("Unable to open input file!");
 		
 		$printStr = $phageCount." ".$enzCount."\n";
@@ -44,21 +58,32 @@
 		fclose($fileIn);
 		
 		//Our input file is now created. On to the config file for pars. (parsIn.txt)
-		//	We will store that file in confFiles folder. (If it doesn't exist, we create it.)
+		//	We will store that file in confFiles folder.
 		
-		if(!file_exists('confFiles')){
-			mkdir('confFiles');
-		}
-		$parsInName = "confFiles/parseIn".date("ymdHis").$userId.".txt";
 		$parsIn = fopen($parsInName, "w") or die("Unable to open pars config file!");
-		$fileOutName = "outFiles/outFile".date("ymdHis").$userId."txt";
-		$treeOutName = "outFiles/treeOut".date("ymdHis").$userId."txt";
+		
 		while( (($randSeed = rand()) % 2) == 0){}
 		
-		$printStr = $generalPath.$fileInName."\nF\n".$generalPath.$fileOutName."\nV\n100\nJ\n".$randSeed."\n10\nY\nF\n".$generalPath.$treeOutName; //Seems iffy
+		$printStr = $generalPath.$fileInName."\nF\n".$generalPath.$fileOutName."\nV\n100\nJ\n".$randSeed."\n10\nY\nF\n".$generalPath.$treeOutName;
 		fwrite($parsIn, $printStr);
 		
 		fclose($parsIn);
+		
+		//Our pars config file is now finished. On to the consense config file.
+		//	We will store that file in confFiles folder.
+		
+		$consenseIn = fopen($consenseInName, "w") or die("Unable to open consense config file!");
+		
+		$printStr = $generalPath.$treeOutName."\nF\n".$generalPath.$fileOutName."\nC\nY\nF\n".$generalPath.$treeOutName2;
+		fwrite($consenseIn, $printStr);
+		
+		fclose($consenseIn);
+		
+		//Our consense config file is now finished. On to the drawgram/drawtree config file.
+		// We will store that file in confFiles folder.
+		
+		
+		
 		
 	}else{
 		die("Unequal number of cut entries and phages!");
