@@ -1,4 +1,4 @@
-<?
+<?php
 	$phageStr = $_GET['phages'];
 	$cutStr = $_GET['cuts'];
 	$phages = explode(",", $phageStr);
