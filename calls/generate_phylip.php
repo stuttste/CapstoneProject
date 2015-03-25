@@ -11,6 +11,7 @@
 	$cutCount = count($cuts);
 	$enzCount = strlen($cuts[0]);
 	$generalPath = "/var/www/staging/calls/";	//Needed for config files.
+	$phylipPath = "/var/www/staging/phylip-3.696/";	//Needed to find Phylip files.
 	$currDate = date("ymdHis");		//Do this now so all files will have the same date header.
 	
 	//Let's go ahead and define all the file names we will be using.
@@ -20,6 +21,8 @@
 	$fileOutName = "outFiles/outFile".$currDate.$userId.".txt";
 	$treeOutName = "outFiles/treeOut".$currDate.$userId.".txt";
 	$treeOutName2 = "outFiles/treeOutSecond".$currDate.$userId.".txt";
+	$fontPath = $phylipPath."exe/font1";
+	$drawGramName = "outFiles/drawGram".$currDate.$userId.".txt";
 	
 	
 	//Make all the folders we will be needing.
@@ -82,7 +85,14 @@
 		//Our consense config file is now finished. On to the drawgram/drawtree config file.
 		// We will store that file in confFiles folder.
 		
+		$drawGram = fopen($drawGramName, "w") or die("Unable to open drawgram file!");
 		
+		$printStr = $generalPath.$treeOutName2."\nF\n".$fontPath."\nC\nY\nF\n".$generalPath.$drawGramName;
+		fwrite($drawGram, $printStr);
+		
+		fclose($drawGram);
+		
+		//That's it for the config files. Now to run Phylip.
 		
 		
 	}else{
