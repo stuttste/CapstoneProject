@@ -55,7 +55,21 @@ include_once 'includes/functions.php';
 						<input type="password" 
 											 name="confirmpwd" 
 											 id="confirmpwd" class="form-control" placeholder="Retype Password" />
-					<input type="button" 
+					
+<label for="inputInst" class="sr-only">User</label>
+						<input type='text' 
+							name='Institution' 
+							id='username' class="form-control" placeholder="Place your institution that you attend or work for here"/>
+<label for="inputUsername" class="sr-only"></label>
+						<input type='text' 
+							name='username' 
+							id='username' class="form-control" placeholder="Username"/>
+<label for="inputUsername" class="sr-only">Username</label>
+						<input type='text' 
+							name='username' 
+							id='username' class="form-control" placeholder="Username"/>
+
+<input type="button" 
 						   value="Register" 
 						   onclick="return regformhash(this.form,
 										   this.form.username,
