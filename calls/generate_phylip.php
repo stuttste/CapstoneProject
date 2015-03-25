@@ -22,7 +22,8 @@
 	$treeOutName = "outFiles/treeOut".$currDate.$userId.".txt";
 	$treeOutName2 = "outFiles/treeOutSecond".$currDate.$userId.".txt";
 	$fontPath = $phylipPath."exe/font1";
-	$drawGramName = "outFiles/drawGram".$currDate.$userId.".txt";
+	$drawGramInName = "confFiles/drawGramIn".$currDate.$userId.".txt";
+	$plotFileName = "outFiles/plotFile".$currDate.$userId.".txt";
 	
 	
 	//Make all the folders we will be needing.
@@ -85,12 +86,12 @@
 		//Our consense config file is now finished. On to the drawgram/drawtree config file.
 		// We will store that file in confFiles folder.
 		
-		$drawGram = fopen($drawGramName, "w") or die("Unable to open drawgram file!");
+		$drawGramIn = fopen($drawGramInName, "w") or die("Unable to open drawgram file!");
 		
-		$printStr = $generalPath.$treeOutName2."\nF\n".$fontPath."\nC\nY\nF\n".$generalPath.$drawGramName;
-		fwrite($drawGram, $printStr);
+		$printStr = $generalPath.$treeOutName2."\n".$fontPath."\nP\nL\nV\nN\nY\nF\n".$generalPath.$plotFileName;
+		fwrite($drawGramIn, $printStr);
 		
-		fclose($drawGram);
+		fclose($drawGramIn);
 		
 		//That's it for the config files. Now to run Phylip.
 		
