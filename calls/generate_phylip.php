@@ -16,11 +16,11 @@
 		
 		$i = 0;
 		while($i < $phageCount){
-			if(strlen($phages[$i]) <= 10){
-				$printStr = str_pad($phages[$i], 10).$cuts[$i];
+			if(strlen($phages($i)) <= 10){
+				$printStr = str_pad($phages($i), 10).$cuts($i)."\n";
 				fwrite($printStr);
 			}else{
-				$printStr = substr($phages[$i], 0, 10).$cuts[$i];
+				$printStr = substr($phages($i), 0, 10).$cuts($i)."\n";
 				fwrite($printStr);
 			}
 			$i++;
