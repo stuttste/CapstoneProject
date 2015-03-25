@@ -74,7 +74,7 @@
 		
 		while( (($randSeed = rand()) % 2) == 0){}
 		
-		$printStr = $generalPath.$fileInName." F ".$generalPath.$fileOutName." V 100 J ".$randSeed." 10 Y F ".$generalPath.$treeOutName;
+		$printStr = $generalPath.$fileInName."\nF\n".$generalPath.$fileOutName."\nV\n100\nJ\n".$randSeed."\n10\nY\nF\n".$generalPath.$treeOutName;
 		fwrite($parsIn, $printStr);
 		
 		fclose($parsIn);
