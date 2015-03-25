@@ -18,12 +18,15 @@
 	$fileInName = "inputFiles/inFile".$currDate.$userId.".txt";
 	$parsInName = "confFiles/parseIn".$currDate.$userId.".txt";
 	$consenseInName = "confFiles/consenseIn".$currDate.$userId.".txt";
+	$drawGramInName = "confFiles/drawGramIn".$currDate.$userId.".txt";
+	
+	
 	$fileOutName = "outFiles/outFile".$currDate.$userId.".txt";
 	$treeOutName = "outFiles/treeOut".$currDate.$userId.".txt";
 	$treeOutName2 = "outFiles/treeOutSecond".$currDate.$userId.".txt";
 	$fontPath = $phylipPath."exe/font1";
-	$drawGramInName = "confFiles/drawGramIn".$currDate.$userId.".txt";
 	$plotFileName = "outFiles/plotFile".$currDate.$userId.".txt";
+	$plotFilePDFName = "outFiles/plotFilePDF".$currDate.$userId.".pdf";
 	
 	
 	//Make all the folders we will be needing.
