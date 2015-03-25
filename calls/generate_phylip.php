@@ -10,6 +10,8 @@
 	$phageCount = count($phages);
 	$cutCount = count($cuts);
 	$enzCount = strlen($cuts[0]);
+	$generalPath = "/var/www/staging/calls/";
+	
 	
 	//The number of cut count entries must be equal to the number of phages.
 	//Please note I am not referring to the number of enzymes, I am referring to the number
@@ -53,7 +55,7 @@
 		$treeOutName = "outFiles/treeOut".date("ymdHis").$userId."txt";
 		while( (($randSeed = rand()) % 2) == 0){}
 		
-		$printStr = $fileInName."\nF\n".$fileOutName."\nV\n100\nJ\n".$randSeed."\n10\nY\nF\n".$treeOutName; //Seems iffy
+		$printStr = $generalPath.$fileInName."\nF\n".$generalPath.$fileOutName."\nV\n100\nJ\n".$randSeed."\n10\nY\nF\n".$generalPath.$treeOutName; //Seems iffy
 		fwrite($parsIn, $printStr);
 		
 		fclose($parsIn);
