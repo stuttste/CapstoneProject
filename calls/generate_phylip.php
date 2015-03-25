@@ -54,6 +54,9 @@
 		while( (($randSeed = rand()) % 2) == 0){}
 		
 		$printStr = $fileInName."\nF\n".$fileOutName."\nV\n100\nJ\n".$randSeed."\n10\nY\nF\n".$treeOutName; //Seems iffy
+		fwrite($parsIn, $printStr);
+		
+		fclose($parsIn);
 		
 	}else{
 		die("Unequal number of cut entries and phages!");
