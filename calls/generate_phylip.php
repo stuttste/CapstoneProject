@@ -98,6 +98,17 @@
 		
 		//That's it for the config files. Now to run Phylip.
 		
+		$commandStr = $phylipPath."exe/pars < ".$generalPath.$parsInName." > /dev/null 2>&1";
+		exec($commandStr);
+		
+		$commandStr = $phylipPath."exe/consense < ".$generalPath.$consenseInName." > /dev/null 2>&1";
+		exec($commandStr);
+		
+		$commandStr = $phylipPath."exe/drawgram < ".$generalPath.$drawGramInName." > /dev/null 2>&1";
+		exec($commandStr);
+		
+		$commandStr = "/usr/bin/ps2pdf ".$generalPath.$plotFileName." ".$generalPath.$plotFilePDFName." > /dev/null 2>&1";
+		exec($commandStr);
 		
 	}else{
 		die("Unequal number of cut entries and phages!");
