@@ -18,7 +18,7 @@
 		
 		//Create our parsIn file. Specifies the phages and cuts for the tree.
 		
-		$fileIn = fopen("inFile".date("ymdHis").".txt", "w") or die("Unable to open input file!");
+		$fileIn = fopen("inputFiles/inFile".date("ymdHis").".txt", "w") or die("Unable to open input file!");
 		
 		$printStr = $phageCount." ".$enzCount."\n";
 		fwrite($fileIn, $printStr);
