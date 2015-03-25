@@ -19,7 +19,7 @@
 	$consenseInName = "confFiles/consenseIn".$currDate.$userId.".txt";
 	$fileOutName = "outFiles/outFile".$currDate.$userId.".txt";
 	$treeOutName = "outFiles/treeOut".$currDate.$userId.".txt";
-	$treeOutName2 = "outFiles/treeOutSecond".$currDate.$userId.".txt"
+	$treeOutName2 = "outFiles/treeOutSecond".$currDate.$userId.".txt";
 	
 	
 	//Make all the folders we will be needing.
