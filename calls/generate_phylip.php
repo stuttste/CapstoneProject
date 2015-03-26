@@ -15,19 +15,19 @@
 	$currDate = date("ymdHis");		//Do this now so all files will have the same date header.
 	
 	//Let's go ahead and define all the file names we will be using.
-	$fileInName = "infile_".$currDate.$userId;
-	$treeInName = "intree_".$currDate.$userId;
-	$parsInName = "parsIn_".$currDate.$userId;
-	$consenseInName = "consenseIn_".$currDate.$userId;
-	$drawGramInName = "drawgramIn_".$currDate.$userId;
+	$fileInName = "inputFiles/infile_".$currDate.$userId;
+	$treeInName = "inputFiles/intree_".$currDate.$userId;
+	$parsInName = "confFiles/parsIn_".$currDate.$userId;
+	$consenseInName = "confFiles/consenseIn_".$currDate.$userId;
+	$drawGramInName = "confFiles/drawgramIn_".$currDate.$userId;
 	
 	
-	$fileOutName = "outfile_".$currDate.$userId;
-	$treeOutName = "outtree_".$currDate.$userId;
-	$treeOutName2 = "outtree_Second_".$currDate.$userId;
+	$fileOutName = "outFiles/outfile_".$currDate.$userId;
+	$treeOutName = "outFiles/outtree_".$currDate.$userId;
+	$treeOutName2 = "outFiles/outtree_Second_".$currDate.$userId;
 	$fontPath = $phylipPath."exe/font1";
-	$plotFileName = "plotFileDrawgram_".$currDate.$userId;
-	$plotFilePDFName = "plotFileDrawgramPDF_".$currDate.$userId;
+	$plotFileName = "outFiles/plotFileDrawgram_".$currDate.$userId;
+	$plotFilePDFName = "outFiles/plotFileDrawgramPDF_".$currDate.$userId;
 	
 	
 	//Make all the folders we will be needing.
@@ -85,7 +85,7 @@
 		
 		$consenseIn = fopen($consenseInName, "w") or die("Unable to open consense config file!");
 		
-		$printStr = $generalPath.$treeInName."\nF\n".$generalPath.$fileOutName."\nC\nY\nF\n".$generalPath.$treeOutName;
+		$printStr = $generalPath.$treeInName."\nF ".$generalPath.$fileOutName."\nC\nY\nF ".$generalPath.$treeOutName;
 		fwrite($consenseIn, $printStr);
 		
 		fclose($consenseIn);
@@ -95,7 +95,7 @@
 		
 		$drawGramIn = fopen($drawGramInName, "w") or die("Unable to open drawgram file!");
 		
-		$printStr = $generalPath.$treeInName."\n".$fontPath."\nP\nL\nV\nN\nY\nF\n".$generalPath.$plotFileName;
+		$printStr = $generalPath.$treeInName."\n".$fontPath."\nP\nL\nV\nN\nY\nF ".$generalPath.$plotFileName;
 		fwrite($drawGramIn, $printStr);
 		
 		fclose($drawGramIn);
