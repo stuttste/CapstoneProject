@@ -15,19 +15,19 @@
 	$currDate = date("ymdHis");		//Do this now so all files will have the same date header.
 	
 	//Let's go ahead and define all the file names we will be using.
-	$fileInName = "inputFiles/infile_".$currDate.$userId;
-	$treeInName = "inputFiles/intree_".$currDate.$userId;
-	$parsInName = "confFiles/parsIn_".$currDate.$userId;
-	$consenseInName = "confFiles/consenseIn_".$currDate.$userId;
-	$drawGramInName = "confFiles/drawgramIn_".$currDate.$userId;
+	$fileInName = "infile_".$currDate.$userId;
+	$treeInName = "intree_".$currDate.$userId;
+	$parsInName = "parsIn_".$currDate.$userId;
+	$consenseInName = "consenseIn_".$currDate.$userId;
+	$drawGramInName = "drawgramIn_".$currDate.$userId;
 	
 	
-	$fileOutName = "outFiles/outfile_".$currDate.$userId;
-	$treeOutName = "outFiles/outtree_".$currDate.$userId;
-	$treeOutName2 = "outFiles/outtree_Second_".$currDate.$userId;
+	$fileOutName = "outfile_".$currDate.$userId;
+	$treeOutName = "outtree_".$currDate.$userId;
+	$treeOutName2 = "outtree_Second_".$currDate.$userId;
 	$fontPath = $phylipPath."exe/font1";
-	$plotFileName = "outFiles/plotFileDrawgram_".$currDate.$userId;
-	$plotFilePDFName = "outFiles/plotFileDrawgramPDF_".$currDate.$userId;
+	$plotFileName = "plotFileDrawgram_".$currDate.$userId;
+	$plotFilePDFName = "plotFileDrawgramPDF_".$currDate.$userId;
 	
 	
 	//Make all the folders we will be needing.
