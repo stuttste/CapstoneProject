@@ -4,7 +4,7 @@ include_once 'psl-config.php';
  
 $error_msg = "";
  
-if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
+if (isset($_POST['username'], $_POST['email'], $_POST['p'], $POST['fname'], $POST ['lname'] $POST ['state'], $POST['univ'])) {
     // Sanitize and validate the data passed in
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -85,7 +85,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
  
         // Insert the new user into the database 
         if ($insert_stmt = $mysqli->prepare("INSERT INTO MEMBERS (Username, Email, Password, Salt,Fname,Lname,State,University) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
-            $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
+            $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt,$Fname,$Lname,$State,$Univ);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
