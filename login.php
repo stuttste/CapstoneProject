@@ -70,7 +70,7 @@ if (login_check($mysqli) == true) {
 					}
 					?>
         <ul class="list-group">
-					<li>Usernames may contain only digits, upper and lower case letters and underscores</li>
+					<li>Personal data will not be distributed to third parties without consent and is only gathered in order to gather usage data about this tool.</li>
 					<li>Emails must have a valid email format</li>
 					<li>Passwords must be at least 6 characters long</li>
 					<li >Passwords must contain
@@ -127,7 +127,11 @@ if (login_check($mysqli) == true) {
 										   this.form.username,
 										   this.form.email,
 										   this.form.password,
-										   this.form.confirmpwd);" 
+										   this.form.confirmpwd,
+										   this.form.Fname(),
+										   this,form.Lname()
+										   this.form.State()
+										   this.form.Univ());" 
 							class="btn btn-lg btn-primary btn-block" /> 
 				</form>
 				
