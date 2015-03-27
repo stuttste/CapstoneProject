@@ -113,4 +113,5 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 			
         header('Location: ./register_success.php');
     }
-}
+
+?>
