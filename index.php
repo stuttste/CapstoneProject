@@ -32,11 +32,16 @@ sec_session_start();
 	<script type="text/javascript" class="init">
 		$(document).ready(function() {
 		var table = $('#phageTable').DataTable();
-		var etable = $('#enzymeTable').DataTable();
+		//var etable = $('#enzymeTable').DataTable();
 		var btable = $('#bestResultTable').DataTable();
 		var rtable = $('#resultsTable').DataTable();
+		var hiddenTable = $('#hiddenSearchTable').DataTable();
 		
 		$('#phageTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('active');
+		} );
+		
+		$('#hiddenSearchTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
 		} );
 		
