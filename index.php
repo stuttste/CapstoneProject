@@ -159,7 +159,7 @@ sec_session_start();
 			})
 		});*/
 
-		var showOnlyOptionsSimilarToText = function (selectionEl, str, isCaseSensitive) {
+		var textFilter = function (selectionEl, str, isCaseSensitive) {
 			if (isCaseSensitive)
 				str = str.toLowerCase();
 			var $el = $(selectionEl);
@@ -191,7 +191,7 @@ sec_session_start();
 		
 		$("#enzSelect").on("keyup", function () {
 			var userInput = $("#enzSelect").val();
-			showOnlyOptionsSimilarToText($("#enzselection"), userInput);
+			textFilter($("#enzselection"), userInput);
 		});
 
 
