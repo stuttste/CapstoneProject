@@ -193,51 +193,18 @@ sec_session_start();
 					<li><a href="#results" data-toggle="tab" >Results</a></li>
 				</ul>
 			
-				<div id="mytabs" class="tab-content">
+				<!--><div id="mytabs" class="tab-content">
 					<div id="description" class="tab-pane active">
 						<h3>Description</h3>
 						<p>This tool has been created for the ULM Biology department in order to assist researchers in identifying and comparing unknown phages to existing phages. This tool has been updated to provide functions that will help assist research in development and its previous version can be found at: http://ec2-54-245-31-145.us-west-2.compute.amazonaws.com/  </p> 
 
 						<p>Instructions</p>
-					</div>
+					</div>-->
 					
 					
 					<div id="petTool" class="tab-pane">
 						<h3>Pet Tool</h3>
-						<div class="row">
-							<div class="col-md-6">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="phageTable">
-									<thead>
-										<th>Phage</th>
-										<th>Cluster</th>
-										<th>Subcluster</th>
-										<th>Enzyme</th>
-									</thead>
-									<tbody id="phageTableBody">
-										<!-- Data gets plugged in here-->
-									</tbody>
-								</table>
-							</table>
-									    <button type="button">Clear</button>
-										<button type="button">Reset</button>
-										<br />
-							</div>
-			
-							<!--<div class="col-md-6">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="enzymeTable">
-									<thead>
-										<th>Enzyme</th>
-									</thead>
-									<tbody id="enzymeTableBody">
-										Data gets plugged in here
-									</tbody>
-									
-								</table>
-							</table>
-							</div>-->
-						</div>
+						
 			                
 						<div class="row">
 							<div class="col-md-3">
@@ -338,6 +305,42 @@ sec_session_start();
 							</table>
 							</div>
 						</div>
+						
+						<div class="row">
+							<div class="col-md-6">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="phageTable">
+									<thead>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>Subcluster</th>
+										<th>Enzyme</th>
+									</thead>
+									<tbody id="phageTableBody">
+										<!-- Data gets plugged in here-->
+									</tbody>
+								</table>
+							</table>
+									    <button type="button">Clear</button>
+										<button type="button">Reset</button>
+										<br />
+							</div>
+			
+							<!--<div class="col-md-6">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="enzymeTable">
+									<thead>
+										<th>Enzyme</th>
+									</thead>
+									<tbody id="enzymeTableBody">
+										Data gets plugged in here
+									</tbody>
+									
+								</table>
+							</table>
+							</div>-->
+						</div>
+			                
 					</div>
 				
 					<!--<div id="results" class="tab-pane">
