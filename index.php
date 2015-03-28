@@ -40,9 +40,9 @@ sec_session_start();
 			$(this).toggleClass('active');
 		} );
 		
-		$('#enzymeTable tbody').on( 'click', 'tr', function () {
+		/*$('#enzymeTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
-		} );
+		} );*/
 		
 		$('#bestResultTable tbody').on( 'click', 'tr', function () {
 			$(this).toggleClass('active');
@@ -207,6 +207,7 @@ sec_session_start();
 										<th>Phage</th>
 										<th>Cluster</th>
 										<th>Subcluster</th>
+										<th>Enzyme</th>
 									</thead>
 									<tbody id="phageTableBody">
 										<!-- Data gets plugged in here-->
@@ -218,19 +219,19 @@ sec_session_start();
 										<br />
 							</div>
 			
-							<div class="col-md-6">
+							<!--<div class="col-md-6">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="enzymeTable">
 									<thead>
 										<th>Enzyme</th>
 									</thead>
 									<tbody id="enzymeTableBody">
-										<!-- Data gets plugged in here-->
+										Data gets plugged in here
 									</tbody>
 									
 								</table>
 							</table>
-							</div>
+							</div>-->
 						</div>
 			                
 						<div class="row">
@@ -314,6 +315,27 @@ sec_session_start();
 							</div>
 							</form>
 							</div>
+							
+							<div class="row">
+							<div class="col-md-6">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="hiddenSearchTable">
+									<thead>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>Subcluster</th>
+										<th>Enzyme</th>
+									</thead>
+									<tbody id="hiddenSearchTableBody">
+										<!-- Data gets plugged in here-->
+									</tbody>
+								</table>
+							</table>
+									    <button type="button">Clear</button>
+										<button type="button">Reset</button>
+										<br />
+							</div>
+						</div>
 					</div>
 				
 					<div id="results" class="tab-pane">
