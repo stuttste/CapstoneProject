@@ -147,6 +147,7 @@ sec_session_start();
 				
 		});
 		
+		
 		/*$('#enzymeButton').click(function (){
 			var selectedEnzyme = $('#enzselection option:selected').val();
 			$.each($('#enzymeTableBody tr'), function () {
@@ -159,7 +160,32 @@ sec_session_start();
 		});*/
 
 		
-		
+		jQuery.fn.filterByText = function(textbox) {
+			return this.each(function() {
+				var select = this;
+				var options = [];
+				$(select).find('phage').each(function() {
+				options.push({value: $(this).val(), text: $(this).text()});
+				});
+				$(select).data('options', options);
+
+				$(textbox).bind('change keyup', function() {
+					var options = $(select).empty().data('options');
+					var search = $.trim($(this).val());
+					var regex = new RegExp(search,"gi");
+
+					$.each(options, function(i) {
+						var option = options[i];
+						if(option.text.match(regex) !== null) {
+							$(select).append(
+								$('<phage>').text(option.text).val(option.value)
+							);
+						}
+					});
+				});
+			});
+		};
+
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
 		//} );
@@ -186,23 +212,8 @@ sec_session_start();
 		</nav>
 		
 		<div class="container">
-			<!--<div id="maintabs">
-				<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
-					<li class="active"><a href="#description" data-toggle="tab" >Description</a></li>
-					<li><a href="#petTool" data-toggle="tab" >PET Tool</a></li>
-					<li><a href="#results" data-toggle="tab" >Results</a></li>
-				</ul>
 			
-				<div id="mytabs" class="tab-content">
-					<div id="description" class="tab-pane active">
-						<h3>Description</h3>
-						<p>This tool has been created for the ULM Biology department in order to assist researchers in identifying and comparing unknown phages to existing phages. This tool has been updated to provide functions that will help assist research in development and its previous version can be found at: http://ec2-54-245-31-145.us-west-2.compute.amazonaws.com/  </p> 
-
-						<p>Instructions</p>
-					</div>-->
-					
-					
-					<div id="petTool" >
+			<div id="petTool">
 						<h3>Pet Tool</h3>
 						
 			                
@@ -343,86 +354,7 @@ sec_session_start();
 			                
 					</div>
 				
-					<!--<div id="results" class="tab-pane">
-						<h3>Results</h3>
-							<div class="row">
-							<div class="col-md-12">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="bestResultTable">
-									<thead>
-										<th>Phage</th>
-										<th>Cluster</th>
-										<th>Subcluster</th>
-										<th>Percentage</th>
-									</thead>
-									<tbody id="phageTableBody">
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-											<td>!</td>
-										</tr>
-									</tbody>
-							<div>
-							<h3>Table results in words</h3>
-							</div>
-							<div class="row">
-							<div class="col-md-12">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="resultsTable">
-									<thead>
-										<th>Phage</th>
-										<th>Cluster</th>
-										<th>Subcluster</th>
-										<th>Percentage</th>
-									</thead>
-									<tbody id="phageTableBody">
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-											<td>Percentage</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-											<td>Percentage</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-											<td>Percentage</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-											<td>Percentage</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-											<td>Percentage</td>
-										</tr>
-										<tr>
-											<td>Test</td>
-											<td>Data</td>
-											<td>Here</td>
-											<td>Percentage</td>
-										</tr>
-									</tbody>
-								</table>
-							</table>
-									   	<button type="button">Return</button>
-										<br />
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>-->
+					
 	</body>
 	
 	
