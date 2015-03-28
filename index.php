@@ -159,32 +159,26 @@ sec_session_start();
 			})
 		});*/
 
-		
-		jQuery.fn.filterByText = function(textbox) {
-			return this.each(function() {
-				var select = this;
-				var options = [];
-				$(select).find('phage').each(function() {
-				options.push({value: $(this).val(), text: $(this).text()});
-				});
-				$(select).data('options', options);
-
-				$(textbox).bind('change keyup', function() {
-					var options = $(select).empty().data('options');
-					var search = $.trim($(this).val());
-					var regex = new RegExp(search,"gi");
-
-					$.each(options, function(i) {
-						var option = options[i];
-						if(option.text.match(regex) !== null) {
-							$(select).append(
-								$('<phage>').text(option.text).val(option.value)
-							);
-						}
-					});
-				});
-			});
+		var showOnlyOptionsSimilarToText = function (selectionEl, str, isCaseSensitive) {
+			if (isCaseSensitive)
+				str = str.toLowerCase();
+			var $el = $(selectionEl);
+		if (!$el.data("options")) {
+			$el.data("options", $el.find("option").clone());
+		}
+		var newOptions = $el.data("options").filter(function () {
+			var text = $(this).text();
+			if (isCaseSensitive)
+				text = text.toLowerCase();
+			return text.match(str);
+		});
+		$el.empty().append(newOptions);
 		};
+		$("#phageSelect").on("keyup", function () {
+			var userInput = $("#phageSelect").val();
+			showOnlyOptionsSimilarToText($("#phage"), userInput);
+		});
+
 
 		//$('#button').click( function () {
 			//alert( table.rows('.selected').data().length +' row(s) selected' );
@@ -222,7 +216,7 @@ sec_session_start();
 							<form class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<input type="text" class="form-control" placeholder = "Select Phage">
+									<input type="text" class="form-control" placeholder = "Select Phage" id="phageSelect">
 									<select multiple class="form-control" id="phage" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
