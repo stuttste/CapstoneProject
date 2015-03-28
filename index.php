@@ -176,17 +176,17 @@ sec_session_start();
 		};
 		$("#phageSelect").on("keyup", function () {
 			var userInput = $("#phageSelect").val();
-			showOnlyOptionsSimilarToText($("#phage"), userInput);
+			textFilter($("#phage"), userInput);
 		});
 		
 		$("#clusterSelect").on("keyup", function () {
 			var userInput = $("#clusterSelect").val();
-			showOnlyOptionsSimilarToText($("#cluster"), userInput);
+			textFilter($("#cluster"), userInput);
 		});
 		
 		$("#subSelect").on("keyup", function () {
 			var userInput = $("#subSelect").val();
-			showOnlyOptionsSimilarToText($("#subcluster"), userInput);
+			textFilter($("#subcluster"), userInput);
 		});
 		
 		$("#enzSelect").on("keyup", function () {
