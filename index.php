@@ -178,6 +178,21 @@ sec_session_start();
 			var userInput = $("#phageSelect").val();
 			showOnlyOptionsSimilarToText($("#phage"), userInput);
 		});
+		
+		$("#clusterSelect").on("keyup", function () {
+			var userInput = $("#clusterSelect").val();
+			showOnlyOptionsSimilarToText($("#cluster"), userInput);
+		});
+		
+		$("#subSelect").on("keyup", function () {
+			var userInput = $("#subSelect").val();
+			showOnlyOptionsSimilarToText($("#subcluster"), userInput);
+		});
+		
+		$("#enzSelect").on("keyup", function () {
+			var userInput = $("#enzSelect").val();
+			showOnlyOptionsSimilarToText($("#enzselection"), userInput);
+		});
 
 
 		//$('#button').click( function () {
@@ -236,7 +251,7 @@ sec_session_start();
 							
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
-									<input type="text" class="form-control" placeholder = "Select Cluster">
+									<input type="text" class="form-control" placeholder = "Select Cluster" id="clusterSelect">
 									<select multiple class="form-control" id="cluster" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT DISTINCT `Cluster` FROM `PHAGE` ORDER BY `Cluster`")) {
@@ -255,7 +270,7 @@ sec_session_start();
 							<div class="col-md-3">
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
-									<input type="text" class="form-control" placeholder = "Select Subcluster">
+									<input type="text" class="form-control" placeholder = "Select Subcluster" id="subSelect">
 									<select multiple class="form-control" id="subcluster" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT DISTINCT `Subcluster` FROM `PHAGE` ORDER BY `Subcluster`")) {
@@ -274,7 +289,7 @@ sec_session_start();
 							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
-										<input type="text" class="form-control" placeholder = "Select Enzyme">
+										<input type="text" class="form-control" placeholder = "Select Enzyme" id="enzSelect">
 										<select multiple class="form-control" id="enzselection" rows="10">
 											<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
