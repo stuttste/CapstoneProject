@@ -334,7 +334,7 @@ sec_session_start();
 										
 									
 									
-										echo '<thead><th>Phage</th><th>Cluster</th><th>Subcluster</th>'
+										echo '<thead><th>Phage</th><th>Cluster</th><th>Subcluster</th>';
 											if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 													$sql->execute();
 													$sql->bind_result($name);
@@ -342,7 +342,7 @@ sec_session_start();
 															echo "<th>".$name."</th>";
 													}
 													$sql->close();
-										echo '</thead>'
+										echo '</thead>';
 									?>
 									
 									<!--
