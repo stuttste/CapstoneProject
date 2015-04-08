@@ -76,6 +76,11 @@ sec_session_start();
 		});*/
 		
 		$('#phageButton').click(function (){
+				
+				selectedId = $('#phage option:selected').val();
+				document.getElementsByClassName(selectedId)[0].style.visibility='hidden';
+				
+				/*
 				var type;
 				var id;
 				var selectedId;
@@ -107,7 +112,7 @@ sec_session_start();
 					}
 					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+selectedId,true);
 					xmlhttp.send();
-				
+				*/
 				
 				
 		});
@@ -341,7 +346,7 @@ sec_session_start();
 													$sql->execute();
 													$sql->bind_result($name);
 													while($sql->fetch()){
-															echo '<th class= "'.$name.'>'.$name.'</th>';
+															echo '<th class= "'.$name.'">'.$name.'</th>';
 													}
 													$sql->close();
 												}
