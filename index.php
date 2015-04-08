@@ -32,8 +32,7 @@ sec_session_start();
 	<script type="text/javascript" class="init">
 		$(document).ready(function() {
 		var table = $('#phageTable').DataTable({
-				"scrollX":	"200px";
-				"scrollCollapse":	true;
+				"scrollX": true
 			});
 		//var etable = $('#enzymeTable').DataTable();
 		var btable = $('#bestResultTable').DataTable();
@@ -334,6 +333,9 @@ sec_session_start();
 							<table class="table-responsive">
 								<table class="table table-bordered" id="phageTable">
 									<thead>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>Subcluster</th>
 									<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 													$sql->execute();
