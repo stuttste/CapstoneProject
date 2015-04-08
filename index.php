@@ -31,7 +31,10 @@ sec_session_start();
 	
 	<script type="text/javascript" class="init">
 		$(document).ready(function() {
-		var table = $('#phageTable').DataTable();
+		var table = $('#phageTable').DataTable({
+				"scrollX":	"200px";
+				"scrollCollapse":	true;
+			});
 		//var etable = $('#enzymeTable').DataTable();
 		var btable = $('#bestResultTable').DataTable();
 		var rtable = $('#resultsTable').DataTable();
