@@ -75,7 +75,7 @@ sec_session_start();
 			})
 		});*/
 		
-		$('#phageButton').click(function (){
+		$('#enzymeButton').click(function (){
 				
 				selectedId = $('#phage option:selected').val();
 				document.getElementsByClassName(selectedId)[0].style.visibility='hidden';
