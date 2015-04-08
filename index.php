@@ -341,7 +341,7 @@ sec_session_start();
 													$sql->execute();
 													$sql->bind_result($name);
 													while($sql->fetch()){
-															echo "<th>".$name."</th>";
+															echo '<th class= "'.$name.'>'.$name.'</th>';
 													}
 													$sql->close();
 												}
