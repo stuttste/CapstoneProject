@@ -330,21 +330,18 @@ sec_session_start();
 							<div class="col-md-12">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="phageTable">
+									<thead>
 									<?php
-										
-									
-									
-										echo '<thead><th>Phage</th><th>Cluster</th><th>Subcluster</th>';
-											if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
+												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 													$sql->execute();
 													$sql->bind_result($name);
 													while($sql->fetch()){
 															echo "<th>".$name."</th>";
 													}
 													$sql->close();
-										echo '</thead>';
+												}
 									?>
-									
+									</thead>
 									<!--
 									<thead>
 										<th>Phage</th>
