@@ -369,11 +369,14 @@ sec_session_start();
 										</thead>
 										<tbody>
 										<?php
+												$enzCount = 0;
 												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, IFNULL(GROUP_CONCAT(`Count`), '-') as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name`")) {
 													$sql->execute();
 													$sql->bind_result($name, $cluster, $sub, $cuts);
 													while($sql->fetch()){
 															$cutsArray = explode(",", $cuts);
+															if(count($cutsArray) > $enzCount)
+																$enzCount = count($cutsArray);
 															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
 															if($enzCount == count($cutsArray)){
 																for($i = 0; $i < $enzCount; $i++){
