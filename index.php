@@ -78,7 +78,7 @@ sec_session_start();
 		$('#enzymeButton').click(function (){
 				
 				
-				var selectedId = ".".$('#enzselection option:selected').val();
+				var selectedId = "." + $('#enzselection option:selected').val();
 				alert(selectedId);
 				
 				table
