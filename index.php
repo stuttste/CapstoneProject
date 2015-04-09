@@ -359,16 +359,17 @@ sec_session_start();
 										<?php
 													if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 														$sql->execute();
-														$enzCount = $sql->rowCount();
+														global $enzCount = $sql->rowCount();
 														$sql->bind_result($name);
 														while($sql->fetch()){
 																echo '<th class= "'.$name.'">'.$name.'</th>';
 														}
 														
 													}
-													
-													echo '</thead><tbody>';
-										
+											?>	
+										</thead>
+										<tbody>
+										<?php>
 												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, IFNULL(GROUP_CONCAT(`Count`), '-') as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name`")) {
 													$sql->execute();
 													$sql->bind_result($name, $cluster, $sub, $cuts);
