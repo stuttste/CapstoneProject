@@ -82,7 +82,7 @@ sec_session_start();
 				alert(selectedId);
 				
 				table.rows( selectedId ).every( function (){
-					this.child().hide();
+					this.child.hide();
 				});
 				
 				/*
