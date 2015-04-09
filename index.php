@@ -81,7 +81,7 @@ sec_session_start();
 				var selectedId = "." + $('#phage option:selected').val();
 				alert(selectedId);
 				
-				table.rows( selectedId ).remove();
+				table.rows( selectedId ).remove().draw();
 				
 				/*
 				var type;
