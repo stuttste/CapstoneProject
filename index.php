@@ -369,11 +369,16 @@ sec_session_start();
 									</thead>
 									<tbody>
 										<?php
-												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster` FROM `PHAGE`")) {
+												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage`")) {
 													$sql->execute();
-													$sql->bind_result($name, $cluster, $sub);
+													$sql->bind_result($name, $cluster, $sub, $cuts);
 													while($sql->fetch()){
-															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td></tr>';
+															$cutsArray = split(",", $cuts);
+															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
+															for($i = 0; $i < count(cutsArray); $i++){
+																echo '<td>'.cutsArray[i].'</td>';
+															}
+															echo '</tr>';
 													}
 													$sql->close();
 												}
