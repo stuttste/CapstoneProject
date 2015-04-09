@@ -347,7 +347,19 @@ sec_session_start();
 										<th>Phage</th>
 										<th>Cluster</th>
 										<th>Subcluster</th>
-									<?php
+										<?php
+													if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
+														$sql->execute();
+														$sql->bind_result($name);
+														while($sql->fetch()){
+																echo '<th class= "'.$name.'">'.$name.'</th>';
+														}
+														$sql->close();
+													}
+										?>
+									</thead>
+									<tbody>
+										<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 													$sql->execute();
 													$sql->bind_result($name);
@@ -356,8 +368,7 @@ sec_session_start();
 													}
 													$sql->close();
 												}
-									?>
-									</thead>
+										?>
 									<!--
 									<thead>
 										<th>Phage</th>
