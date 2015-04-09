@@ -81,9 +81,9 @@ sec_session_start();
 				var selectedId = "." + $('#phage option:selected').val();
 				alert(selectedId);
 				
-				table
-					.rows( selectedId )
-					.hide();
+				table.rows( selectedId ).every( function (){
+					this.child().hide();
+				});
 				
 				/*
 				var type;
