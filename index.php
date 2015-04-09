@@ -76,8 +76,9 @@ sec_session_start();
 		});*/
 		
 		$('#enzymeButton').click(function (){
+				alert("Button was pressed.");
 				
-				var selectedId = ".".$('#phage option:selected').val();
+				var selectedId = ".".$('#enzselection option:selected').val();
 				
 				table
 					.columns( selectedId )
