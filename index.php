@@ -369,7 +369,7 @@ sec_session_start();
 									</thead>
 									<tbody>
 										<?php
-												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage`")) {
+												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name`")) {
 													$sql->execute();
 													$sql->bind_result($name, $cluster, $sub, $cuts);
 													while($sql->fetch()){
