@@ -75,14 +75,14 @@ sec_session_start();
 			})
 		});*/
 		
-		$('#enzymeButton').click(function (){
+		$('#phageButton').click(function (){
 				
 				
-				var selectedId = "." + $('#enzselection option:selected').val();
+				var selectedId = "." + $('#phage option:selected').val();
 				alert(selectedId);
 				
 				table
-					.columns( selectedId )
+					.rows( selectedId )
 					.visible( false );
 				
 				/*
@@ -119,6 +119,18 @@ sec_session_start();
 					xmlhttp.send();
 				*/
 				
+				
+		});
+		
+		$('#enzymeButton').click(function (){
+				
+				
+				var selectedId = "." + $('#enzselection option:selected').val();
+				alert(selectedId);
+				
+				table
+					.columns( selectedId )
+					.visible( false );
 				
 		});
 		
