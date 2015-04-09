@@ -359,7 +359,7 @@ sec_session_start();
 										<?php
 													if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 														$sql->execute();
-														$enzCount = mysqli_num_rows($sql);
+														$enzCount = $sql->rowCount();
 														$sql->bind_result($name);
 														while($sql->fetch()){
 																echo '<th class= "'.$name.'">'.$name.'</th>';
