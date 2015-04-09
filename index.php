@@ -364,7 +364,7 @@ sec_session_start();
 														while($sql->fetch()){
 																echo '<th class= "'.$name.'">'.$name.'</th>';
 														}
-														
+														$sql->close();
 													}
 											?>	
 										</thead>
