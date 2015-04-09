@@ -76,16 +76,17 @@ sec_session_start();
 		});*/
 		
 		$('#enzymeButton').click(function (){
-				alert("Button was pressed.");
+				
 				
 				var selectedId = ".".$('#enzselection option:selected').val();
+				alert(selectedId);
 				
 				table
 					.columns( selectedId )
 					.visible( false );
 				
 				
-				//document.getElementsByClassName(selectedId)[0].style.visibility='hidden';
+				document.getElementsByClassName(selectedId)[0].style.visibility='hidden';
 				
 				/*
 				var type;
