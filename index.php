@@ -85,9 +85,6 @@ sec_session_start();
 					.columns( selectedId )
 					.visible( false );
 				
-				
-				document.getElementsByClassName(selectedId)[0].style.visibility='hidden';
-				
 				/*
 				var type;
 				var id;
@@ -362,11 +359,11 @@ sec_session_start();
 									</thead>
 									<tbody>
 										<?php
-												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
+												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster` FROM `PHAGE`")) {
 													$sql->execute();
-													$sql->bind_result($name);
+													$sql->bind_result($name, $cluster, $sub);
 													while($sql->fetch()){
-															echo '<th class= "'.$name.'">'.$name.'</th>';
+															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td></tr>';
 													}
 													$sql->close();
 												}
