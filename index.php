@@ -376,7 +376,7 @@ sec_session_start();
 															$cutsArray = explode(",", $cuts);
 															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
 															for($i = 0; $i < count($cutsArray); $i++){
-																echo '<td>'.$cutsArray[i].'</td>';
+																echo '<td>'.$cutsArray[$i].'</td>';
 															}
 															echo '</tr>';
 													}
