@@ -83,7 +83,7 @@ sec_session_start();
 				
 				table
 					.rows( selectedId )
-					.visible( false );
+					.hide();
 				
 				/*
 				var type;
