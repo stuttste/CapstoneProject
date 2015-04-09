@@ -77,14 +77,14 @@ sec_session_start();
 		
 		$('#enzymeButton').click(function (){
 				
-				table.columns().every( function () {
-					var data = this.data();
-					alert(data);
-		
-				} );
+				var selectedId = ".".$('#phage option:selected').val();
 				
-				selectedId = $('#phage option:selected').val();
-				document.getElementsByClassName(selectedId)[0].style.visibility='hidden';
+				table
+					.columns( selectedId )
+					.visible( false );
+				
+				
+				//document.getElementsByClassName(selectedId)[0].style.visibility='hidden';
 				
 				/*
 				var type;
