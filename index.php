@@ -370,23 +370,24 @@ sec_session_start();
 										<tbody>
 										<?php
 												$enzCount = 0;
-												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, IFNULL(GROUP_CONCAT(`Count`), '-') as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name`")) {
+												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name` WHERE GROUP_CONCAT(`Count`) <> NULL")) {
 													$sql->execute();
 													$sql->bind_result($name, $cluster, $sub, $cuts);
 													while($sql->fetch()){
 															$cutsArray = explode(",", $cuts);
 															if(count($cutsArray) > $enzCount)
 																$enzCount = count($cutsArray);
-															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
+															
 															if($enzCount == count($cutsArray)){
+																echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
 																for($i = 0; $i < $enzCount; $i++){
 																	echo '<td>'.$cutsArray[$i].'</td>';
 																}
-															}else{
+															}/*else{
 																for($i = 0; $i < $enzCount; $i++){
 																	echo '<td>-</td>';
 																}
-															}
+															}*/
 															echo '</tr>';
 													}
 													$sql->close();
