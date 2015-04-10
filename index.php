@@ -375,15 +375,14 @@ sec_session_start();
 													$sql->bind_result($name, $cluster, $sub, $cuts);
 													while($sql->fetch()){
 															$cutsArray = explode(",", $cuts);
-															if(count($cutsArray) > $enzCount)
-																$enzCount = count($cutsArray);
-															
-															if($enzCount == count($cutsArray)){
-																echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
-																for($i = 0; $i < $enzCount; $i++){
+															//if(count($cutsArray) > $enzCount)
+																//$enzCount = count($cutsArray);
+															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
+															//if($enzCount == count($cutsArray)){
+																for($i = 0; $i < count($cutsArray); $i++){
 																	echo '<td>'.$cutsArray[$i].'</td>';
 																}
-															}/*else{
+															/*}else{
 																for($i = 0; $i < $enzCount; $i++){
 																	echo '<td>-</td>';
 																}
