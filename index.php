@@ -122,13 +122,22 @@ sec_session_start();
 		
 		$('#enzymeButton').click(function (){
 				
+			var PhageForm = document.forms.PhageForm;
+			//var selectedId = "." + $('#enzselection option:selected').val();
+			var selectedId = "";
+			var x = 0;
+			
+			for(x=0; x<PhageForm.enzSelect.length; x++){
+					if(PhageForm.enzSelect[x].selected){
+						selectedId = PhageForm.enzSelect[x].value;
+						table
+							.columns( selectedId )
+							.visible( false );
+					}
+			}
+				//alert(selectedId);
 				
-				var selectedId = "." + $('#enzselection option:selected').val();
-				alert(selectedId);
 				
-				table
-					.columns( selectedId )
-					.visible( false );
 				
 		});
 		
@@ -250,7 +259,7 @@ sec_session_start();
 			                
 						<div class="row">
 							<div class="col-md-3">
-							<form class="inline-block">
+							<form name="PhageForm" class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<input type="text" class="form-control" placeholder = "Select Phage" id="phageSelect">
@@ -312,7 +321,7 @@ sec_session_start();
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme" id="enzSelect">
-										<select multiple class="form-control" id="enzselection" rows="10">
+										<select name="enzSelect" multiple class="form-control" id="enzselection" rows="10">
 											<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 													$sql->execute();
