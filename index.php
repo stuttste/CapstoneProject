@@ -77,11 +77,64 @@ sec_session_start();
 		
 		$('#phageButton').click(function (){
 				
-				
+				/*
 				var selectedId = "." + $('#phage option:selected').val();
 				alert(selectedId);
 				
 				table.rows( selectedId ).remove().draw();
+				*/
+				
+				var PhageForm = document.forms.PhageForm;
+				var phageStr;
+				var clusterStr;
+				var subclusterStr;
+				var enzStr;
+				
+				
+				for(x=0; x<PhageForm.phageSelectBox.length; x++){
+					if(PhageForm.phageSelectBox[x].selected){
+						if(phageStr.equals(""))
+							phageStr += "'" + PhageForm.phageSelectBox[x].value + "'";
+						else
+							phageStr += ",'" + PhageForm.phageSelectBox[x].value + "'";
+					}
+				}
+				
+				for(x=0; x<PhageForm.clusterSelectBox.length; x++){
+					if(PhageForm.clusterSelectBox[x].selected){
+						if(clusterStr.equals(""))
+							clusterStr += "'" + PhageForm.clusterSelectBox[x].value + "'";
+						else
+							clusterStr += ",'" + PhageForm.clusterSelectBox[x].value + "'";
+					}
+				}
+				
+				for(x=0; x<PhageForm.subclusterSelectBox.length; x++){
+					if(PhageForm.subclusterSelectBox[x].selected){
+						if(subclusterStr.equals(""))
+							subclusterStr += "'" + PhageForm.subclusterSelectBox[x].value + "'";
+						else
+							subclusterStr += ",'" + PhageForm.subclusterSelectBox[x].value + "'";
+					}
+				}
+				
+				for(x=0; x<PhageForm.enzSelectBox.length; x++){
+					if(PhageForm.enzSelectBox[x].selected){
+						if(enzStr.equals(""))
+							enzStr += "'" + PhageForm.enzSelectBox[x].value + "'";
+						else
+							enzStr += ",'" + PhageForm.enzSelectBox[x].value + "'";
+					}
+				}
+				
+				$.ajax({
+					url: "http://www.g3cap.tk/staging/calls/phageLookup.php?phages=" + phageStr + "clusters=" + clusterStr + "subclusters=" + subclusterStr + "enzymes=" + enzStr,
+					success: function(data){
+							var t = document.getElementById("phageTable");
+							t.innerHTML = data;
+							table.draw();
+					}
+				});
 				
 				/*
 				var type;
@@ -264,7 +317,7 @@ sec_session_start();
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<input type="text" class="form-control" placeholder = "Select Phage" id="phageSelect">
-									<select multiple class="form-control" id="phage" rows="10">
+									<select name= "phageSelectBox" multiple class="form-control" id="phage" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
 											$sql->execute();
@@ -284,7 +337,7 @@ sec_session_start();
 								<div class="form-group">
 									<label for="cluster">Cluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Cluster" id="clusterSelect">
-									<select multiple class="form-control" id="cluster" rows="10">
+									<select name="clusterSelectBox" multiple class="form-control" id="cluster" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT DISTINCT `Cluster` FROM `PHAGE` ORDER BY `Cluster`")) {
 											$sql->execute();
@@ -303,7 +356,7 @@ sec_session_start();
 								<div class="form-group">
 									<label for="subcluster">Subcluster:</label>
 									<input type="text" class="form-control" placeholder = "Select Subcluster" id="subSelect">
-									<select multiple class="form-control" id="subcluster" rows="10">
+									<select name="subclusterSelectBox" multiple class="form-control" id="subcluster" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT DISTINCT `Subcluster` FROM `PHAGE` ORDER BY `Subcluster`")) {
 											$sql->execute();
