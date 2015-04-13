@@ -94,38 +94,47 @@ sec_session_start();
 				for(x=0; x<PhageForm.phageSelectBox.length; x++){
 					if(PhageForm.phageSelectBox[x].selected){
 						if(phageStr === "")
-							phageStr += "'" + PhageForm.phageSelectBox[x].value + "'";
+							phageStr += "&quot;" + PhageForm.phageSelectBox[x].value + "&quot;";
 						else
-							phageStr += ",'" + PhageForm.phageSelectBox[x].value + "'";
+							phageStr += ",&quot;" + PhageForm.phageSelectBox[x].value + "&quot;";
 					}
 				}
 				
 				for(x=0; x<PhageForm.clusterSelectBox.length; x++){
 					if(PhageForm.clusterSelectBox[x].selected){
 						if(clusterStr === "")
-							clusterStr += "'" + PhageForm.clusterSelectBox[x].value + "'";
+							clusterStr += "&quot;" + PhageForm.clusterSelectBox[x].value + "&quot;";
 						else
-							clusterStr += ",'" + PhageForm.clusterSelectBox[x].value + "'";
+							clusterStr += ",&quot;" + PhageForm.clusterSelectBox[x].value + "&quot;";
 					}
 				}
 				
 				for(x=0; x<PhageForm.subclusterSelectBox.length; x++){
 					if(PhageForm.subclusterSelectBox[x].selected){
 						if(subclusterStr === "")
-							subclusterStr += "'" + PhageForm.subclusterSelectBox[x].value + "'";
+							subclusterStr += "&quot;" + PhageForm.subclusterSelectBox[x].value + "&quot;";
 						else
-							subclusterStr += ",'" + PhageForm.subclusterSelectBox[x].value + "'";
+							subclusterStr += ",&quot;" + PhageForm.subclusterSelectBox[x].value + "&quot;";
 					}
 				}
 				
 				for(x=0; x<PhageForm.enzSelectBox.length; x++){
 					if(PhageForm.enzSelectBox[x].selected){
 						if(enzStr === "")
-							enzStr += "'" + PhageForm.enzSelectBox[x].value + "'";
+							enzStr += "&quot;" + PhageForm.enzSelectBox[x].value + "&quot;";
 						else
-							enzStr += ",'" + PhageForm.enzSelectBox[x].value + "'";
+							enzStr += ",&quot;" + PhageForm.enzSelectBox[x].value + "&quot;";
 					}
 				}
+				
+				if(phageStr === "")
+					phageStr = "No_phage";
+				if(clusterStr === "")
+					clusterStr = "No_cluster";
+				if(subclusterStr === "")
+					subclusterStr = "No_subcluster";
+				if(enzStr === "")
+					enzStr = "No_enzymes";
 				
 				$.ajax({
 					url: "calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
