@@ -130,12 +130,13 @@ sec_session_start();
 			for(x=0; x<PhageForm.enzSelect.length; x++){
 					if(PhageForm.enzSelect[x].selected){
 						selectedId = PhageForm.enzSelect[x].value;
+						alert(selectedId);
 						table
 							.columns( selectedId )
 							.visible( false );
 					}
 			}
-				//alert(selectedId);
+				
 				
 				
 				
