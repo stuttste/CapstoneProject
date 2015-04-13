@@ -85,10 +85,10 @@ sec_session_start();
 				*/
 				
 				var PhageForm = document.forms.PhageForm;
-				var phageStr;
-				var clusterStr;
-				var subclusterStr;
-				var enzStr;
+				var phageStr = "";
+				var clusterStr = "";
+				var subclusterStr = "";
+				var enzStr = "";
 				
 				
 				for(x=0; x<PhageForm.phageSelectBox.length; x++){
@@ -128,7 +128,7 @@ sec_session_start();
 				}
 				
 				$.ajax({
-					url: "http://www.g3cap.tk/staging/calls/phageLookup.php?phages=" + phageStr + "clusters=" + clusterStr + "subclusters=" + subclusterStr + "enzymes=" + enzStr,
+					url: "http://www.g3cap.tk/staging/calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
 					success: function(data){
 							var t = document.getElementById("phageTable");
 							t.innerHTML = data;
