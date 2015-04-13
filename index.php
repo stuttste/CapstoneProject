@@ -128,7 +128,7 @@ sec_session_start();
 				}
 				
 				$.ajax({
-					url: "http://www.g3cap.tk/staging/calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
+					url: "calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
 					success: function(data){
 							var t = document.getElementById("phageTable");
 							t.innerHTML = data;
