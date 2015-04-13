@@ -127,9 +127,9 @@ sec_session_start();
 			var selectedId = "";
 			var x = 0;
 			
-			for(x=0; x<PhageForm.enzSelect.length; x++){
-					if(PhageForm.enzSelect[x].selected){
-						selectedId = PhageForm.enzSelect[x].value;
+			for(x=0; x<PhageForm.enzSelectBox.length; x++){
+					if(PhageForm.enzSelectBox[x].selected){
+						selectedId = PhageForm.enzSelectBox[x].value;
 						alert(selectedId);
 						table
 							.columns( selectedId )
@@ -324,7 +324,7 @@ sec_session_start();
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
 										<input type="text" class="form-control" placeholder = "Select Enzyme" id="enzSelect">
-										<select name="enzSelect" multiple class="form-control" id="enzselection" rows="10">
+										<select name="enzSelectBox" multiple class="form-control" id="enzselection" rows="10">
 											<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 													$sql->execute();
