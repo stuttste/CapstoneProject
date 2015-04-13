@@ -129,13 +129,11 @@ sec_session_start();
 			
 			for(x=0; x<PhageForm.enzSelectBox.length; x++){
 					if(PhageForm.enzSelectBox[x].selected){
-						selectedId = PhageForm.enzSelectBox[x].value;
+						selectedId = '.' + PhageForm.enzSelectBox[x].value;
 						alert(selectedId);
 						table
 							.columns( selectedId )
 							.visible( false );
-					}else{
-							alert("This is not working");
 					}
 			}
 				
