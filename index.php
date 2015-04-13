@@ -134,6 +134,8 @@ sec_session_start();
 						table
 							.columns( selectedId )
 							.visible( false );
+					}else{
+							alert("This is not working");
 					}
 			}
 				
