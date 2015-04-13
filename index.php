@@ -93,7 +93,7 @@ sec_session_start();
 				
 				for(x=0; x<PhageForm.phageSelectBox.length; x++){
 					if(PhageForm.phageSelectBox[x].selected){
-						if(phageStr.equals(""))
+						if(phageStr === "")
 							phageStr += "'" + PhageForm.phageSelectBox[x].value + "'";
 						else
 							phageStr += ",'" + PhageForm.phageSelectBox[x].value + "'";
@@ -102,7 +102,7 @@ sec_session_start();
 				
 				for(x=0; x<PhageForm.clusterSelectBox.length; x++){
 					if(PhageForm.clusterSelectBox[x].selected){
-						if(clusterStr.equals(""))
+						if(clusterStr === "")
 							clusterStr += "'" + PhageForm.clusterSelectBox[x].value + "'";
 						else
 							clusterStr += ",'" + PhageForm.clusterSelectBox[x].value + "'";
@@ -111,7 +111,7 @@ sec_session_start();
 				
 				for(x=0; x<PhageForm.subclusterSelectBox.length; x++){
 					if(PhageForm.subclusterSelectBox[x].selected){
-						if(subclusterStr.equals(""))
+						if(subclusterStr === "")
 							subclusterStr += "'" + PhageForm.subclusterSelectBox[x].value + "'";
 						else
 							subclusterStr += ",'" + PhageForm.subclusterSelectBox[x].value + "'";
@@ -120,7 +120,7 @@ sec_session_start();
 				
 				for(x=0; x<PhageForm.enzSelectBox.length; x++){
 					if(PhageForm.enzSelectBox[x].selected){
-						if(enzStr.equals(""))
+						if(enzStr === "")
 							enzStr += "'" + PhageForm.enzSelectBox[x].value + "'";
 						else
 							enzStr += ",'" + PhageForm.enzSelectBox[x].value + "'";
