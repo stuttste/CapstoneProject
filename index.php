@@ -370,7 +370,7 @@ sec_session_start();
 										<tbody>
 										<?php
 												$enzCount = 0;
-												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name`")) {
+												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name` HAVING GROUP_CONCAT(`Count`) IS NOT NULL")) {
 													$sql->execute();
 													$sql->bind_result($name, $cluster, $sub, $cuts);
 													while($sql->fetch()){
