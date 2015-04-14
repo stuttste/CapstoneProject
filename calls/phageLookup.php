@@ -6,37 +6,35 @@
 	$clusters = $_GET['clusters'];
 	$sub = $_GET['subclusters'];
 	$enzymes = $_GET['enzymes'];
+	$enzymeArr = explode(",", $enzymes);
+	$cutsArr;
+	$i = 0;
+	$resultStr = "";
 	
-	$sql = $mysqli->query("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`)"
+	$sql = $mysqli->query("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) AS Cuts"
 								. " FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage`"
 								. " WHERE (`Name` IN($phages) OR `Cluster` IN($clusters) OR `Subcluster` IN($sub)) AND `Enzyme` IN($enzymes)"
-								. " GROUP BY `Name`"
+								. " GROUP BY `Name`");
+								
+	$resultStr = "<thead><th>Phage</th><th>Cluster</th><th>Subcluster</th>";
 	
-	
-	
-	////////////////////////////////////////////////////////////////////////////////
-	
-	
-	if($type='Phage'){
-		$sql=$mysqli->query("SELECT `Name`, `Cluster`, `Subcluster` FROM `PHAGE` WHERE `Name`= '".$id."'");
-	}elseif($type='Cluster'){
-		$sql=$mysqli->query("SELECT `Name`, `Cluster`, `Subcluster` FROM `PHAGE` WHERE `Cluster`= '".$id."'");
-	}elseif($type='Subcluster'){
-		$sql=$mysqli->query("SELECT `Name`, `Cluster`, `Subcluster` FROM `PHAGE` WHERE `Subcluster`= '".$id."'");
-	}elseif($type='Enzyme'){
-		$sql=$mysqli->query("SELECT `Name` FROM `PHAGE` WHERE `Name`= '".$id."'");
+	for($i=0; $i < count($enzymeArr); i++){
+		$resultStr .= "<th>$enzymeArr[$i]</th>";
 	}
 	
-	if($type='Phage' || $type='Cluster' || $type='Subcluster'){
-		while($row = $sql->fetch_assoc()){
-			echo $row["Name"] .', '. $row["Cluster"] .', '. $row["Subcluster"] ;
-			//echo '<tr><td>'. $row["Name"] .'</td><td>'. $row["Cluster"] .'</td><td>'. $row["Subcluster"] .'</td></tr>';
+	$resultStr .= "</thead><tbody>";
+								
+	while($row = $sql->fetch_assoc()){
+		$resultStr .= "<tr><td>$row['Name']</td><td>$row['Cluster']</td><td>$row['Subcluster']</td>";
+		$cutsArr = explode(",", $row['Cuts']);
+		for($i = 0; $i < count($cutsArr); i++){
+			$resultStr .= "<td>$cutsArr[$i]</td>";
 		}
-	}elseif($type='Enzyme'){
-		while($row = $sql->fetch_assoc()){
-			echo '<tr><td>'. $row["Name"].'</td></tr>';
-		}
-		
-	
+		$resultStr .= "</tr>" ;
 	}
+	
+	$resultStr .= "</tbody>";
+	
+	echo $resultStr;
+	
 ?>
