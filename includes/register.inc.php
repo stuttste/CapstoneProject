@@ -9,11 +9,11 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-		  $Fname = filter_input(INPUT_POST, 'Fname', FILTER_SANITIZE_STRING);
-	    $Lname = filter_input(INPUT_POST, 'Lname', FILTER_SANITIZE_STRING);
-		  $State = filter_input(INPUT_POST, 'State', FILTER_SANITIZE_STRING);
-		    $Univ = filter_input(INPUT_POST, 'Univ', FILTER_SANITIZE_STRING);
-}
+	$Fname = filter_input(INPUT_POST, 'Fname', FILTER_SANITIZE_STRING);
+	$Lname = filter_input(INPUT_POST, 'Lname', FILTER_SANITIZE_STRING);
+	$State = filter_input(INPUT_POST, 'State', FILTER_SANITIZE_STRING);
+	$Univ = filter_input(INPUT_POST, 'Univ', FILTER_SANITIZE_STRING);
+	}
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Not a valid email
         $error_msg .= '<p class="error">The email address you entered is not valid</p>';
@@ -75,8 +75,11 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
     // We'll also have to account for the situation where the user doesn't have
     // rights to do registration, by checking what type of user is attempting to
     // perform the operation.
- 
-    if (empty($error_msg)) {
+	
+	//debug output
+ echo $Univ.$Fname.$State.$Lname;
+    
+	if (empty($error_msg)) {
         // Create a random salt
         //$random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE)); // Did not work
         $random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
@@ -84,6 +87,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 		$normPass = $password;
         // Create salted password 
         $password = hash('sha512', $password . $random_salt);
+ 
+ // Thinking the variable $Mysqli could be a possible issue.
  
         // Insert the new user into the database 
         if ($insert_stmt = $mysqli->prepare("INSERT INTO MEMBERS (Username, Email, Password, Salt,Fname,Lname,State,University) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
