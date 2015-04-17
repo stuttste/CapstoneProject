@@ -131,7 +131,7 @@ if (login_check($mysqli) == true) {
 										   this.form.Fname,
 										   this.form.Lname,
 										   this.form.State,
-										   this.form.Univ,
+										   this.form.Univ
 										  );" 
 							class="btn btn-lg btn-primary btn-block" /> 
 				</form>
