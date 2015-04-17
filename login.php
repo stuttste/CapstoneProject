@@ -128,6 +128,10 @@ if (login_check($mysqli) == true) {
 										   this.form.email,
 										   this.form.password,
 										   this.form.confirmpwd
+										   this.form.Fname
+										   this.form.Lname
+										   this.form.State
+										   this.form.Univ
 										  );" 
 							class="btn btn-lg btn-primary btn-block" /> 
 				</form>
