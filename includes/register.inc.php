@@ -77,7 +77,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
     // perform the operation.
 	
 	//debug output
- echo $Univ.$Fname.$State.$Lname;
+ //echo $Univ.$Fname.$State.$Lname;
     
 	if (empty($error_msg)) {
         // Create a random salt
@@ -93,7 +93,11 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
         // Insert the new user into the database 
         if ($insert_stmt = $mysqli->prepare("INSERT INTO MEMBERS (Username, Email, Password, Salt,Fname,Lname,State,University) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
 		$insert_stmt->bind_param( $username, $email, $password, $random_salt,$Fname,$Lname,$State,$Univ);}
-            // Execute the prepared query.
+            else
+			{
+				echo $insert_stmt;
+			}
+			// Execute the prepared query.
             if (! $insert_stmt->execute()) {
                // header('Location: ../error.php?err=Registration failure: INSERT');
             } else{

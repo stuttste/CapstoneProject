@@ -76,8 +76,8 @@ function regformhash(form, uid, email, password, conf,Fname,Lname,State,Univ) {
     // Make sure the plaintext password doesn't get sent. 
     password.value = "";
     conf.value = "";
- // debug data passing verification
-alert( uid.value+p.value+Fname.value+Lname.value+Univ.value+State.value)
+ // debug data passing verification Returned info
+//alert( uid.value+p.value+Fname.value+Lname.value+Univ.value+State.value)
     // Finally submit the form. 
     form.submit();
     return true;
