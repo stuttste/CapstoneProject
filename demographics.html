@@ -1,0 +1,64 @@
+<script type="text"/javascript src=http://cdnjs.cloudflare.com/ajax/libs/dc/1.7.0/dc.js</script>
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script>
+d3.json("Demo.json", function (demo_data) {
+var pieChart = dc.pieChart("#dc-pie-graph");
+var dataTable = dc.dataTable("#dc-table-graph");
+var cfx = crossfilter(demo_data);
+    var startValue = cfx.dimension(function (d) {
+        return d.state;
+    });
+    var startValueGroup = startValue.group();
+ var tDimension = cfx.dimension(function (d) { return d.} 
+pieChart.width(300)
+        .height(300)
+        .transitionDuration(1500)
+        .dimension(startValue)
+        .group(startValueGroup)
+        .radius(90)
+        .minAngleForLabel(0)
+        .label(function(d) { return d.data.key; })
+        .on("filtered", function (chart) {
+            dc.events.trigger(function () {
+                if(chart.filter()) {
+                    console.log(chart.filter());
+                    volumeChart.filter([chart.filter()-.25,chart.filter()-(-0.25)]);
+                    }
+                else volumeChart.filterAll();
+            });
+        });
+	dataTable.width(800).height(800)
+    .dimension(tDimension)
+    .group(function(d) { return "List of all Demographic Data"
+     })
+    .size(100)
+    .columns([
+        function(d) { return d.Lname; },
+        function(d) { return d.University; },
+        function(d) { return d.State; },
+    
+    ])
+    .sortBy(function(d){ return d.Lname; })
+    // (optional) sort order, :default ascending
+    .order(d3.ascending);	
+		</script>
+  <div class='row-fluid'>
+                            <div class='pie-graph span4' id='dc-pie-graph'>
+                                <h4>Division by State(Pie)</h4>
+                            </div>
+							   <div class='row-fluid'>
+                            <div class='span12 table-graph'>
+                                <h4>Data Table for User info</h4>
+                                <table class='table table-hover dc-data-table' id='dc-table-graph'>
+                                    <thead>
+                                        <tr class='header'>
+                                            <th>Lname</th>
+                                            <th>University</th>
+                                            <th> State </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
