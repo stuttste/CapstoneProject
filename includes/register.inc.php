@@ -92,17 +92,16 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
  
         // Insert the new user into the database 
         if ($insert_stmt = $mysqli->prepare("INSERT INTO MEMBERS (Username, Email, Password, Salt,Fname,Lname,State,University) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
-		$insert_stmt->bind_param( $username, $email, $password, $random_salt,$Fname,$Lname,$State,$Univ);}
+		$insert_stmt->bind_param('dummy', $username, $email, $password, $random_salt,$Fname,$Lname,$State,$Univ);}
             else
 			{
 				
 			}
-			echo $insert_stmt;
-			echo $mysqli;
+			
 			
 			// Execute the prepared query.
             if (! $insert_stmt->execute()) {
-               // header('Location: ../error.php?err=Registration failure: INSERT');
+               header('Location: ../error.php?err=Registration failure: INSERT');
             } else{
 				$to			= $email;
 				$subject 	= 'PET Account Verification';
@@ -122,8 +121,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 				$headers = 'From:stuttste@gmail.com'."\r\n";
 				mail($to, $subject, $message, $headers);
 				}
-			// disabled for debugging
-        //header('Location: ./register_success.php');
+			// disable headers for debugging
+        header('Location: ./register_success.php');
     }
 
 ?>
