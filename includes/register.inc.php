@@ -115,8 +115,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 				$headers = 'From:stuttste@gmail.com'."\r\n";
 				mail($to, $subject, $message, $headers);
 				}
-			
-        header('Location: ./register_success.php');
+			// disabled for debugging
+        //header('Location: ./register_success.php');
     }
 
 ?>
