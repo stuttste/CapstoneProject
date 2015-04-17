@@ -95,7 +95,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 		$insert_stmt->bind_param( $username, $email, $password, $random_salt,$Fname,$Lname,$State,$Univ);}
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
+               // header('Location: ../error.php?err=Registration failure: INSERT');
             } else{
 				$to			= $email;
 				$subject 	= 'PET Account Verification';
