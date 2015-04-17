@@ -72,7 +72,7 @@ function regformhash(form, uid, email, password, conf,Fname,Lname,State,Univ) {
     p.name = "p";
     p.type = "hidden";
     p.value = hex_sha512(password.value);
- 
+ // debug data passing verification
     // Make sure the plaintext password doesn't get sent. 
     password.value = "";
     conf.value = "";
