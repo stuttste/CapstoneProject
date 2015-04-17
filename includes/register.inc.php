@@ -88,16 +88,12 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
         // Create salted password 
         $password = hash('sha512', $password . $random_salt);
  
- 
+	}
  
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO MEMBERS (Username, Email, Password, Salt,Fname,Lname,State,University) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO MEMBERS ('Username', 'Email', 'Password', 'Salt','Fname','Lname','State','University') VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
 		$insert_stmt->bind_param('dummy', $username, $email, $password, $random_salt,$Fname,$Lname,$State,$Univ);}
-            else
-			{
-				
-			}
-			
+            
 			
 			// Execute the prepared query.
             if (! $insert_stmt->execute()) {
