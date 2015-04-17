@@ -88,15 +88,18 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
         // Create salted password 
         $password = hash('sha512', $password . $random_salt);
  
- // Thinking the variable $Mysqli could be a possible issue.
+ 
  
         // Insert the new user into the database 
         if ($insert_stmt = $mysqli->prepare("INSERT INTO MEMBERS (Username, Email, Password, Salt,Fname,Lname,State,University) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
 		$insert_stmt->bind_param( $username, $email, $password, $random_salt,$Fname,$Lname,$State,$Univ);}
             else
 			{
-				echo $insert_stmt;
+				
 			}
+			echo $insert_stmt;
+			echo $mysqli;
+			
 			// Execute the prepared query.
             if (! $insert_stmt->execute()) {
                // header('Location: ../error.php?err=Registration failure: INSERT');
