@@ -45,6 +45,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		var mTable = $('#memberEmailTable').DataTable({
 				"scrollX": true
 			});
+			
+			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('active');
+			} );
 	</script>
 	
 	
@@ -243,7 +247,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
             <button type="button">Demote user</button>
             <button type="button">Delete account</button>
             <div class="row">
-							<div class="col-md-12">
+						<div class="col-md-12">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="memberEmailTable">
 									<thead>
@@ -252,9 +256,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 										<th>Admin</th>
 									</thead>
 									
-										<tbody>
+									<tbody>
 										<?php
-											if ($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin`, FROM `MEMBERS`")){													
+											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin`, FROM `MEMBERS`")){													
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
@@ -267,10 +271,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 									</tbody>
 								</table>
 							</table>
-							</div>
-			
-							
 						</div>
+			</div>
           </div>
         </div>
       </div>
