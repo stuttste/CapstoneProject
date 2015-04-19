@@ -250,42 +250,19 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 										<th>Username</th>
 										<th>Email</th>
 										<th>Admin</th>
-										<?php
-													if ($sql = $mysqli->prepare("SELECT `Username` FROM `MEMBERS`")) {
-														$sql->execute();
-														$sql->bind_result($username);
-														while($sql->fetch()){
-																echo '<th class= "'.$username.'">'.$username.'</th>';
-														}
-														$sql->close();
-													}
-											?>	
-										</thead>
+									</thead>
+									
 										<tbody>
-										<?php/*
-												$enzCount = 0;
-												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name` HAVING GROUP_CONCAT(`Count`) IS NOT NULL")) {
-													$sql->execute();
-													$sql->bind_result($name, $cluster, $sub, $cuts);
+										<?php
+											if ($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin`, FROM `MEMBERS`")){													
+												$sql->execute();
+													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
-															$cutsArray = explode(",", $cuts);
-															//if(count($cutsArray) > $enzCount)
-																//$enzCount = count($cutsArray);
-															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
-															//if($enzCount == count($cutsArray)){
-																for($i = 0; $i < count($cutsArray); $i++){
-																	echo '<td>'.$cutsArray[$i].'</td>';
-																}
-															/*}else{
-																for($i = 0; $i < $enzCount; $i++){
-																	echo '<td>-</td>';
-																}
-															}*/
-															/*echo '</tr>';
-													}
+															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td>'.$email.'</td><td>'.$admin.'</td>';
+															}
 													$sql->close();
 												}
-										*/?>
+										?>
 									
 									</tbody>
 								</table>
