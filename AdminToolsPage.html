@@ -32,21 +32,26 @@ dist/js/bootstrap.min.js"></script>
 
 href="jQuery/jquery-1.11.2.min.js"></script>
         -->
-    <link rel="stylesheet" href=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
-    type="text/css" />
-    <link rel="stylesheet" href=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
-    type="text/css" />
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
-    type="text/javascript">
-</script>
-    <script src=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"
-    type="text/javascript">
-</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+	
+	<script type="text/javascript" class="init">
+		$(document).ready(function() {
+		var mTable = $('#memberEmailTable').DataTable({
+				"scrollX": true
+			});
+	
+	
   </head>
+  
+  
+  
+  
   <body>
     <nav class="navbar navbar-inverse sidebar" role="navigation">
 			<div class="container-fluid">
@@ -232,91 +237,62 @@ href="jQuery/jquery-1.11.2.min.js"></script>
             </h3>
             <p>
               This tab allows for the management of user accounts.
-            </p><button type="button">Promote user</button>
+            </p>
+			<button type="button">Promote user</button>
             <button type="button">Demote user</button>
             <button type="button">Delete account</button>
-            <div class="resultstable">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>
-                      Email
-                    </th>
-                    <th>
-                      Status
-                    </th>
-                    <th>
-                      (Toggle Button)
-                    </th>
-                    <th>
-                      Delete
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <div class="row">
+							<div class="col-md-12">
+							<table class="table-responsive">
+								<table class="table table-bordered" id="memberEmailTable">
+									<thead>
+										<th>Username</th>
+										<th>Email</th>
+										<th>Admin</th>
+										<?php
+													if ($sql = $mysqli->prepare("SELECT `Username` FROM `MEMBERS`")) {
+														$sql->execute();
+														$sql->bind_result($username);
+														while($sql->fetch()){
+																echo '<th class= "'.$username.'">'.$username.'</th>';
+														}
+														$sql->close();
+													}
+											?>	
+										</thead>
+										<tbody>
+										<?php/*
+												$enzCount = 0;
+												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name` HAVING GROUP_CONCAT(`Count`) IS NOT NULL")) {
+													$sql->execute();
+													$sql->bind_result($name, $cluster, $sub, $cuts);
+													while($sql->fetch()){
+															$cutsArray = explode(",", $cuts);
+															//if(count($cutsArray) > $enzCount)
+																//$enzCount = count($cutsArray);
+															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
+															//if($enzCount == count($cutsArray)){
+																for($i = 0; $i < count($cutsArray); $i++){
+																	echo '<td>'.$cutsArray[$i].'</td>';
+																}
+															/*}else{
+																for($i = 0; $i < $enzCount; $i++){
+																	echo '<td>-</td>';
+																}
+															}*/
+															/*echo '</tr>';
+													}
+													$sql->close();
+												}
+										*/?>
+									
+									</tbody>
+								</table>
+							</table>
+							</div>
+			
+							
+						</div>
           </div>
         </div>
       </div>
