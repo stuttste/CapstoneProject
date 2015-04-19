@@ -188,6 +188,16 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 										<th>Username</th>
 										<th>Email</th>
 										<th>Admin</th>
+										<?php
+													if ($sql = $mysqli->prepare("SELECT `Username` FROM `MEMBERS`")) {
+														$sql->execute();
+														$sql->bind_result($username);
+														while($sql->fetch()){
+																echo '<th class= "'.$username.'">'.$username.'</th>';
+														}
+														$sql->close();
+													}
+											?>	
 									</thead>
 									
 									<tbody>
