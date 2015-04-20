@@ -35,14 +35,14 @@
 		</nav>
 <script>
 d3.json("Demo.json", function (demo) {
-var pieChart = dc.pieChart("dc-pie-graph");
-var dataTable = dc.dataTable("dc-table-graph");
+var pieChart = dc.pieChart("#dc-pie-graph");
+var dataTable = dc.dataTable("#dc-table-graph");
 var cfx = crossfilter(demo);
     var startValue = cfx.dimension(function (d) {
-        return d.State;
+        return d.ID;
     });
     var startValueGroup = startValue.group();
- var tDimension = cfx.dimension(function (d) { return d.LName} 
+ var tDimension = cfx.dimension(function (d) { return d.ID} 
 pieChart.width(300)
         .height(300)
         .transitionDuration(1500)
@@ -62,7 +62,7 @@ pieChart.width(300)
         });
 	dataTable.width(800).height(800)
     .dimension(tDimension)
-    .group(function(d) { return "List of all Demographic Data"
+    .group(function(d) { return d.ID;
      })
     .size(100)
     .columns([
@@ -74,6 +74,7 @@ pieChart.width(300)
     .sortBy(function(d){ return d.LName; })
     // (optional) sort order, :default ascending
     .order(d3.ascending);	
+	dc.renderAll();
 		</script>
   <div class='row-fluid'>
                             <div class='pie-graph span4' id='dc-pie-graph'>
