@@ -1,6 +1,7 @@
 <?php
 include_once 'db_connect.php';
 include_once 'psl-config.php';
+ int error_reporting ([ int 4 ] )
  
 $error_msg = "";
  
