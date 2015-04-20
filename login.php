@@ -111,7 +111,7 @@ if (login_check($mysqli) == true) {
 							id='Lname' class="form-control" placeholder="Last name"/>
 						<label for="inputLname" class="sr-only">Lname</label>
 					
-											 <input type='text' 
+											 <input type='text' maxlength="2" 
 							name='State' 
 							id='State' class="form-control" placeholder="State"/>
 						<label for="State" class="sr-only">State</label>
