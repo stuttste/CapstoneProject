@@ -26,7 +26,7 @@
 						<li ><a href="UserSubmit.html">User Submission<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="AdminToolsPage.html">Administration Tools<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="CutPage.html">Cut Results<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-						<li ><a href="EditAccount.html">Edit Acount<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+						<li ><a href="EditAccount.html">Edit Account<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
 						<li ><a href="LicensePage.html">License Page<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 							<li ><a href="Demographics.html">Demographics<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 					</ul>
@@ -34,15 +34,15 @@
 			</div>
 		</nav>
 <script>
-d3.json("Demo.json", function (demo_data) {
-var pieChart = dc.pieChart("#dc-pie-graph");
-var dataTable = dc.dataTable("#dc-table-graph");
-var cfx = crossfilter(demo_data);
+d3.json("Demo.json", function (demo) {
+var pieChart = dc.pieChart("dc-pie-graph");
+var dataTable = dc.dataTable("dc-table-graph");
+var cfx = crossfilter(demo);
     var startValue = cfx.dimension(function (d) {
-        return d.state;
+        return d.State;
     });
     var startValueGroup = startValue.group();
- var tDimension = cfx.dimension(function (d) { return d.} 
+ var tDimension = cfx.dimension(function (d) { return d.LName} 
 pieChart.width(300)
         .height(300)
         .transitionDuration(1500)
@@ -66,12 +66,12 @@ pieChart.width(300)
      })
     .size(100)
     .columns([
-        function(d) { return d.Lname; },
+        function(d) { return d.LName; },
         function(d) { return d.University; },
         function(d) { return d.State; },
     
     ])
-    .sortBy(function(d){ return d.Lname; })
+    .sortBy(function(d){ return d.LName; })
     // (optional) sort order, :default ascending
     .order(d3.ascending);	
 		</script>
@@ -85,7 +85,7 @@ pieChart.width(300)
                                 <table class='table table-hover dc-data-table' id='dc-table-graph'>
                                     <thead>
                                         <tr class='header'>
-                                            <th>Lname</th>
+                                            <th>Last name</th>
                                             <th>University</th>
                                             <th> State </th>
                                         </tr>
