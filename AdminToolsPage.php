@@ -85,7 +85,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 									</thead>
 									<tbody>
 										<?php
-											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin`, FROM `MEMBERS`")){													
+											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin` FROM `MEMBERS`")){													
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
