@@ -42,7 +42,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		$(document).ready(function() {
 			var mTable = $('#memberEmailTable').DataTable({
 			"scrollX": true
+			$(this).toggleClass('active');
 			
+		})
 						
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				if ( $(this).hasClass('selected') ) {
@@ -58,7 +60,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				table.row('.selected').remove().draw( false );
 			});
 			
-			})
+			
 	</script>
 	
 	
