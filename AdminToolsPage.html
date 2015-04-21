@@ -12,9 +12,9 @@ sec_session_start();
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content=
-    "text/html; charset=utf-8" />
+    "text/html; charset=utf-8"/>
     <meta name="viewport" content=
-    "width=device-width, initial-scale=1" />
+    "width=device-width, initial-scale=1"/>
     <title>
       G3Capstone Staging
     </title><!--<link rel="stylesheet" type="text/css" 
@@ -80,7 +80,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
           <li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
         </ul>
         <div id="mytabs" class="tab-content">
-          <div id="addDeletePhage" class="tab-pane active">
+         <!-- <div id="addDeletePhage" class="tab-pane active">
             <h3>
               Description
             </h3>
@@ -94,16 +94,16 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
             <div class="form-inline">
               <label for="phageselection">Phage:</label>
-              <input type="text" class="form-control" placeholder="Enter Phage" /> 
+              <input type="text" class="form-control" placeholder="Enter Phage"/> 
 			  <label for="clusterselection">Cluster:</label> 
-			  <input type="text" class="form-control" placeholder="Enter Cluster" /> 
+			  <input type="text" class="form-control" placeholder="Enter Cluster"/> 
 			  <label for="subclustselection">SubCluster:</label> 
-			  <input type="text" class="form-control" placeholder="Enter SubCluster" />
+			  <input type="text" class="form-control" placeholder="Enter SubCluster"/>
             </div>
 			
             <div class="form-inline">
               <label for="enzymeEntry">Enzyme:</label> 
-			  <input type="text" class="form-control" placeholder="Enter Enzyme" />
+			  <input type="text" class="form-control" placeholder="Enter Enzyme"/>
             </div>
 			
             <div>
@@ -138,7 +138,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
           </div>
 		  
-          <div id="reviewUserSubmission" class="tab-pane">
+         <!-- <div id="reviewUserSubmission" class="tab-pane">
             <h3>
               Review User Submission
             </h3>
@@ -168,7 +168,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
                 </thead>
              </table>
             </div>
-          </div>
+          </div>-->
           
 		  <div id="acctManage" class="tab-pane">
             <h3>
@@ -188,9 +188,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 										<th>Username</th>
 										<th>Email</th>
 										<th>Admin</th>
-										
 									</thead>
-									
 									<tbody>
 										<?php
 											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin`, FROM `MEMBERS`")){													
@@ -202,7 +200,6 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 													$sql->close();
 												}
 										?>
-									
 									</tbody>
 								</table>
 							</table>
