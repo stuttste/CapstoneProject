@@ -40,12 +40,13 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 	
 	<script type="text/javascript" class="init">
 		$(document).ready(function() {
-		var mTable = $('#memberEmailTable').DataTable({
-				"scrollX": true
+			var mTable = $('#memberEmailTable').DataTable({
+			"scrollX": true
 			});
+		});
 			
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
-			$(this).toggleClass('active');
+				$(this).toggleClass('active');
 			} );
 	</script>
 	
