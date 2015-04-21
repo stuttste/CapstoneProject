@@ -42,12 +42,23 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		$(document).ready(function() {
 			var mTable = $('#memberEmailTable').DataTable({
 			"scrollX": true
-			});
-		});
-			
+						
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
+				if ( $(this).hasClass('selected') ) {
+				     $(this).removeClass('selected');
+				}
+				else {
+					table.$('tr.selected').removeClass('selected');
+					$(this).addClass('selected');
+				}
 				$(this).toggleClass('active');
 			} );
+			
+			$('#deleteEmail').click( function () {
+				table.row('.selected').remove().draw( false );
+			});
+			
+			})
 	</script>
 	
 	
@@ -181,7 +192,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
             </p>
 			<button type="button">Promote user</button>
             <button type="button">Demote user</button>
-            <button type="button">Delete account</button>
+            <button type="button" id="deleteEmail">Delete account</button>
            <div class="row">
 						<div class="col-md-12">
 							<table class="table-responsive">
