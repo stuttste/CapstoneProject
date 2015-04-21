@@ -74,32 +74,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		</nav>
     <div class="container">
 	
-	<div class="row">
-						<div class="col-md-12">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="memberEmailTable">
-									<thead>
-										<th>Username</th>
-										<th>Email</th>
-										<th>Admin</th>
-									</thead>
-									<tbody>
-										<?php
-											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin` FROM `MEMBERS`")){													
-												$sql->execute();
-													$sql->bind_result($username, $email, $admin);
-													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td>'.$email.'</td><td>'.$admin.'</td></tr>';
-															}
-													$sql->close();
-												}
-										?>
-									</tbody>
-								</table>
-							</table>
-						</div>
-			</div>
-     <!-- <div id="maintabs">
+	
+     <div id="maintabs">
         <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
           <li class="active"> <a href="#addDeletePhage" data-="" toggle= "tab">Add/Delete Phage</a> </li>
           <li> <a href="#reviewUserSubmission" data-toggle="tab">Review User Submission</a></li>
@@ -206,7 +182,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			<button type="button">Promote user</button>
             <button type="button">Demote user</button>
             <button type="button">Delete account</button>
-            <div class="row">
+           <div class="row">
 						<div class="col-md-12">
 							<table class="table-responsive">
 								<table class="table table-bordered" id="memberEmailTable">
@@ -217,7 +193,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 									</thead>
 									<tbody>
 										<?php
-											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin`, FROM `MEMBERS`")){													
+											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin` FROM `MEMBERS`")){													
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
@@ -233,7 +209,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			</div>
           </div>
         </div>
-      </div>-->
+      </div>
     </div>
   </body>
 </html>
