@@ -1,20 +1,48 @@
-<<<<<<< HEAD
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User Demographics</title>
+	<!--<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<script rel = "Code" type="javascript" href="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+	<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
+	-->
+	
 <script type="text/javascript" src="js/dc.js"</script>
-=======
-<script type="text"/javascript src=http://cdnjs.cloudflare.com/ajax/libs/dc/1.7.0/dc.js</script>
->>>>>>> parent of 2fb59f5... Tiny change
 <script type="text/javascript" src="js/d3.js"></script>
 <script type="text/javascript" src="js/crossfilter.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		
+		<nav class="navbar navbar-inverse sidebar" role="navigation">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.php">Homepage<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+						<li ><a href="UserSubmit.html">User Submission<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+						<li ><a href="AdminToolsPage.html">Administration Tools<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+						<li ><a href="CutPage.html">Cut Results<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+						<li ><a href="EditAccount.html">Edit Account<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+						<li ><a href="LicensePage.html">License Page<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+							<li ><a href="Demographics.html">Demographics<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 <script>
-d3.json("Demo.json", function (demo_data) {
+d3.json("Demo.json", function (demo) {
 var pieChart = dc.pieChart("#dc-pie-graph");
 var dataTable = dc.dataTable("#dc-table-graph");
-var cfx = crossfilter(demo_data);
+var cfx = crossfilter(demo);
     var startValue = cfx.dimension(function (d) {
-        return d.state;
+        return d.ID;
     });
     var startValueGroup = startValue.group();
- var tDimension = cfx.dimension(function (d) { return d.} 
+ var tDimension = cfx.dimension(function (d) { return d.ID} 
 pieChart.width(300)
         .height(300)
         .transitionDuration(1500)
@@ -34,18 +62,19 @@ pieChart.width(300)
         });
 	dataTable.width(800).height(800)
     .dimension(tDimension)
-    .group(function(d) { return "List of all Demographic Data"
+    .group(function(d) { return d.ID;
      })
     .size(100)
     .columns([
-        function(d) { return d.Lname; },
+        function(d) { return d.LName; },
         function(d) { return d.University; },
         function(d) { return d.State; },
     
     ])
-    .sortBy(function(d){ return d.Lname; })
+    .sortBy(function(d){ return d.LName; })
     // (optional) sort order, :default ascending
     .order(d3.ascending);	
+	dc.renderAll();
 		</script>
   <div class='row-fluid'>
                             <div class='pie-graph span4' id='dc-pie-graph'>
@@ -57,7 +86,7 @@ pieChart.width(300)
                                 <table class='table table-hover dc-data-table' id='dc-table-graph'>
                                     <thead>
                                         <tr class='header'>
-                                            <th>Lname</th>
+                                            <th>Last name</th>
                                             <th>University</th>
                                             <th> State </th>
                                         </tr>
