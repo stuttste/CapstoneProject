@@ -140,11 +140,13 @@ sec_session_start();
 					url: "calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
 					success: function(data){
 							var t = document.getElementById("phageTable");
-							t.innerHTML = data;
+							/*t.innerHTML = data;
 							var table = $('#phageTable').DataTable({
 								"bDestroy": true,
 								"scrollX": true
-							});
+							});*/
+							table.fnClearTable();
+							table.fnAddData(data);
 							table.draw();
 					}
 				});
