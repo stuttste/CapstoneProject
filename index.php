@@ -94,36 +94,36 @@ sec_session_start();
 				for(x=0; x<PhageForm.phageSelectBox.length; x++){
 					if(PhageForm.phageSelectBox[x].selected){
 						if(phageStr === "")
-							phageStr += "&quot;" + PhageForm.phageSelectBox[x].value + "&quot;";
+							phageStr += PhageForm.phageSelectBox[x].value;
 						else
-							phageStr += ",&quot;" + PhageForm.phageSelectBox[x].value + "&quot;";
+							phageStr += "," + PhageForm.phageSelectBox[x].value;
 					}
 				}
 				
 				for(x=0; x<PhageForm.clusterSelectBox.length; x++){
 					if(PhageForm.clusterSelectBox[x].selected){
 						if(clusterStr === "")
-							clusterStr += "&quot;" + PhageForm.clusterSelectBox[x].value + "&quot;";
+							clusterStr += PhageForm.clusterSelectBox[x].value;
 						else
-							clusterStr += ",&quot;" + PhageForm.clusterSelectBox[x].value + "&quot;";
+							clusterStr += "," + PhageForm.clusterSelectBox[x].value;
 					}
 				}
 				
 				for(x=0; x<PhageForm.subclusterSelectBox.length; x++){
 					if(PhageForm.subclusterSelectBox[x].selected){
 						if(subclusterStr === "")
-							subclusterStr += "&quot;" + PhageForm.subclusterSelectBox[x].value + "&quot;";
+							subclusterStr += PhageForm.subclusterSelectBox[x].value;
 						else
-							subclusterStr += ",&quot;" + PhageForm.subclusterSelectBox[x].value + "&quot;";
+							subclusterStr += "," + PhageForm.subclusterSelectBox[x].value;
 					}
 				}
 				
 				for(x=0; x<PhageForm.enzSelectBox.length; x++){
 					if(PhageForm.enzSelectBox[x].selected){
 						if(enzStr === "")
-							enzStr += "&quot;" + PhageForm.enzSelectBox[x].value + "&quot;";
+							enzStr += PhageForm.enzSelectBox[x].value;
 						else
-							enzStr += ",&quot;" + PhageForm.enzSelectBox[x].value + "&quot;";
+							enzStr += "," +  PhageForm.enzSelectBox[x].value;
 					}
 				}
 				
