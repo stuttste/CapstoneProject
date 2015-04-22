@@ -142,6 +142,7 @@ sec_session_start();
 							var t = document.getElementById("phageTable");
 							t.innerHTML = data;
 							var table = $('#phageTable').DataTable({
+								"bDestroy": true,
 								"scrollX": true
 							});
 							table.draw();
