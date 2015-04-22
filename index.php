@@ -432,51 +432,8 @@ sec_session_start();
 										<th>Phage</th>
 										<th>Cluster</th>
 										<th>Subcluster</th>
-										<?php/*
-													if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
-														$sql->execute();
-														$sql->bind_result($name);
-														while($sql->fetch()){
-																echo '<th class= "'.$name.'">'.$name.'</th>';
-														}
-														$sql->close();
-													}*/
-											?>	
 										</thead>
 										<tbody>
-										<?php/*
-												$enzCount = 0;
-												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name` HAVING GROUP_CONCAT(`Count`) IS NOT NULL")) {
-													$sql->execute();
-													$sql->bind_result($name, $cluster, $sub, $cuts);
-													while($sql->fetch()){
-															$cutsArray = explode(",", $cuts);
-															//if(count($cutsArray) > $enzCount)
-																//$enzCount = count($cutsArray);
-															echo '<tr class= "'.$name.'"><td>'.$name.'</td><td>'.$cluster.'</td><td>'.$sub.'</td>';
-															//if($enzCount == count($cutsArray)){
-																for($i = 0; $i < count($cutsArray); $i++){
-																	echo '<td>'.$cutsArray[$i].'</td>';
-																}
-															/*}else{
-																for($i = 0; $i < $enzCount; $i++){
-																	echo '<td>-</td>';
-																}
-															}
-															echo '</tr>';
-													}
-													$sql->close();
-												}*/
-										?>
-									<!--
-									<thead>
-										<th>Phage</th>
-										<th>Cluster</th>
-										<th>Subcluster</th>
-										<th>Enzyme</th>
-									</thead>
-									<tbody id="phageTableBody">
-										<!-- Data gets plugged in here-->
 									</tbody>
 								</table>
 							</table>
@@ -484,20 +441,6 @@ sec_session_start();
 										<button type="button">Reset</button>
 										<br />
 							</div>
-			
-							<!--<div class="col-md-6">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="enzymeTable">
-									<thead>
-										<th>Enzyme</th>
-									</thead>
-									<tbody id="enzymeTableBody">
-										Data gets plugged in here
-									</tbody>
-									
-								</table>
-							</table>
-							</div>-->
 						</div>
 			                
 					</div>
