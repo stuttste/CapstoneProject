@@ -64,10 +64,10 @@
 	$resultStr .= "</thead><tbody>";
 								
 	while($row = $sql->fetch_assoc()){
-		$resultStr .= "<tr><td>$row['Name']</td><td>$row['Cluster']</td><td>$row['Subcluster']</td>";
+		$resultStr .= "<tr><td>". $row['Name'] . "</td><td>" . $row['Cluster'] . "</td><td>" . $row['Subcluster'] . "</td>";
 		$cutsArr = explode(",", $row['Cuts']);
 		for($i = 0; $i < count($cutsArr); $i++){
-			$resultStr .= "<td>$cutsArr[$i]</td>";
+			$resultStr .= "<td>" . $cutsArr[$i] . "</td>";
 		}
 		$resultStr .= "</tr>" ;
 	}
