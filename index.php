@@ -139,15 +139,16 @@ sec_session_start();
 				$.ajax({
 					url: "calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
 					success: function(data){
-							var table = $('#phageTable').DataTable({
-								"scrollX": true
-							});
+							var table = $('#phageTable').DataTable();
 							
 							table.destroy();
 							$('#phageTable').empty();
 							var t = document.getElementById("phageTable");
 							t.innerHTML = data;
 							
+							var table = $('#phageTable').DataTable({
+								"scrollX": true
+							});
 							table.draw();
 					}
 				});
