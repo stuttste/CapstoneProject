@@ -432,7 +432,7 @@ sec_session_start();
 										<th>Phage</th>
 										<th>Cluster</th>
 										<th>Subcluster</th>
-										<?php
+										<?php/*
 													if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 														$sql->execute();
 														$sql->bind_result($name);
@@ -440,11 +440,11 @@ sec_session_start();
 																echo '<th class= "'.$name.'">'.$name.'</th>';
 														}
 														$sql->close();
-													}
+													}*/
 											?>	
 										</thead>
 										<tbody>
-										<?php
+										<?php/*
 												$enzCount = 0;
 												if ($sql = $mysqli->prepare("SELECT `Name`, `Cluster`, `Subcluster`, GROUP_CONCAT(`Count`) as Count FROM `PHAGE` Left Join `CUTS2` on `Name` = `Phage` GROUP BY `Name` HAVING GROUP_CONCAT(`Count`) IS NOT NULL")) {
 													$sql->execute();
@@ -462,11 +462,11 @@ sec_session_start();
 																for($i = 0; $i < $enzCount; $i++){
 																	echo '<td>-</td>';
 																}
-															}*/
+															}
 															echo '</tr>';
 													}
 													$sql->close();
-												}
+												}*/
 										?>
 									<!--
 									<thead>
