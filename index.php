@@ -141,6 +141,9 @@ sec_session_start();
 					success: function(data){
 							var t = document.getElementById("phageTable");
 							t.innerHTML = data;
+							var table = $('#phageTable').DataTable({
+								"scrollX": true
+							});
 							table.draw();
 					}
 				});
