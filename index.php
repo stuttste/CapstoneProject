@@ -428,8 +428,8 @@ sec_session_start();
 						
 						<div class="row">
 							<div class="col-md-12">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="phageTable">
+							<!-- <table class="table-responsive"> -->
+								<table class="table table-bordered table-responsive" id="phageTable">
 									<thead>
 										<th>Phage</th>
 										<th>Cluster</th>
@@ -438,7 +438,7 @@ sec_session_start();
 										<tbody>
 									</tbody>
 								</table>
-							</table>
+							<!-- </table> -->
 									    <button type="button">Clear</button>
 										<button type="button">Reset</button>
 										<br />
