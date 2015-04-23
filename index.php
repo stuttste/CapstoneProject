@@ -262,36 +262,25 @@ sec_session_start();
 												}
 											?>
 										</select>
-										<input type="checkbox">Add Unknown Phage?</input><button type="button" id="phageButton">Search</button>	 									
+										<input type="checkbox" id="unkownPhageCheck">Add Unknown Phage?</input><button type="button" id="phageButton" class="pull-right">Search</button>	 									
 								</div>
 							</div>
 							</form>
 							</div>
 							
+							
 							<div class="row" id="unknownPhage">
-								
-							
-							
-							</div>
-							
-							
-							<div class="row" id ="hiddenDiv" style="display: none;">
-							<div class="col-md-6">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="hiddenSearchTable">
-									<thead>
-										<th>Phage</th>
-										<th>Cluster</th>
-										<th>Subcluster</th>
-										<th>Enzyme</th>
-									</thead>
-									<tbody id="hiddenSearchTableBody">
+								<form name="unknownPhage">
+									<div class="form-group">
+										<label for="UnknownPhageName">Phage Name</label>
+										<input type="text" class="form-control" id="UnknownPhageName" placeholder="Enter phage name">
+										<div id="enzymeCutCounts">
 										
-									</tbody>
-								</table>
-							</table>
+										</div>
+									</div>
+								</form>
 							</div>
-						</div>
+							
 						
 						<div class="row">
 							<div class="col-md-12">
