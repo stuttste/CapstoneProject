@@ -81,6 +81,13 @@ sec_session_start();
 			
 		});
 		
+		$('#unknownPhageCheck').on('click', function(){
+			if(document.getElementById("unknownPhageCheck").value)
+				document.getElementById("unknownPhage").style.visibility = true;
+			else
+				document.getElementById("unknownPhage").style.visibility = false;
+		});
+		
 
 		var textFilter = function (selectionEl, str, isCaseSensitive) {
 			if (isCaseSensitive)
@@ -295,7 +302,7 @@ sec_session_start();
 												}
 											?>
 										</select>
-										<input type="checkbox" id="unkownPhageCheck">Add Unknown Phage?</input><button type="button" id="phageButton" class="pull-right">Search</button>	 									
+										<input type="checkbox" id="unknownPhageCheck">Add Unknown Phage?</input><button type="button" id="phageButton" class="pull-right">Search</button>	 									
 								</div>
 							</div>
 							</form>
