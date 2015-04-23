@@ -304,8 +304,8 @@ sec_session_start();
 							
 							<div class="row" id="unknownPhage">
 								<form class="form-inline" name="unknownPhage">
-									<div class="form-group col-md-3">
-										<span class="margin-bottom"><label for="UnknownPhageName">Phage Name</label>  <input type="text" class="form-control" id="UnknownPhageName" placeholder="Enter phage name"></span><br />
+									<div class="input-group col-md-3">
+										<span class="input-group-addon">Phage Name</span><input type="text" class="form-control" id="UnknownPhageName" placeholder="Enter phage name"><br />
 										<div id="enzymeCutCounts">
 										
 										</div>
