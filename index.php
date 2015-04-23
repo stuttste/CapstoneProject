@@ -74,7 +74,7 @@ sec_session_start();
 			enzArr = enzStr.split(",");
 			
 			for(var i = 0; i < enzArr.length; i++){
-				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span><input type="text" class="form-control" id="' + enzArr[i] + '" placeholder="Enter cut count"></span><br />';
+				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span><input type="text" class="form-control" id="' + enzArr[i] + '" placeholder="Enter cut count"></div><br />';
 			}
 			
 			document.getElementById("enzymeCutCounts").innerHTML = htmlOut;
