@@ -60,7 +60,7 @@ sec_session_start();
 			var enzArr = "";
 			var htmlOut = "";
 			
-			$('#enzymeCutCounts').innerHTML = "";
+			document.getElementById("enzymeCutCounts").innerHTML = "";
 			
 			for(x=0; x<PhageForm.enzSelectBox.length; x++){
 					if(PhageForm.enzSelectBox[x].selected){
@@ -77,7 +77,7 @@ sec_session_start();
 				htmlOut += '<label>' + enzArr[i] + '</label><input type="text" class="form-control" id="' + enzArr[i] + '" placeholder="Enter cut count"><br />';
 			}
 			
-			$('#enzymeCutCounts').innerHTML = htmlOut;
+			document.getElementById("enzymeCutCounts").innerHTML = htmlOut;
 			
 		});
 		
