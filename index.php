@@ -49,7 +49,50 @@ sec_session_start();
 		
 		$('#phageButton').click(function (){
 				
-				var PhageForm = document.forms.PhageForm;
+				searchPhages();
+				
+				
+		});
+
+		var textFilter = function (selectionEl, str, isCaseSensitive) {
+			if (isCaseSensitive)
+				str = str.toLowerCase();
+			var $el = $(selectionEl);
+		if (!$el.data("options")) {
+			$el.data("options", $el.find("option").clone());
+		}
+		var newOptions = $el.data("options").filter(function () {
+			var text = $(this).text();
+			if (isCaseSensitive)
+				text = text.toLowerCase();
+			return text.match(str);
+		});
+		$el.empty().append(newOptions);
+		};
+		$("#phageSelect").on("keyup", function () {
+			var userInput = $("#phageSelect").val();
+			textFilter($("#phage"), userInput);
+		});
+		
+		$("#clusterSelect").on("keyup", function () {
+			var userInput = $("#clusterSelect").val();
+			textFilter($("#cluster"), userInput);
+		});
+		
+		$("#subSelect").on("keyup", function () {
+			var userInput = $("#subSelect").val();
+			textFilter($("#subcluster"), userInput);
+		});
+		
+		$("#enzSelect").on("keyup", function () {
+			var userInput = $("#enzSelect").val();
+			textFilter($("#enzselection"), userInput);
+		});
+
+	});
+	
+	function searchPhages(){
+		var PhageForm = document.forms.PhageForm;
 				var phageStr = "";
 				var clusterStr = "";
 				var subclusterStr = "";
@@ -117,46 +160,7 @@ sec_session_start();
 							table.draw();
 					}
 				});
-				
-				
-		});
-
-		var textFilter = function (selectionEl, str, isCaseSensitive) {
-			if (isCaseSensitive)
-				str = str.toLowerCase();
-			var $el = $(selectionEl);
-		if (!$el.data("options")) {
-			$el.data("options", $el.find("option").clone());
-		}
-		var newOptions = $el.data("options").filter(function () {
-			var text = $(this).text();
-			if (isCaseSensitive)
-				text = text.toLowerCase();
-			return text.match(str);
-		});
-		$el.empty().append(newOptions);
-		};
-		$("#phageSelect").on("keyup", function () {
-			var userInput = $("#phageSelect").val();
-			textFilter($("#phage"), userInput);
-		});
-		
-		$("#clusterSelect").on("keyup", function () {
-			var userInput = $("#clusterSelect").val();
-			textFilter($("#cluster"), userInput);
-		});
-		
-		$("#subSelect").on("keyup", function () {
-			var userInput = $("#subSelect").val();
-			textFilter($("#subcluster"), userInput);
-		});
-		
-		$("#enzSelect").on("keyup", function () {
-			var userInput = $("#enzSelect").val();
-			textFilter($("#enzselection"), userInput);
-		});
-
-	});
+	}
 	</script>
 	</head>
 
@@ -264,6 +268,13 @@ sec_session_start();
 							</form>
 							</div>
 							
+							<div class="row" id="unknownPhage">
+								
+							
+							
+							</div>
+							
+							
 							<div class="row" id ="hiddenDiv" style="display: none;">
 							<div class="col-md-6">
 							<table class="table-responsive">
@@ -284,7 +295,6 @@ sec_session_start();
 						
 						<div class="row">
 							<div class="col-md-12">
-							<!-- <table class="table-responsive"> -->
 								<table class="table table-bordered table-responsive" id="phageTable">
 									<thead>
 										<th>Phage</th>
@@ -294,9 +304,6 @@ sec_session_start();
 										<tbody>
 									</tbody>
 								</table>
-							<!-- </table> -->
-									    <button type="button">Clear</button>
-										<button type="button">Reset</button>
 										<br />
 							</div>
 						</div>
