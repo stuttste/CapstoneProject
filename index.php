@@ -309,7 +309,7 @@ sec_session_start();
 							</div>
 							
 							
-							<div class="row" id="unknownPhage">
+							<div class="row" id="unknownPhage" style="display: none">
 								<form class="form-inline" name="unknownPhage">
 									<div class="input-group col-md-3">
 										<span class="input-group-addon">Phage Name</span><input type="text" class="form-control" id="UnknownPhageName" placeholder="Enter phage name"><br />
