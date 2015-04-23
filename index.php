@@ -53,6 +53,33 @@ sec_session_start();
 				
 				
 		});
+		
+		$('#enzSelectBox').on('click', 'option', function(){
+			var enzStr;
+			var enzArr;
+			var htmlOut;
+			
+			$('#enzymeCutCounts').innerHTML = "";
+			
+			for(x=0; x<PhageForm.enzSelectBox.length; x++){
+					if(PhageForm.enzSelectBox[x].selected){
+						if(enzStr === "")
+							enzStr += PhageForm.enzSelectBox[x].value;
+						else
+							enzStr += "," +  PhageForm.enzSelectBox[x].value;
+					}
+			}
+			
+			enzArr = enzStr.split(",");
+			
+			for(var i = 0; i < enzArr.length; i++){
+				htmlOut += '<label>' + enzArr[i] + '</label><input type="text" class="form-control" id="' + enzArr[i] + '" placeholder="Enter cut count"><br />';
+			}
+			
+			$('#enzymeCutCounts').innerHTML = htmlOut;
+			
+		});
+		
 
 		var textFilter = function (selectionEl, str, isCaseSensitive) {
 			if (isCaseSensitive)
@@ -90,6 +117,11 @@ sec_session_start();
 		});
 
 	});
+	
+	
+	
+	
+	
 	
 	function searchPhages(){
 		var PhageForm = document.forms.PhageForm;
