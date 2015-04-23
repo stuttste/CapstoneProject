@@ -2,11 +2,8 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>User Demographics</title>
-	<!--<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<script rel = "Code" type="javascript" href="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
-	<script rel = "Code" type="javascript" href="jQuery/jquery-1.11.2.min.js"></script>
-	-->
+	
+	
 	
 <script type="text/javascript" src="js/dc.js"</script>
 <script type="text/javascript" src="js/d3.js"></script>
@@ -34,37 +31,36 @@
 			</div>
 		</nav>
 <script>
-d3.json("Demo.json", function (demo) {
-var pieChart = dc.pieChart("#dc-pie-graph");
-var dataTable = dc.dataTable("#dc-table-graph");
+d3.json("data/Demo.json", function (demo) {
+var pieChart = dc.pieChart('#dc-pie-graph');
+var dataTable = dc.dataTable('#dc-table-graph');
 
 var cfx = crossfilter(demo);
     var startValue = cfx.dimension(function (d) {
-        return d;});
+        return d.Object.ID});
     var startValueGroup = startValue.group();
- var tDimension = cfx.dimension(function (d) { return d} );
+ var tDimension = cfx.dimension(function (d) { return d.Object.ID} );
 pieChart.width(300)
         .height(300)
         .transitionDuration(1500)
         .dimension(startValue)
         .group(startValueGroup)
         .radius(90)
-        .minAngleForLabel(0)
-        .label(function(d) { return d.data.key; })
+
         
    
 	dataTable.width(800).height(800)
     .dimension(tDimension)
-    .group(function(d) { return d;
+    .group(function(d) { return d.Object.ID;
      })
     .size(100)
     .columns([
-        function(d) { return d.LName; },
-        function(d) { return d.University; },
-        function(d) { return d.State; },
+        function(d) { return d.Object.LName; },
+        function(d) { return d.Object.University; },
+        function(d) { return d.Object.State; },
     
     ]);
-    .sortBy(function(d){ return d.LName; })
+    .sortBy(function(d){ return d.Object.LName; })
     // (optional) sort order, :default ascending
     .order(d3.ascending);	
 	dc.renderAll();})
