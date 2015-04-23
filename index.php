@@ -74,7 +74,7 @@ sec_session_start();
 			enzArr = enzStr.split(",");
 			
 			for(var i = 0; i < enzArr.length; i++){
-				htmlOut += enzArr[i] + ':<input type="text" class="form-control" id="' + enzArr[i] + '" placeholder="Enter cut count"><br />';
+				htmlOut += '<span class= "margin-bottom"><label>' + enzArr[i] + ':</label><input type="text" class="form-control" id="' + enzArr[i] + '" placeholder="Enter cut count"></span><br />';
 			}
 			
 			document.getElementById("enzymeCutCounts").innerHTML = htmlOut;
@@ -305,8 +305,7 @@ sec_session_start();
 							<div class="row" id="unknownPhage">
 								<form class="form-inline" name="unknownPhage">
 									<div class="form-group col-md-3">
-										<label for="UnknownPhageName">Phage Name</label>
-										<input type="text" class="form-control" id="UnknownPhageName" placeholder="Enter phage name"><br />
+										<span class="margin-bottom"><label for="UnknownPhageName">Phage Name</label>  <input type="text" class="form-control" id="UnknownPhageName" placeholder="Enter phage name"></span><br />
 										<div id="enzymeCutCounts">
 										
 										</div>
