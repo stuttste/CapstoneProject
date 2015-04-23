@@ -30,7 +30,7 @@ sec_session_start();
 	<script src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
 	
 	<script type="text/javascript" class="init">
-		$(document).ready(function() {
+	$(document).ready(function() {
 		var table = $('#phageTable').DataTable({
 				"scrollX": true
 			});
@@ -47,42 +47,7 @@ sec_session_start();
 			$(this).toggleClass('active');
 		} );
 		
-		/*$('#enzymeTable tbody').on( 'click', 'tr', function () {
-			$(this).toggleClass('active');
-		} );
-		
-		$('#bestResultTable tbody').on( 'click', 'tr', function () {
-			$(this).toggleClass('active');
-		} );
-		
-		$('#resultsTable tbody').on( 'click', 'tr', function () {
-			$(this).toggleClass('active');
-		} );*/
-		
-	 
-		/*$('#phageButton1').click(function (){
-			var selectedPhage = $('#phage option:selected').val();
-			var selectedCluster = $('#cluster option:selected').val();
-			var selectedSubCluster = $('#subcluster option:selected').val();
-			$.each($('#phageTableBody tr'), function () {
-				if($(this).find('td:first').text() == "Test"){
-					$(this).find('td:first').text(selectedPhage);
-					$(this).find('td:nth-child(2)').text(selectedCluster);
-					$(this).find('td:nth-child(3)').text(selectedSubCluster);
-					return false;
-				}
-				
-			})
-		});*/
-		
 		$('#phageButton').click(function (){
-				
-				/*
-				var selectedId = "." + $('#phage option:selected').val();
-				alert(selectedId);
-				
-				table.rows( selectedId ).remove().draw();
-				*/
 				
 				var PhageForm = document.forms.PhageForm;
 				var phageStr = "";
@@ -153,113 +118,8 @@ sec_session_start();
 					}
 				});
 				
-				/*
-				var type;
-				var id;
-				var selectedId;
-				var xmlhttp;
-				var len;
-				
-				selectedId = $('#phage option:selected').val();
-				
-				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-					xmlhttp=new XMLHttpRequest();
-				}else{// code for IE6, IE5
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				
-				//for(var i = 0, len=document.getElementById("phage").options.length; i < len; i++){
-					
-					
-					//id = document.getElementById("phage").options[i];
-					
-					xmlhttp.onreadystatechange=function(){
-						if (xmlhttp.readyState==4 && xmlhttp.status==200){
-							//if(id.selected){
-								var compStr = xmlhttp.responseText;
-								var partStr = compStr.split(", ");
-								$(".odd").remove();
-								$("#phageTable").DataTable().row.add(partStr).draw();
-							//}
-						}
-					}
-					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Phage&id="+selectedId,true);
-					xmlhttp.send();
-				*/
-				
 				
 		});
-		
-		$('#enzymeButton').click(function (){
-				
-			var PhageForm = document.forms.PhageForm;
-			//var selectedId = "." + $('#enzselection option:selected').val();
-			var selectedId = "";
-			var x = 0;
-			
-			for(x=0; x<PhageForm.enzSelectBox.length; x++){
-					if(PhageForm.enzSelectBox[x].selected){
-						selectedId = '.' + PhageForm.enzSelectBox[x].value;
-						alert(selectedId);
-						table
-							.columns( selectedId )
-							.visible( false );
-					}
-			}
-				
-				
-				
-				
-		});
-		
-		$('#clusterButton').click(function (){
-				var type;
-				var id;
-				var selectedId;
-				var xmlhttp;
-				var len;
-				
-				selectedId = $('#cluster option:selected').val();
-				
-				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-					xmlhttp=new XMLHttpRequest();
-				}else{// code for IE6, IE5
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				
-				//for(var i = 0, len=document.getElementById("phage").options.length; i < len; i++){
-					
-					
-					//id = document.getElementById("phage").options[i];
-					
-					xmlhttp.onreadystatechange=function(){
-						if (xmlhttp.readyState==4 && xmlhttp.status==200){
-							//if(id.selected){
-								var compStr = xmlhttp.responseText;
-								var partStr = compStr.split(", ");
-								$(".odd").remove();
-								$("#phageTable").DataTable().row.add(partStr).draw();
-							//}
-						}
-					}
-					xmlhttp.open("GET","calls/phageEnzymeCall.php?type=Cluster&id="+selectedId,true);
-					xmlhttp.send();
-				
-				
-				
-		});
-		
-		
-		/*$('#enzymeButton').click(function (){
-			var selectedEnzyme = $('#enzselection option:selected').val();
-			$.each($('#enzymeTableBody tr'), function () {
-				if($(this).find('td:first').text() == "Test" || $(this).find('td:first').text() == "Data" || $(this).find('td:first').text() == "Here"){
-					$(this).find('td:first').text(selectedEnzyme);
-					return false;
-				}
-				
-			})
-		});*/
 
 		var textFilter = function (selectionEl, str, isCaseSensitive) {
 			if (isCaseSensitive)
@@ -296,11 +156,7 @@ sec_session_start();
 			textFilter($("#enzselection"), userInput);
 		});
 
-
-		//$('#button').click( function () {
-			//alert( table.rows('.selected').data().length +' row(s) selected' );
-		//} );
-		});
+	});
 	</script>
 	</head>
 
@@ -346,8 +202,7 @@ sec_session_start();
 											$sql->close();
 										}
 										?>
-									</select>
-									<button type="button" id ="phageButton">Add Phage</button>									
+									</select>									
 								</div>
 							</div>
 							<div class="col-md-3">
@@ -366,8 +221,7 @@ sec_session_start();
 											$sql->close();
 										}
 										?>
-									</select>
-									<button type="button" id = "clusterButton">Add Cluster</button>									
+									</select>								
 								</div>
 							</div>
 							<div class="col-md-3">
@@ -385,8 +239,7 @@ sec_session_start();
 											$sql->close();
 										}
 										?>
-									</select>
-									<button type="button">Add Subcluster</button>									
+									</select>								
 								</div>
 							</div>
 							<div class="col-md-3">
@@ -405,7 +258,7 @@ sec_session_start();
 												}
 											?>
 										</select>
-										<button type="button" id="enzymeButton">Add Enzyme</button>	 									
+										<button type="button" id="phageButton">Search</button>	 									
 								</div>
 							</div>
 							</form>
