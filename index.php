@@ -74,7 +74,7 @@ sec_session_start();
 			enzArr = enzStr.split(",");
 			
 			for(var i = 0; i < enzArr.length; i++){
-				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span>';
+				htmlOut += '<div class="input-group col-md-3">';
 				htmlOut += '<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" id="' + enzArr[i] + '">';
 				htmlOut += '<ul class="dropdown-menu" role="menu"><li>None</li><li>Few</li><li>Normal</li><li>Many</li><li>Lots</li></ul></button>';
 				htmlOut += '</span></div><br />';
