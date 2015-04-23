@@ -54,7 +54,8 @@ sec_session_start();
 				
 		});
 		
-		$('#enzSelectBox').on('click', 'option', function(){
+		$('#enzselection').on('click', 'option', function(){
+			var PhageForm = document.forms.PhageForm;
 			var enzStr;
 			var enzArr;
 			var htmlOut;
