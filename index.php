@@ -56,9 +56,9 @@ sec_session_start();
 		
 		$('#enzselection').on('click', 'option', function(){
 			var PhageForm = document.forms.PhageForm;
-			var enzStr;
-			var enzArr;
-			var htmlOut;
+			var enzStr = "";
+			var enzArr = "";
+			var htmlOut = "";
 			
 			$('#enzymeCutCounts').innerHTML = "";
 			
