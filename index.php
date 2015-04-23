@@ -83,9 +83,9 @@ sec_session_start();
 		
 		$('#unknownPhageCheck').on('click', function(){
 			if(document.getElementById("unknownPhageCheck").checked)
-				document.getElementById("unknownPhage").style.visibility = true;
+				document.getElementById("unknownPhage").style.visibility = "visible";
 			else
-				document.getElementById("unknownPhage").style.visibility = false;
+				document.getElementById("unknownPhage").style.visibility = "hidden";
 		});
 		
 
