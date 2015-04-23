@@ -262,7 +262,7 @@ sec_session_start();
 												}
 											?>
 										</select>
-										<button type="button" id="phageButton">Search</button>	 									
+										<input type="checkbox">Add Unknown Phage?</input><button type="button" id="phageButton">Search</button>	 									
 								</div>
 							</div>
 							</form>
