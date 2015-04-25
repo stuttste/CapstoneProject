@@ -44,13 +44,23 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			"scrollX": true
 			})
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
-				$(this).toggleClass('active');
-				mTable
-					.row( $(this).parents('tr'))
-					.remove()
-					.draw();
-				
+				 if ( $(this).hasClass('selected') ) {
+					$(this).removeClass('selected');
+				}
+				else {
+					mTable.$('tr.selected').removeClass('selected');
+					$(this).addClass('selected');
+				}
+				//$(this).toggleClass('active');
+				//mTable
+					//.row( $(this).parents('tr'))
+					//.remove()
+					//.draw();
 			});
+			
+			$('#deleteEmail').click( function () {
+				mTable.row('.selected').remove().draw( false );
+    } );
 		})
 						
 		
