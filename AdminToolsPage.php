@@ -45,7 +45,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			})
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				$(this).toggleClass('active');
-				mtable
+				mTable
 					.row( $(this).parents('tr'))
 					.remove()
 					.draw();
