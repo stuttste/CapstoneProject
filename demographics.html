@@ -34,7 +34,7 @@
 			</div>
 		</nav>
 <script>
-d3.json("data/Demo.json", function (demo) {
+d3.csv("data/Demo.csv", function (demo) {
 var pieChart = dc.pieChart("#dc-pie-graph");
 var univChart = dc.pieChart("#dc-Univ-graph");
 var dataTable = dc.dataTable("#dc-table-graph");
@@ -79,11 +79,11 @@ var cfx = crossfilter(demo);
 		</script>
   <div class='row-fluid'>
                             <div class='pie-graph span4' id='dc-pie-graph'>
-                                <h4>Division by University(Pie)</h4>
+                                <h4>Division by State(Pie)</h4>
                             </div>
 							   <div class='row-fluid'>
 							    <div class='pie-graph span4' id='dc-Univ-graph'>
-                                <h4>Division by State(Pie)</h4>
+                                <h4>Division by University(Pie)</h4>
                             </div>
 							   <div class='row-fluid'>
                             <div class='span12 table-graph'>
