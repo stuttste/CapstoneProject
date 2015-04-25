@@ -220,7 +220,7 @@ sec_session_start();
 						<li ><a href="demographics.html">Demographics<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						</ul>
 						<div class="pull-right">
-							<p class="navbar-text"><a href="includes/logout.php">Log Out</a></p>
+							<p class="navbar-text"><a href="includes/logout.php">Log Out<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out"></span></a></p>
 						</div>
 				</div>
 			</div>
