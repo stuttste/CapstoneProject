@@ -46,7 +46,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				// if ( $(this).hasClass('selected') ) {
 					//$(this).removeClass('selected');
-					var email = $(this).children().find('.email').text();
+					var email = $(this).find('td:nth-child(2)').text()
 					alert(email);
 					$.ajax({
 						type: 'POST',
