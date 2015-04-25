@@ -97,6 +97,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 						<li ><a href="LicensePage.html">License Page<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="demographics.html">Demographics<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 					</ul>
+					<ul class="nav navbar-nav pull-right">
+						<li ><a href="includes/logout.php">Log Out<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out"></span></a></li>
+					</ul>
 				</div>
 			</div>
 		</nav>
