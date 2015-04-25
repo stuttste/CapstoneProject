@@ -98,27 +98,27 @@ if (login_check($mysqli) == true) {
 									 id="password" class="form-control" placeholder="Password" />
 						<label for="inputPassword" class="sr-only">Password</label>
 						<input type="password" 
-											 name="confirmpwd" 
-											 id="confirmpwd" class="form-control" placeholder="Retype Password" />
+									name="confirmpwd" 
+									id="confirmpwd" class="form-control" placeholder="Retype Password" />
 										
-											 <input type='text' 
-							name='Fname' 
-							id='Fname' class="form-control" placeholder="First name"/>
+						<input type='text' 
+									name='Fname' 
+									id='Fname' class="form-control" placeholder="First name"/>
 						<label for="inputFname" class="sr-only">Fname</label>
 					
-											 <input type='text' 
-							name='Lname' 
-							id='Lname' class="form-control" placeholder="Last name"/>
+						<input type='text' 
+									name='Lname' 
+									id='Lname' class="form-control" placeholder="Last name"/>
 						<label for="inputLname" class="sr-only">Lname</label>
 					
-											 <input type='text' maxlength="2" 
-							name='State' 
-							id='State' class="form-control" placeholder="State"/>
+						<input type='text' maxlength="2" 
+									name='State' 
+									id='State' class="form-control" placeholder="State"/>
 						<label for="State" class="sr-only">State</label>
 						
-											 <input type='text' 
-							name='Univ' 
-							id='Univ' class="form-control" placeholder="University"/>
+						<input type='text' 
+									name='Univ' 
+									id='Univ' class="form-control" placeholder="University"/>
 						<label for="Univ" class="sr-only">Univ</label>
 						
 					<input type="button" 

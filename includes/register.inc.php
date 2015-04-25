@@ -13,7 +13,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 	$Lname = filter_input(INPUT_POST, 'Lname', FILTER_SANITIZE_STRING);
 	$State = filter_input(INPUT_POST, 'State', FILTER_SANITIZE_STRING);
 	$Univ = filter_input(INPUT_POST, 'Univ', FILTER_SANITIZE_STRING);
-	}
+	
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Not a valid email
         $error_msg .= '<p class="error">The email address you entered is not valid</p>';
@@ -120,5 +120,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 			// disable headers for debugging
         header('Location: ./register_success.php');
     }
+}
 
 ?>
