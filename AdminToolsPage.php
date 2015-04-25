@@ -49,8 +49,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 					var email = $(this).find('td:nth-child(2)').text()
 					alert(email);
 					$.ajax({
-						type: 'POST',
-						url: 'addInsertDelete.php',
+						type: "POST",
+						url: "addInsertDelete.php",
 						data: {email: email},					
 						success: function (){
 								alert("Record was delated");
