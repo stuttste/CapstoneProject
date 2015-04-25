@@ -46,16 +46,22 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				 if ( $(this).hasClass('selected') ) {
 					$(this).removeClass('selected');
+					var email = $(this).children().find('.email').text();
+					alert(email);
+					$.ajax({
+						type: 'POST',
+						url: '/addInsertDelete.php',
+						data: {email: email}					
+						success: function (){
+								alert("Record was delated");
+					}
+				});
 				}
 				else {
 					mTable.$('tr.selected').removeClass('selected');
 					$(this).addClass('selected');
 				}
-				//$(this).toggleClass('active');
-				//mTable
-					//.row( $(this).parents('tr'))
-					//.remove()
-					//.draw();
+
 			});
 			
 			$('#deleteEmail').click( function () {
@@ -64,6 +70,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 			
 		})
+		
+		
 						
 		
 			
@@ -112,7 +120,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td>'.$email.'</td><td>'.$admin.'</td></tr>';
+															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.$admin.'</td></tr>';
 															}
 													$sql->close();
 												}
