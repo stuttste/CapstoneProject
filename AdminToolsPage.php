@@ -47,15 +47,11 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				$(this).toggleClass('active');
 				
 			});
-			
-			$('#deleteEmail').click( function () {
-				table.row('.selected').remove().draw( false );
-			});
-			
-			
 		})
 						
-			
+		$('#deleteEmail').click( function () {
+				table.row('.selected').remove().draw( false );
+			});	
 			
 			
 	</script>
