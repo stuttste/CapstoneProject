@@ -42,18 +42,13 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		$(document).ready(function() {
 			var mTable = $('#memberEmailTable').DataTable({
 			"scrollX": true
-			$(this).toggleClass('active');
+			
 			
 		})
 						
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
-				if ( $(this).hasClass('selected') ) {
-				     $(this).removeClass('selected');
-				}
-				else {
-					table.$('tr.selected').removeClass('selected');
-					$(this).addClass('selected');
-				}
+				$(this).toggleClass('active');
+				
 			});
 			
 			$('#deleteEmail').click( function () {
