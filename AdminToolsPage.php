@@ -84,13 +84,13 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		</nav>
     <div class="container">
 	
-		<button type="button">Promote user</button>
+		    <button type="button">Promote user</button>
             <button type="button">Demote user</button>
             <button type="button" id="deleteEmail">Delete account</button>
+			
            <div class="row">
 						<div class="col-md-12">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="memberEmailTable">
+							<table class="table table-bordered table-responsive" id="memberEmailTable">
 									<thead>
 										<th>Username</th>
 										<th>Email</th>
@@ -108,8 +108,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 												}
 										?>
 									</tbody>
-								</table>
 							</table>
+							
 						</div>
 			</div>
 	
