@@ -231,16 +231,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 										<th>Admin</th>
 									</thead>
 									<tbody>
-										<?php
-											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin` FROM `MEMBERS`")){													
-												$sql->execute();
-													$sql->bind_result($username, $email, $admin);
-													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td>'.$email.'</td><td>'.$admin.'</td></tr>';
-															}
-													$sql->close();
-												}
-										?>
+									
 									</tbody>
 								</table>
 							</table>
