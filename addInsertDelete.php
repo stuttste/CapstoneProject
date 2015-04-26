@@ -9,16 +9,16 @@ sec_session_start();
 	die();
 }
 
-	$email = $_POST['email'];
+	//$email = $_POST['email'];
 	//$email = "schutzvl@warhawks.ulm.edu";
 	//deleteRow($email);
-	function deleteRow($email){
-		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE `Email` = '.$email.'" )) {
+	//function deleteRow($email){
+		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE `Email` = 'schutzvl@warhawks.ulm.edu'" )) {
 			//$sql->bind_param("s",$email);
 			$sql->execute();
 		}
 			$sql->close();
-	}
+	//}
 	
 
 ?> 
