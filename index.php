@@ -86,10 +86,10 @@ sec_session_start();
 		$('#unknownPhageCheck').on('click', function(){
 			if(document.getElementById("unknownPhageCheck").checked){
 				document.getElementById("unknownPhage").style.display = "inline";
-				document.getElementById("upTable").style.display = "inline";
+				document.getElementById("upTableRow").style.display = "inline";
 			}else{
 				document.getElementById("unknownPhage").style.display = "none";
-				document.getElementById("upTable").style.display = "none";
+				document.getElementById("upTableRow").style.display = "none";
 			}
 		});
 		
@@ -341,7 +341,7 @@ sec_session_start();
 								</form>
 							</div>
 							
-							<div class="row" style="display:none">
+							<div class="row"  id="upTableRow" style="display:none">
 								<table id="upTable">
 								
 								</table>
