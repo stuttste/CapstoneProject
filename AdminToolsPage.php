@@ -107,9 +107,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		</nav>
     <div class="container">
 	
-		    <button type="button">Pomote user</button>
-            <button type="button">Demote user</button>
-            <button type="button" id="deleteEmail">Delete account</button>
+		   
 		
 	
      <div id="maintabs">
@@ -118,7 +116,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
           <li> <a href="#reviewUserSubmission" data-toggle="tab">Review User Submission</a></li>
           <li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
         </ul>
+		
         <div id="mytabs" class="tab-content">
+		
          <div id="addDeletePhage" class="tab-pane active">
             <h3>
               Description
@@ -161,7 +161,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
             </h3>
 			
 				<button type="button">Delete!</button>
+				
             <form class="form-horizontal inline-block">
+			
               <div class="form-group pull-left">
                 <label for="phageSelection" name="phage">Phage</label> 
 				<input type="text" class="form-control" placeholder="Select Phage"/> 
@@ -173,6 +175,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
                 <input type="text" class="form-control" placeholder="Select Enzyme" /> 
                 <textarea class="form- control" id="enzselection" rows="10"></textarea>
               </div>
+			  
             </form>
 			
           </div>
@@ -185,8 +188,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               This tab allows for admins to monitor user submitted
               phages.
             </p>
+			
 			<button type="button">Accept submission</button>
             <button type="button">Decline submission</button>
+			
             <div class="userSubTable">
               <table class="table table-bordered">
                 <thead>
@@ -210,12 +215,15 @@ href="jQuery/jquery-1.11.2.min.js"></script>
           </div>
           
 		  <div id="acctManage" class="tab-pane">
+		  
             <h3>
               Account Management
             </h3>
+			
             <p>
               This tab allows for the management of user accounts.
             </p>
+			
 			<button type="button">Promote user</button>
             <button type="button">Demote user</button>
             <button type="button" id="deleteEmail">Delete account</button>
