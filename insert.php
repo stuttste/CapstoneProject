@@ -13,9 +13,11 @@ sec_session_start();
 		$cluster = $_POST['cChoice'];
 		$subCluster = $_POST['sChoice'];
 		$enzyme = $_POST['eChoice'];
+		
 		if ($sql = $mysqli->prepare("INSERT INTO `Admin_Phage`(`Phage`, `Cluster`, `SubCluster`, `Enzyme`) VALUES ('$phage','$cluster','$subCluster','$enzyme')" )) {
-			
 			$sql->execute();
+			echo "Phage Added";
+			header('Location: AdminToolsPage.php');
 		}
 			$sql->close();
 	
