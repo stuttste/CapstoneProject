@@ -120,7 +120,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 									</thead>
 									<tbody>
 										<?php
-											if($sql = $mysqli->prepare("SELECT `Username`, `Email` FROM `MEMBERS` WHERE Email = 'schutzvl@warhawks.ulm.edu'")){													
+											if($sql = $mysqli->prepare("SELECT `Username`, `Email` FROM `MEMBERS`")){													
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
