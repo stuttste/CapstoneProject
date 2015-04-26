@@ -343,7 +343,7 @@ sec_session_start();
 							
 							<div class="row"  id="upTableRow" style="display:none">
 								<div class = "col-md-12">
-									<table id="upTable" border="1">
+									<table id="upTable" border="1" style="width:100%">
 									
 									</table>
 								</div>
