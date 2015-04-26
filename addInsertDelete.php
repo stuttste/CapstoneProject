@@ -13,7 +13,7 @@ sec_session_start();
 	//deleteRow($email);
 	//function deleteRow($email){
 		
-		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE 'MEMBERS`.`Email` = 'schutzvl@warhawks.ulm.edu'")) {
+		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE 'MEMBERS`.`Email` = " + " schutzvl@warhawks.ulm.edu " )) {
 			//$sql->bind_param("s",$email);
 			$sql->execute();
 		}
