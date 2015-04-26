@@ -74,7 +74,9 @@ sec_session_start();
 			enzArr = enzStr.split(",");
 			
 			for(var i = 0; i < enzArr.length; i++){
-				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span><select class="form-control" id="' + enzArr[i] + '"><option>None</option><option>Few (1 to 5)</option><option>Some (5 to 15)</option><option>Many (15 to 40)</option><option>Lots (40+)</option></select></div><br />';
+				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span><select class="form-control" id="' + enzArr[i] + 'up">';
+				htmlOut += '<option>None</option><option>Few (1 to 5)</option><option>Some (5 to 15)</option>';
+				htmlOut += '<option>Many (15 to 40)</option><option>Lots (40+)</option></select></div><br />';
 			}
 			
 			document.getElementById("enzymeCutCounts").innerHTML = htmlOut;
@@ -82,10 +84,13 @@ sec_session_start();
 		});
 		
 		$('#unknownPhageCheck').on('click', function(){
-			if(document.getElementById("unknownPhageCheck").checked)
+			if(document.getElementById("unknownPhageCheck").checked){
 				document.getElementById("unknownPhage").style.display = "inline";
-			else
+				document.getElementById("upTable").style.display = "inline";
+			}else{
 				document.getElementById("unknownPhage").style.display = "none";
+				document.getElementById("upTable").style.display = "none";
+			}
 		});
 		
 
@@ -138,6 +143,9 @@ sec_session_start();
 				var subclusterStr = "";
 				var enzStr = "";
 				
+				var upHtmlOut = "<thead><th>Phage Name</th><th>Cluster</th><th>Subcluster</th>";
+				var upEnzStr = "";
+				
 				
 				for(x=0; x<PhageForm.phageSelectBox.length; x++){
 					if(PhageForm.phageSelectBox[x].selected){
@@ -172,6 +180,9 @@ sec_session_start();
 							enzStr += PhageForm.enzSelectBox[x].value;
 						else
 							enzStr += "," +  PhageForm.enzSelectBox[x].value;
+						
+						upHtmlOut += "<th>"+ PhageForm.enzSelectBox[x].value + "</th>";
+						upEnzStr += "<td>" + document.getElementById(PhageForm.enzSelectBox[x].value + "up").value + "</td>";
 					}
 				}
 				
@@ -183,6 +194,11 @@ sec_session_start();
 					subclusterStr = "No_subcluster";
 				if(enzStr === "")
 					enzStr = "No_enzymes";
+				
+				upHtmlOut = "</thead><tbody><tr>";
+				upHtmlOut = "<td>" + document.getElementById('UnknownPhageName').value + "</td><td>N/A</td><td>N/A</td>" + upEnzStr + "</tr></tbody>";
+				
+				document.getElementById('upTable').innerHTML = upHtmlOut;
 				
 				$.ajax({
 					url: "calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
@@ -200,6 +216,8 @@ sec_session_start();
 							table.draw();
 					}
 				});
+				
+				
 	}
 	</script>
 	</head>
