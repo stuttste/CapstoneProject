@@ -74,7 +74,7 @@ sec_session_start();
 			enzArr = enzStr.split(",");
 			
 			for(var i = 0; i < enzArr.length; i++){
-				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span><input type="text" class="form-control" id="' + enzArr[i] + '" placeholder="Enter cut count"></div><br />';
+				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span><select class="form-control" id="' + enzArr[i] + '><option>None</option><option>Few (1 to 5)</option><option>Some (5 to 15)</option><option>Many (15 to 40)</option><option>Lots (40+)</option></select></div><br />';
 			}
 			
 			document.getElementById("enzymeCutCounts").innerHTML = htmlOut;
@@ -323,6 +323,11 @@ sec_session_start();
 								</form>
 							</div>
 							
+							<div class="row" style="display:none">
+								<table id="upTable">
+								
+								</table>
+							</div>
 						
 						<div class="row">
 							<div class="col-md-12">
