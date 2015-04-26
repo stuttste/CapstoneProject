@@ -1,9 +1,9 @@
 <?php
 
-	echo("Testing");
-	//for($_GET as $key => $value){
-		//echo($key + " = " $value);
-	//}
+	
+	for($_GET as $key => $value){
+	echo($key + " = " $value);
+	}
 	//$email = $_POST['email'];
 	//function deleteRow(){
 		
