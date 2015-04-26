@@ -148,7 +148,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			  <label for="enzymeEntry">Enzyme:</label> 
 			  <input type="text" class="form-control" name="eChoice" id="eChoice" placeholder="Enter Enzyme"/>
           			
-           	  <input type="submit" id="submitData"/>
+           	  <input type="submit" id="submitData" name="submitData"/>
 			</div>
         </form>
 		
