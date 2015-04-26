@@ -56,6 +56,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 					$.ajax({
 						type: "POST",
 						url: "addInsertDelete.php",
+						datatype: 'json',
 						data: email,					
 						success: function (){
 								alert("Record was delated");

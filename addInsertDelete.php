@@ -9,8 +9,8 @@ sec_session_start();
 	die();
 }
 
-	//$email = $_POST['email'];
-	$email = "smartguypurple@yahoo.com";
+	$email = $_POST['email'];
+	//$email = "smartguypurple@yahoo.com";
 	//deleteRow($email);
 	//function deleteRow($email){
 		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE `Email` = '$email'" )) {
