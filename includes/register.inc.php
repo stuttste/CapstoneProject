@@ -119,7 +119,9 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 				}
 			// disable headers for debugging
         header('Location: ./register_success.php');
-    }
+    }else{
+		$error_msg .= '<p class="error">Insert Statement not running correctly.</p>';
+	}
 }else{
 	$error_msg .= '<p class="error">All of the parameters are not assigned.</p>';
 }
