@@ -53,7 +53,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 					$(this).addClass('selected');
 						var email = $(this).find('td:nth-child(2)').text()
 					alert(email);
-					window.location.href = "./addInsertDelete.php?email="+email;
+					window.location.href = "./addInsertDelete.php?email=testing";
 					/*$.ajax({
 						type: "POST",
 						url: "addInsertDelete.php",
