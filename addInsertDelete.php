@@ -14,7 +14,7 @@ sec_session_start();
 	//deleteRow($email);
 	//function deleteRow($email){
 		
-		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE 'MEMBERS`.`Email` = ?" )) {
+		if ($sql = $mysqli->prepare("DELETE FROM MEMBERS WHERE Email = ?" )) {
 			$sql->bind_param("s",$email);
 			$sql->execute();
 		}
