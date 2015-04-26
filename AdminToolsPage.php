@@ -112,7 +112,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 	
      <div id="maintabs">
         <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
-          <li class="active"> <a href="#addDeletePhage" data-="" toggle= "tab">Add/Delete Phage</a> </li>
+          <li class="active"> <a href="#addDeletePhage" data-toggle= "tab">Add/Delete Phage</a> </li>
           <li> <a href="#reviewUserSubmission" data-toggle="tab">Review User Submission</a></li>
           <li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
         </ul>
