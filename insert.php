@@ -17,7 +17,7 @@ sec_session_start();
 		if ($sql = $mysqli->prepare("INSERT INTO `Admin_Phage`(`Phage`, `Cluster`, `SubCluster`, `Enzyme`) VALUES ('$phage','$cluster','$subCluster','$enzyme')" )) {
 			$sql->execute();
 			echo "Phage Added";
-			header('Location: AdminToolsPage.php');
+			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 		}
 			$sql->close();
 	
