@@ -106,7 +106,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		</nav>
     <div class="container">
 	
-		    <button type="button">Promote user</button>
+		    <button type="button">Big user</button>
             <button type="button">Demote user</button>
             <button type="button" id="deleteEmail">Delete account</button>
 			
