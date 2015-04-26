@@ -341,8 +341,8 @@ sec_session_start();
 								</form>
 							</div>
 							
-							<div class="row"  id="upTableRow" style="display:none">
-								<table id="upTable">
+							<div class="row col-md-12"  id="upTableRow" style="display:none">
+								<table id="upTable" border="1">
 								
 								</table>
 							</div>
