@@ -55,7 +55,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								
 					$.ajax({
 						type: "POST",
-						url: "addInsertDelete.php",
+						url: "delete.php",
 						datatype: 'json',
 						data: {email: email},					
 						success: function (){
@@ -68,7 +68,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 			$('#deleteEmail').click( function () {
 				mTable.row('.selected').remove().draw( false );
-			} );
+			});
+			
+			
 			
 			
 		})
@@ -131,27 +133,24 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               Add Phages and Enzymes
             </h3>
 			
+		<form action="insert.php" method="post"	
             <div class="form-inline">
               <label for="phageselection">Phage:</label>
-              <input type="text" class="form-control" placeholder="Enter Phage"/> 
+              <input type="text" class="form-control" id="phageChoice" placeholder="Enter Phage"/> 
+			
 			  <label for="clusterselection">Cluster:</label> 
-			  <input type="text" class="form-control" placeholder="Enter Cluster"/> 
+			  <input type="text" class="form-control" id="clusChoice"placeholder="Enter Cluster"/> 
+			
 			  <label for="subclustselection">SubCluster:</label> 
-			  <input type="text" class="form-control" placeholder="Enter SubCluster"/>
-            </div>
-			
-            <div class="form-inline">
-              <label for="enzymeEntry">Enzyme:</label> 
-			  <input type="text" class="form-control" placeholder="Enter Enzyme"/>
-            </div>
-			
-            <div>
-              <p>
-			  <button type="button">Add Phage/Enzyme!</button>
-			  <button type="button">Import file!</button>
-              </p>
-            </div>
-            
+			  <input type="text" class="form-control" id="subChoice"placeholder="Enter SubCluster"/>
+           
+			  <label for="enzymeEntry">Enzyme:</label> 
+			  <input type="text" class="form-control" id="enzChoice"placeholder="Enter Enzyme"/>
+          			
+           	  <input type="submit" id="submitData">Add Phage/Enzyme!</button>
+			</div>
+        </form>
+		
 			<h2>
               Line Divide Here
             </h2>
