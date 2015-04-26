@@ -44,13 +44,14 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			"scrollX": true
 			})
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
-				/*if ( $(this).hasClass('selected') ) {
-					$(this).removeClass('selected');*/
-					mTable
-						.row($(this).parents('tr'))
-						.remove()
-						.draw();
-					var email = $(this).find('td:nth-child(2)').text()
+				if ( $(this).hasClass('selected') ) {
+					$(this).removeClass('selected');
+									
+				}
+				else {
+					mTable.$('tr.selected').removeClass('selected');
+					$(this).addClass('selected');
+						var email = $(this).find('td:nth-child(2)').text()
 					alert(email);
 					$.ajax({
 						type: "POST",
@@ -60,11 +61,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								alert("Record was delated");
 						}
 					});
-				//}
-				/*else {
-					mTable.$('tr.selected').removeClass('selected');
-					$(this).addClass('selected');
-				}*/
+				}
 
 			});
 			
