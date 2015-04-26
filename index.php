@@ -341,10 +341,12 @@ sec_session_start();
 								</form>
 							</div>
 							
-							<div class="row col-md-12"  id="upTableRow" style="display:none">
-								<table id="upTable" border="1">
-								
-								</table>
+							<div class="row"  id="upTableRow" style="display:none">
+								<div class = "col-md-12">
+									<table id="upTable" border="1">
+									
+									</table>
+								</div>
 							</div>
 						
 						<div class="row">
