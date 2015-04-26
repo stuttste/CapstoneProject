@@ -202,18 +202,7 @@ sec_session_start();
 				upHtmlOut += "</thead><tbody><tr>";
 				upHtmlOut += "<td>" + document.getElementById('UnknownPhageName').value + "</td><td>N/A</td><td>N/A</td>" + upEnzStr + "</tr></tbody>";
 				
-				var uptable = $('#upTable').DataTable();
-							
-							table.destroy();
-							$('#upTable').empty();
-							var t = document.getElementById("upTable");
-							t.innerHTML = upHtmlOut;
-							
-							var uptable = $('#upTable').DataTable({
-								"scrollX": true
-							});
-							table.draw();
-				
+				document.getElementById('upTable').innerHTML = upHtmlOut;
 				
 				$.ajax({
 					url: "calls/phageLookup.php?phages=" + phageStr + "&clusters=" + clusterStr + "&subclusters=" + subclusterStr + "&enzymes=" + enzStr,
