@@ -11,7 +11,7 @@ sec_session_start();
 
 	//$email = $_POST['email'];
 	$email = "schutzvl@warhawks.ulm.edu"
-	deleteRow($email);
+	//deleteRow($email);
 	function deleteRow($email){
 		
 		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE 'MEMBERS`.`Email` = 'schutzvl@warhawks.ulm.edu'" )) {
