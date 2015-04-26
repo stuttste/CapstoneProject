@@ -1,7 +1,7 @@
 <?php
 
 	
-	for($_GET as $key => $value){
+	foreach($_GET as $key => $value){
 	echo($key + " = " $value);
 	}
 	//$email = $_POST['email'];
