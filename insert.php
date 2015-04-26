@@ -14,12 +14,17 @@ sec_session_start();
 		$subCluster = $_POST['sChoice'];
 		$enzyme = $_POST['eChoice'];
 		
+		if(!$_POST['submit']){
+			echo "Fill out form";
+			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
+		}
 		if ($sql = $mysqli->prepare("INSERT INTO `Admin_Phage`(`Phage`, `Cluster`, `SubCluster`, `Enzyme`) VALUES ('$phage','$cluster','$subCluster','$enzyme')" )) {
 			$sql->execute();
 			echo "Phage Added";
 			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 		}
 			$sql->close();
+		
 	
 	
 
