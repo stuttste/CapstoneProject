@@ -195,8 +195,8 @@ sec_session_start();
 				if(enzStr === "")
 					enzStr = "No_enzymes";
 				
-				upHtmlOut = "</thead><tbody><tr>";
-				upHtmlOut = "<td>" + document.getElementById('UnknownPhageName').value + "</td><td>N/A</td><td>N/A</td>" + upEnzStr + "</tr></tbody>";
+				upHtmlOut += "</thead><tbody><tr>";
+				upHtmlOut += "<td>" + document.getElementById('UnknownPhageName').value + "</td><td>N/A</td><td>N/A</td>" + upEnzStr + "</tr></tbody>";
 				
 				document.getElementById('upTable').innerHTML = upHtmlOut;
 				
