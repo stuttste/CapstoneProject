@@ -137,16 +137,16 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		<form action="insert.php" method="post">	
             <div class="form-inline">
               <label for="phageselection">Phage:</label>
-              <input type="text" class="form-control" id="pChoice" placeholder="Enter Phage"/> 
+              <input type="text" class="form-control" name="pChoice" id="pChoice" placeholder="Enter Phage"/> 
 			
 			  <label for="clusterselection">Cluster:</label> 
-			  <input type="text" class="form-control" id="cChoice" placeholder="Enter Cluster"/> 
+			  <input type="text" class="form-control" name="cChoice" id="cChoice" placeholder="Enter Cluster"/> 
 			
 			  <label for="subclustselection">SubCluster:</label> 
-			  <input type="text" class="form-control" id="sChoice" placeholder="Enter SubCluster"/>
+			  <input type="text" class="form-control" name="sChoice" id="sChoice" placeholder="Enter SubCluster"/>
            
 			  <label for="enzymeEntry">Enzyme:</label> 
-			  <input type="text" class="form-control" id="eChoice" placeholder="Enter Enzyme"/>
+			  <input type="text" class="form-control" name="eChoice" id="eChoice" placeholder="Enter Enzyme"/>
           			
            	  <input type="submit" id="submitData"/>
 			</div>
