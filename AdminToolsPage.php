@@ -110,32 +110,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		    <button type="button">Pomote user</button>
             <button type="button">Demote user</button>
             <button type="button" id="deleteEmail">Delete account</button>
-			
-           <div class="row">
-						<div class="col-md-12">
-							<table class="table table-bordered table-responsive" id="memberEmailTable">
-									<thead>
-										<th>Username</th>
-										<th>Email</th>
-										<th>Admin</th>
-									</thead>
-									<tbody>
-										<?php
-											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin` FROM `MEMBERS`")){													
-												$sql->execute();
-													$sql->bind_result($username, $email, $admin);
-													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.$admin.'</td></tr>';
-															}
-													$sql->close();
-												}
-										?>
-									</tbody>
-							</table>
-							
-						</div>
-			</div>
-	
+		
 	
      <div id="maintabs">
         <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
