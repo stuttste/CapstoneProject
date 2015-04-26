@@ -18,10 +18,10 @@ sec_session_start();
 			echo "Fill out form";
 			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 		}
-		if ($sql = $mysqli->prepare("INSERT INTO `Admin_Phage`(`Phage`, `Cluster`, `SubCluster`, `Enzyme`) VALUES ('$pChoice','$cChoice','$sChoice','$eChoice')" )) {
-			$sql->execute();
+		if ($sql = $mysqli->prepare("INSERT INTO `Admin_Phage`(`Phage`, `Cluster`, `SubCluster`, `Enzyme`) VALUES ('$phage','$cluster','$subCluster','$enzyme')" )) {
 			echo "Phage Added";
 			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
+			$sql->execute();
 		}
 			$sql->close();
 		
