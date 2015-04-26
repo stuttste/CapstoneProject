@@ -107,49 +107,53 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				</div>
 			</div>
 		</nav>
+   
     <div class="container">
 	
 		   
 		
 	
-     <div id="maintabs">
-        <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
-          <li class="active"> <a href="#addDeletePhage" data-toggle= "tab">Add/Delete Phage</a> </li>
-          <li> <a href="#reviewUserSubmission" data-toggle="tab">Review User Submission</a></li>
-          <li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
-        </ul>
+		<div id="maintabs">
+			<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
+				<li class="active"> <a href="#addDeletePhage" data-toggle= "tab">Add/Delete Phage</a> </li>
+				<li> <a href="#reviewUserSubmission" data-toggle="tab">Review User Submission</a></li>
+				<li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
+			</ul>
 		
         <div id="mytabs" class="tab-content">
 		
-         <div id="addDeletePhage" class="tab-pane active">
-            <h3>
-              Description
-            </h3>
-            <p>
-              This tab adds for the direct adding or deleting of enzymes and
-              phages to/from the database.
-            </p>
-            <h3>
-              Add Phages and Enzymes
-            </h3>
-			
-		<form action="insert.php" method="post"	
+			<div id="addDeletePhage" class="tab-pane active">
+				<h3>
+					Description
+				</h3>
+				<p>
+					This tab adds for the direct adding or deleting of enzymes and
+					phages to/from the database.
+				</p>
+				<h3>
+					Add Phages and Enzymes
+				</h3>
+			</div>	
+		 
+		<form action="insert.php" method="post">	
             <div class="form-inline">
               <label for="phageselection">Phage:</label>
               <input type="text" class="form-control" id="pChoice" placeholder="Enter Phage"/> 
 			
 			  <label for="clusterselection">Cluster:</label> 
-			  <input type="text" class="form-control" id="cChoice"placeholder="Enter Cluster"/> 
+			  <input type="text" class="form-control" id="cChoice" placeholder="Enter Cluster"/> 
 			
 			  <label for="subclustselection">SubCluster:</label> 
-			  <input type="text" class="form-control" id="sChoice"placeholder="Enter SubCluster"/>
+			  <input type="text" class="form-control" id="sChoice" placeholder="Enter SubCluster"/>
            
 			  <label for="enzymeEntry">Enzyme:</label> 
-			  <input type="text" class="form-control" id="eChoice"placeholder="Enter Enzyme"/>
+			  <input type="text" class="form-control" id="eChoice" placeholder="Enter Enzyme"/>
           			
-           	  <input type="submit" id="submitData">Add Phage/Enzyme!</button>
+           	  <input type="submit" id="submitData"/>
 			</div>
         </form>
+		
+		
 		
 			<h2>
               Line Divide Here
@@ -159,27 +163,27 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               Delete Phage or Enzyme
             </h3>
 			
-				<button type="button">Delete!</button>
+			<button type="button">Delete!</button>
 				
             <form class="form-horizontal inline-block">
 			
-              <div class="form-group pull-left">
-                <label for="phageSelection" name="phage">Phage</label> 
-				<input type="text" class="form-control" placeholder="Select Phage"/> 
-                <textarea class="form- control" id="phageSelection" rows="10"></textarea>
-              </div>
+				<div class="form-group pull-left">
+					<label for="phageSelection" name="phage">Phage</label> 
+					<input type="text" class="form-control" placeholder="Select Phage"/> 
+					<textarea class="form- control" id="phageSelection" rows="10"></textarea>
+				</div>
 			  
-              <div class="form-group pull- right">
-                <label for="enzselection">Enzyme</label>
-                <input type="text" class="form-control" placeholder="Select Enzyme" /> 
-                <textarea class="form- control" id="enzselection" rows="10"></textarea>
-              </div>
+				<div class="form-group pull- right">
+					<label for="enzselection">Enzyme</label>
+					<input type="text" class="form-control" placeholder="Select Enzyme" /> 
+					<textarea class="form- control" id="enzselection" rows="10"></textarea>
+				</div>
 			  
             </form>
 			
-          </div>
+          
 		  
-          <div id="reviewUserSubmission" class="tab-pane">
+        <div id="reviewUserSubmission" class="tab-pane">
             <h3>
               Review User Submission
             </h3>
@@ -211,23 +215,19 @@ href="jQuery/jquery-1.11.2.min.js"></script>
                 </thead>
              </table>
             </div>
-          </div>
+        </div>
           
-		  <div id="acctManage" class="tab-pane">
+		<div id="acctManage" class="tab-pane">
 		  
             <h3>
               Account Management
             </h3>
 			
-            <p>
-              This tab allows for the management of user accounts.
-            </p>
-			
-			<button type="button">Promote user</button>
+           	<button type="button">Promote user</button>
             <button type="button">Demote user</button>
             <button type="button" id="deleteEmail">Delete account</button>
        	
-           <div class="row">
+            <div class="row">
 						<div class="col-md-12">
 							<table class="table table-bordered table-responsive" id="memberEmailTable">
 									<thead>
@@ -252,9 +252,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 						</div>
 			</div>
 	
-          </div>
         </div>
-      </div>
+		
+        </div>
+    </div>
     </div>
   </body>
 </html>
