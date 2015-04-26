@@ -116,7 +116,6 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		<div id="maintabs">
 			<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
 				<li class="active"> <a href="#addDeletePhage" data-toggle= "tab">Add/Delete Phage</a> </li>
-				<li> <a href="#reviewUserSubmission" data-toggle="tab">Review User Submission</a></li>
 				<li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
 			</ul>
 		
@@ -133,7 +132,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				<h3>
 					Add Phages and Enzymes
 				</h3>
-			</div>	
+			
 		 
 		<form action="insert.php" method="post">	
             <div class="form-inline">
@@ -180,44 +179,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				</div>
 			  
             </form>
+			</div>
 			
-          
-		  
-        <div id="reviewUserSubmission" class="tab-pane">
-            <h3>
-              Review User Submission
-            </h3>
-            <p>
-              This tab allows for admins to monitor user submitted
-              phages.
-            </p>
-			
-			<button type="button">Accept submission</button>
-            <button type="button">Decline submission</button>
-			
-            <div class="userSubTable">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>
-                      Phage
-                    </th>
-                    <th>
-                      Cluster
-                    </th>
-                    <th>
-                      Subcluster
-                    </th>
-                    <th>
-                      Cut Range and Enzyme
-                    </th>
-                  </tr>
-                </thead>
-             </table>
-            </div>
-        </div>
-          
-		<div id="acctManage" class="tab-pane">
+      	<div id="acctManage" class="tab-pane">
 		  
             <h3>
               Account Management
