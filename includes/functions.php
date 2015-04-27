@@ -244,7 +244,7 @@ function demoToCSV($mysqli){
 	
 	fputcsv($output, array('ID', 'State', 'University'));
 	
-		$stmt = $mysqli->query("SELECT `ID`, IFNULL(`State`, 'None'), IFNULL(`University`, 'None') FROM MEMBERS");
+		$stmt = $mysqli->query("SELECT `ID`, IFNULL(`State`, 'None') AS State, IFNULL(`University`, 'None') AS University FROM MEMBERS");
  
             while ($row = $stmt->fetch_assoc()) {
                 fputcsv($output, array($row['ID'], $row['State'], $row['University']));
