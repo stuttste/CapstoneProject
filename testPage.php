@@ -9,6 +9,6 @@ sec_session_start();
 	die();
 }
 
-demoToCSV($mysqli);
+ echo demoToCSV($mysqli);
 
 ?>
