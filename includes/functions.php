@@ -256,8 +256,7 @@ function demoToCSV($mysqli){
         // Get the user-agent string of the user.
         $user_browser = $_SERVER['HTTP_USER_AGENT'];
  
-        if ($stmt = $mysqli->prepare("SELECT `ID`, `State`, `University` 
-														FROM MEMBERS")) {
+        if ($stmt = $mysqli->prepare("SELECT `ID`, `State`, `University` FROM MEMBERS")) {
             $stmt->execute();   // Execute the prepared query.
  
             while ($row = $stmt->fetch_assoc()) {
@@ -267,7 +266,7 @@ function demoToCSV($mysqli){
 			
 			fputcsv($output, array('End', 'Of', 'File'));
 			
-			fclose($output);
+			
         }else{
 			fputcsv($output, "Fail on query execution");
 		}
@@ -275,7 +274,7 @@ function demoToCSV($mysqli){
 		fputcsv($output, "Fail on session variables");
 	}
 	
-	
+	fclose($output);
 }
 
 
