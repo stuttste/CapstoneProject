@@ -34,6 +34,9 @@ sec_session_start();
 		var table = $('#phageTable').DataTable({
 				"scrollX": true
 			});
+		var uTable = $('#upTable').DataTable({
+				"scrollX": true
+			});
 		//var etable = $('#enzymeTable').DataTable();
 		var btable = $('#bestResultTable').DataTable();
 		var rtable = $('#resultsTable').DataTable();
