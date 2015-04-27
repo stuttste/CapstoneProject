@@ -114,7 +114,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 				http://g3cap.tk/staging/verify.php?email='.$email.'&hash='.$random_salt.'
 				';
 				
-				$headers = 'From:stuttste@gmail.com'."\r\n";
+				$headers = 'From:g3cap.tk@gmail.com'."\r\n";
 				mail($to, $subject, $message, $headers);
 				}
 			// disable headers for debugging
