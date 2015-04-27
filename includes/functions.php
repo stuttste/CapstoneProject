@@ -244,21 +244,13 @@ function demoToCSV($mysqli){
 	
 	fputcsv($output, array('ID', 'State', 'University'));
 	
-        if ($stmt = $mysqli->prepare("SELECT `ID`, `State`, `University` FROM MEMBERS")) {
-            $stmt->execute();   // Execute the prepared query.
+		$stmt = $mysqli->query("SELECT `ID`, `State`, `University` FROM MEMBERS");
  
             while ($row = $stmt->fetch_assoc()) {
                 fputcsv($output, array($row['ID'], $row['State'], $row['University']));
 				
             }
-			
-			fputcsv($output, array('End', 'Of', 'File'));
-			
-			
-        }else{
-			fputcsv($output, array('Fail',  'on query', 'execution'));
-		}
-	
+				
 	fclose($output);
 }
 
