@@ -77,6 +77,7 @@ for(var i = 0; i < stateList.length; i++) {
 	{
     stateCheck=true;
 	}
+}
    // Check each field has a value
     if (uid.value == ''         || 
           email.value == ''     || 
