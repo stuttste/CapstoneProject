@@ -242,7 +242,7 @@ function demoToCSV($mysqli){
 	
 	$output = fopen('php://output', 'w');
 	
-	fputcsv($output, array('ID', 'State', 'University');
+	fputcsv($output, array('ID', 'State', 'University'));
 	
 	// Check if all session variables are set 
     if (isset($_SESSION['user_id'], 
