@@ -54,29 +54,20 @@ sec_session_start();
 			<div class="docs-header" id="content">
 			
 				<div class="container">
-					<h1>License Page</h1>
+					<div class = "row">
+							<h1>License Page</h1>
+						
+					
+						<p> 
+						   <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
+						   This work is licensed under a
+						   <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">
+						   Creative Commons Attribution-ShareAlike 3.0 Unported License.
+						   </a>
+						</p>
+					</div>
 				</div>
-			
-<p> 
-   <tr>
-   <td colspan="2">
-   <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">
-   <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
-   </a>
-   This work is licensed under a
-   <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">
-   Creative Commons Attribution-ShareAlike 3.0 Unported License.
-   </a>
-   </td>
-   </tr>
-</p>
-</div>
-			
-			<div class="container">
-				
 			</div>
 			
-		<div class="container">
-		</div>
 	</body>
 </html>
