@@ -7,6 +7,9 @@ sec_session_start();
  if (login_check($mysqli) == false) {
         header('Location: login.php');
         die();
+} elseif (admin_check($mysqli) == false) {
+		header('Location: index.php');
+        die();
 }
 ?>
 <html lang="en">

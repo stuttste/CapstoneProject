@@ -75,8 +75,8 @@ sec_session_start();
 			
 			for(var i = 0; i < enzArr.length; i++){
 				htmlOut += '<div class="input-group col-md-3"><span class="input-group-addon">' + enzArr[i] + '</span><select class="form-control" id="' + enzArr[i] + 'up">';
-				htmlOut += '<option>None</option><option>Few (1 to 5)</option><option>Some (5 to 15)</option>';
-				htmlOut += '<option>Many (15 to 40)</option><option>Lots (40+)</option></select></div><br />';
+				htmlOut += '<option>None</option><option>Few (1 to 5)</option><option>Some (6 to 15)</option>';
+				htmlOut += '<option>Many (16 to 40)</option><option>Alot (41+)</option></select></div><br />';
 			}
 			
 			document.getElementById("enzymeCutCounts").innerHTML = htmlOut;
