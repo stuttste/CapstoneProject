@@ -8,7 +8,7 @@ sec_session_start();
         header('Location: login.php');
         die();
 }
-demoToCSV()
+demoToCSV();
 ?>
 
 <html>
