@@ -265,8 +265,12 @@ function demoToCSV($mysqli){
                 fputcsv($output, array($row['ID'], $row['State'], $row['University']));
 				
             }
-        }
-    }
+        }else{
+			fputcsv($output, "Fail on query execution");
+		}
+    }else{
+		fputcsv($output, "Fail on session variables");
+	}
 	
 	
 }
