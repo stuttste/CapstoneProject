@@ -259,7 +259,6 @@ function demoToCSV($mysqli){
         if ($stmt = $mysqli->prepare("SELECT `ID`, `State`, `University` 
 														FROM MEMBERS")) {
             $stmt->execute();   // Execute the prepared query.
-            $stmt->store_result();
  
             while ($row = $stmt->fetch_assoc()) {
                 fputcsv($output, array($row['ID'], $row['State'], $row['University']));
