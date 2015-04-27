@@ -8,7 +8,7 @@ sec_session_start();
         header('Location: login.php');
         die();
 }
-demoToCSV(data/Demo.csv)
+demoToCSV();
 ?>
 
 <html>
@@ -57,7 +57,7 @@ demoToCSV(data/Demo.csv)
 				</div>
 			</nav>
 	<script>
-	d3.csv("data/Demo.csv", function (demo) {
+	d3.csv("Demo.csv", function (demo) {
 	var pieChart = dc.pieChart("#dc-pie-graph");
 	var univChart = dc.pieChart("#dc-Univ-graph");
 	var dataTable = dc.dataTable("#dc-table-graph");

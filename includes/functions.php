@@ -240,7 +240,7 @@ function esc_url($url) {
 
 function demoToCSV($mysqli){
 	
-	$output = fopen('php://output', 'w');
+	$output = fopen("Demo.csv", 'w');
 	
 	fputcsv($output, array('ID', 'State', 'University'));
 	
