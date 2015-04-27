@@ -105,11 +105,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['Fname'], $_P
 				Thanks for creating an account!
 				Before you can login, please follow the link below to activate your account.
 				
-				------------------------------
-				Email: '.$email.'
-				Password: '.$normPass.'
-				------------------------------
-				
 				Activation link:
 				http://g3cap.tk/staging/verify.php?email='.$email.'&hash='.$random_salt.'
 				';
