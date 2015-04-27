@@ -85,13 +85,17 @@ for(var i = 0; i < stateList.length; i++) {
           conf.value == ''|| 
           Fname.value == ''|| 
           Lname.value == ''|| 
-          stateCheck == false ||
+       
           Univ.value == '') {
  
         alert('You must provide all the requested details. Please try again');
         return false;
     }
- 
+ if(   stateCheck == false)
+ {
+	 alert("Please return the abbreviation in all caps, if outside the USA, use NA");
+	 return false
+ }
     // Check the username
  
     re = /^\w+$/; 
