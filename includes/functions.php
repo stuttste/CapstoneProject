@@ -266,6 +266,8 @@ function demoToCSV($mysqli){
             }
 			
 			fputcsv($output, array('End', 'Of', 'File'));
+			
+			fclose($output);
         }else{
 			fputcsv($output, "Fail on query execution");
 		}
