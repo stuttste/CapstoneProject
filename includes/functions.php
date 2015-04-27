@@ -236,4 +236,43 @@ function esc_url($url) {
     } else {
         return $url;
     }
-}?>
+}
+
+function demoToCSV($mysqli){
+	
+	$output = fopen('php://output', 'w');
+	
+	fputcsv($output, array('ID', 'State', 'University');
+	
+	// Check if all session variables are set 
+    if (isset($_SESSION['user_id'], 
+                        $_SESSION['username'], 
+                        $_SESSION['login_string'])) {
+ 
+        $user_id = $_SESSION['user_id'];
+        $login_string = $_SESSION['login_string'];
+        $username = $_SESSION['username'];
+ 
+        // Get the user-agent string of the user.
+        $user_browser = $_SERVER['HTTP_USER_AGENT'];
+ 
+        if ($stmt = $mysqli->prepare("SELECT `ID`, `State`, `University` 
+														FROM MEMBERS")) {
+            $stmt->execute();   // Execute the prepared query.
+            $stmt->store_result();
+ 
+            while ($row = $stmt->fetch_assoc()) {
+                fputcsv($output, array($row['ID'], $row['State'], $row['University']));
+				
+            }
+        }
+    }
+	
+	
+}
+
+
+
+
+
+?>
