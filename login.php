@@ -70,8 +70,10 @@ if (login_check($mysqli) == true) {
 					}
 					?>
         <ul class="list-group">
-					<li>Personal data will not be distributed to third parties without consent and is only gathered in order to gather usage data about this tool.</li>
+					<li>Personal data will not be distributed to third parties without consent and is only gathered in order to gather usage data about this tool. Internal data displayed on demographics may include portions of the users name and university.
+					</li>
 					<li>Emails must have a valid email format</li>
+					<li>States will use the two letter abbreviation in all caps, users outside the main fifty states in the United States should enter NA. </li>
 					<li>Passwords must be at least 6 characters long</li>
 					<li >Passwords must contain
 						<ul>
