@@ -118,7 +118,7 @@ demoToCSV($mysqli);
 										<table class='table table-hover dc-data-table' id='dc-table-graph'>
 											<thead>
 												<tr class='header'>
-													<th>User ID/th>
+													<th>User ID </th>
 													<th>University</th>
 													<th> State </th>
 												</tr>
