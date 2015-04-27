@@ -16,20 +16,86 @@ function formhash(form, password) {
 }
  
 function regformhash(form, uid, email, password, conf,Fname,Lname,State,Univ) {
-     // Check each field has a value
+// Validate if a state exists
+var stateCheck=false;   
+var stateList = new Array();
+// LOTS of initializating for the array
+stateList[0]="NA";
+stateList[1]="AL";
+stateList[2]="AK";
+stateList[3]="AZ";
+stateList[4]="AR";
+stateList[5]="CA";
+stateList[6]="CO";
+stateList[7]="CT";
+stateList[8]="DE";
+stateList[9]="DC";
+stateList[10]="FL";
+stateList[11]="GA";
+stateList[12]="HI";
+stateList[13]="ID";
+stateList[14]="IL";
+stateList[15]="IN";
+stateList[16]="IA";
+stateList[17]="KS";
+stateList[18]="KY";
+stateList[19]="LA";
+stateList[20]="ME";
+stateList[21]="MD";
+stateList[22]="MI";
+stateList[23]="MN";
+stateList[24]="MS";
+stateList[25]="MO";
+stateList[26]="MT";
+stateList[27]="NE";
+stateList[28]="NY";
+stateList[29]="NV";
+stateList[30]="NH";
+stateList[31]="NJ";
+stateList[32]="NM";
+stateList[33]="NC";
+stateList[34]="ND";
+stateList[35]="OH";
+stateList[36]="OK";
+stateList[37]="OR";
+stateList[38]="PA";
+stateList[39]="RI";
+stateList[40]="SC";
+stateList[41]="SD";
+stateList[42]="TN";
+stateList[43]="UT";
+stateList[44]="VT";
+stateList[45]="VA";
+stateList[46]="WA";
+stateList[47]="WV";
+stateList[48]="WI";
+stateList[49]="WY";
+stateList[50]="TX";
+// loop for checking
+for(var i = 0; i < stateList.length; i++) {
+    if(stateList[i] == State.value) 
+	{
+    stateCheck=true;
+	}
+}
+   // Check each field has a value
     if (uid.value == ''         || 
           email.value == ''     || 
           password.value == ''  || 
           conf.value == ''|| 
           Fname.value == ''|| 
           Lname.value == ''|| 
-          State.value == ''|| 
+       
           Univ.value == '') {
  
         alert('You must provide all the requested details. Please try again');
         return false;
     }
- 
+ if(   stateCheck == false)
+ {
+	 alert("Please return the abbreviation in all caps, if outside the USA, use NA");
+	 return false
+ }
     // Check the username
  
     re = /^\w+$/; 

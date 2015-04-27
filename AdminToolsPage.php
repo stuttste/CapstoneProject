@@ -55,7 +55,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								
 					$.ajax({
 						type: "POST",
-						url: "addInsertDelete.php",
+						url: "delete.php",
+						datatype: 'json',
 						data: {email: email},					
 						success: function (){
 								alert("Record was delated");
@@ -67,7 +68,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 			$('#deleteEmail').click( function () {
 				mTable.row('.selected').remove().draw( false );
-			} );
+			});
+			
+			
 			
 			
 		})
@@ -93,7 +96,6 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 						<li class="active"><a href="index.php">Homepage<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
 						<li ><a href="UserSubmit.html">User Submission<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="AdminToolsPage.php">Administration Tools<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-						<li ><a href="CutPage.html">Cut Results<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="EditAccount.html">Edit Account<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
 						<li ><a href="LicensePage.html">License Page<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 						<li ><a href="demographics.html">Demographics<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
@@ -104,13 +106,91 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				</div>
 			</div>
 		</nav>
+   
     <div class="container">
 	
-		    <button type="button">Promote user</button>
+		   
+		
+	
+		<div id="maintabs">
+			<ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
+				<li class="active"> <a href="#addDeletePhage" data-toggle= "tab">Add/Delete Phage</a> </li>
+				<li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
+			</ul>
+		
+        <div id="mytabs" class="tab-content">
+		
+			<div id="addDeletePhage" class="tab-pane active">
+				<h3>
+					Description
+				</h3>
+				<p>
+					This tab adds for the direct adding or deleting of enzymes and
+					phages to/from the database.
+				</p>
+				<h3>
+					Add Phages and Enzymes
+				</h3>
+			
+		 
+		<form action="insert.php" method="post">	
+            <div class="form-inline">
+              <label for="phageselection">Phage:</label>
+              <input type="text" class="form-control" name="pChoice" id="pChoice" placeholder="Enter Phage"/> 
+			
+			  <label for="clusterselection">Cluster:</label> 
+			  <input type="text" class="form-control" name="cChoice" id="cChoice" placeholder="Enter Cluster"/> 
+			
+			  <label for="subclustselection">SubCluster:</label> 
+			  <input type="text" class="form-control" name="sChoice" id="sChoice" placeholder="Enter SubCluster"/>
+           
+			  <label for="enzymeEntry">Enzyme:</label> 
+			  <input type="text" class="form-control" name="eChoice" id="eChoice" placeholder="Enter Enzyme"/>
+          			
+           	  <input type="submit" id="submitData" name="submitData"/>
+			</div>
+        </form>
+		
+		
+		
+			<h2>
+              Line Divide Here
+            </h2>
+            
+			<h3>
+              Delete Phage or Enzyme
+            </h3>
+			
+			<button type="button">Delete!</button>
+				
+            <form class="form-horizontal inline-block">
+			
+				<div class="form-group pull-left">
+					<label for="phageSelection" name="phage">Phage</label> 
+					<input type="text" class="form-control" placeholder="Select Phage"/> 
+					<textarea class="form- control" id="phageSelection" rows="10"></textarea>
+				</div>
+			  
+				<div class="form-group pull- right">
+					<label for="enzselection">Enzyme</label>
+					<input type="text" class="form-control" placeholder="Select Enzyme" /> 
+					<textarea class="form- control" id="enzselection" rows="10"></textarea>
+				</div>
+			  
+            </form>
+			</div>
+			
+      	<div id="acctManage" class="tab-pane">
+		  
+            <h3>
+              Account Management
+            </h3>
+			
+           	<button type="button">Promote user</button>
             <button type="button">Demote user</button>
             <button type="button" id="deleteEmail">Delete account</button>
-			
-           <div class="row">
+       	
+            <div class="row">
 						<div class="col-md-12">
 							<table class="table table-bordered table-responsive" id="memberEmailTable">
 									<thead>
@@ -135,133 +215,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 						</div>
 			</div>
 	
-	
-     <!--<div id="maintabs">
-        <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
-          <li class="active"> <a href="#addDeletePhage" data-="" toggle= "tab">Add/Delete Phage</a> </li>
-          <li> <a href="#reviewUserSubmission" data-toggle="tab">Review User Submission</a></li>
-          <li> <a href="#acctManage" data-toggle="tab">Account Management</a></li>
-        </ul>
-        <div id="mytabs" class="tab-content">
-         <div id="addDeletePhage" class="tab-pane active">
-            <h3>
-              Description
-            </h3>
-            <p>
-              This tab adds for the direct adding or deleting of enzymes and
-              phages to/from the database.
-            </p>
-            <h3>
-              Add Phages and Enzymes
-            </h3>
-			
-            <div class="form-inline">
-              <label for="phageselection">Phage:</label>
-              <input type="text" class="form-control" placeholder="Enter Phage"/> 
-			  <label for="clusterselection">Cluster:</label> 
-			  <input type="text" class="form-control" placeholder="Enter Cluster"/> 
-			  <label for="subclustselection">SubCluster:</label> 
-			  <input type="text" class="form-control" placeholder="Enter SubCluster"/>
-            </div>
-			
-            <div class="form-inline">
-              <label for="enzymeEntry">Enzyme:</label> 
-			  <input type="text" class="form-control" placeholder="Enter Enzyme"/>
-            </div>
-			
-            <div>
-              <p>
-			  <button type="button">Add Phage/Enzyme!</button>
-			  <button type="button">Import file!</button>
-              </p>
-            </div>
-            
-			<h2>
-              Line Divide Here
-            </h2>
-            
-			<h3>
-              Delete Phage or Enzyme
-            </h3>
-			
-				<button type="button">Delete!</button>
-            <form class="form-horizontal inline-block">
-              <div class="form-group pull-left">
-                <label for="phageSelection" name="phage">Phage</label> 
-				<input type="text" class="form-control" placeholder="Select Phage"/> 
-                <textarea class="form- control" id="phageSelection" rows="10"></textarea>
-              </div>
-			  
-              <div class="form-group pull- right">
-                <label for="enzselection">Enzyme</label>
-                <input type="text" class="form-control" placeholder="Select Enzyme" /> 
-                <textarea class="form- control" id="enzselection" rows="10"></textarea>
-              </div>
-            </form>
-			
-          </div>
-		  
-          <div id="reviewUserSubmission" class="tab-pane">
-            <h3>
-              Review User Submission
-            </h3>
-            <p>
-              This tab allows for admins to monitor user submitted
-              phages.
-            </p>
-			<button type="button">Accept submission</button>
-            <button type="button">Decline submission</button>
-            <div class="userSubTable">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>
-                      Phage
-                    </th>
-                    <th>
-                      Cluster
-                    </th>
-                    <th>
-                      Subcluster
-                    </th>
-                    <th>
-                      Cut Range and Enzyme
-                    </th>
-                  </tr>
-                </thead>
-             </table>
-            </div>
-          </div>
-          
-		  <div id="acctManage" class="tab-pane">
-            <h3>
-              Account Management
-            </h3>
-            <p>
-              This tab allows for the management of user accounts.
-            </p>
-			<button type="button">Promote user</button>
-            <button type="button">Demote user</button>
-            <button type="button" id="deleteEmail">Delete account</button>
-           <div class="row">
-						<div class="col-md-12">
-							<table class="table-responsive">
-								<table class="table table-bordered" id="memberEmailTable">
-									<thead>
-										<th>Username</th>
-										<th>Email</th>
-										<th>Admin</th>
-									</thead>
-									<tbody>
-									
-									</tbody>
-								</table>
-							</table>
-						</div>
-			</div>
-          </div>
         </div>
-      </div>-->
+		
+        </div>
+    </div>
     </div>
   </body>
 </html>
