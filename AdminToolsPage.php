@@ -54,6 +54,23 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				else {
 					mTable.$('tr.selected').removeClass('selected');
 					$(this).addClass('selected');
+					/*var email = $(this).find('td:nth-child(2)').text()
+								
+					$.ajax({
+						type: "POST",
+						url: "delete.php",
+						datatype: 'json',
+						data: {email: email},					
+						success: function (){
+								alert("Record was delated");
+						}
+					});*/
+				}
+
+			});
+			
+			$('#deleteEmail').click( function () {
+				mTable.row('.selected').remove().draw( false );
 					var email = $(this).find('td:nth-child(2)').text()
 								
 					$.ajax({
@@ -65,12 +82,6 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								alert("Record was delated");
 						}
 					});
-				}
-
-			});
-			
-			$('#deleteEmail').click( function () {
-				mTable.row('.selected').remove().draw( false );
 				
 			});
 			
