@@ -46,9 +46,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			var mTable = $('#memberEmailTable').DataTable({
 			"scrollX": true
 			})
-			$('#deleteEmail').click( function () {
-				mTable.row('.selected').remove().draw( false );
-				});
+			
 				
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				if ( $(this).hasClass('selected') ) {
@@ -62,13 +60,17 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								
 					$.ajax({
 						type: "POST",
-						url: "delete.php",
+						url: "deleteUsers.php",
 						datatype: 'json',
 						data: {email: email},					
 						success: function (){
 								alert("Record was deleted");
 						}
 					});
+					
+				$('#deleteEmail').click( function () {
+				mTable.row('.selected').remove().draw( false );
+				});
 				}
 
 			});
@@ -163,6 +165,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			<button type="button">Delete!</button>
 				
 				<div class="row">
+						<button type="button">Delete Phage</button>
 							<div class="col-md-3">
 							<form name="PhageForm" class="inline-block">
 								<div class="form-group">
@@ -183,7 +186,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								</div>
 							</div>
 				
-				
+						<button type="button">Delete Enzyme</button>
 							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
