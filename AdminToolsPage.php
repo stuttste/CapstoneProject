@@ -66,7 +66,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 						datatype: 'json',
 						data: {email: email},					
 						success: function (){
-								alert("Record was delated");
+								alert("Record was deleted");
 						}
 					});
 				}
@@ -162,21 +162,49 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 			<button type="button">Delete!</button>
 				
-            <form class="form-horizontal inline-block">
-			
-				<div class="form-group pull-left">
-					<label for="phageSelection" name="phage">Phage</label> 
-					<input type="text" class="form-control" placeholder="Select Phage"/> 
-					<textarea class="form- control" id="phageSelection" rows="10"></textarea>
+				<div class="row">
+							<div class="col-md-3">
+							<form name="PhageForm" class="inline-block">
+								<div class="form-group">
+									<label for="phage">Phage:</label>
+									<input type="text" class="form-control" placeholder = "Select Phage" id="phageSelect">
+									<select name= "phageSelectBox" multiple class="form-control" id="phage" rows="10">
+									<?php
+										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
+											$sql->execute();
+											$sql->bind_result($name);
+											while($sql->fetch()){
+													echo "<option>".$name."</option>";
+											}
+											$sql->close();
+										}
+										?>
+									</select>									
+								</div>
+							</div>
+				
+				
+							<div class="col-md-3">
+								<div class="form-group">
+										<label for="enzselection">Enzyme</label>
+										<input type="text" class="form-control" placeholder = "Select Enzyme" id="enzSelect">
+										<select name="enzSelectBox" multiple class="form-control" id="enzselection" rows="10">
+											<?php
+												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
+													$sql->execute();
+													$sql->bind_result($name);
+													while($sql->fetch()){
+															echo "<option>".$name."</option>";
+													}
+													$sql->close();
+												}
+											?>
+										</select>
+											 									
+								</div>
+							</div>
+							</form>
 				</div>
-			  
-				<div class="form-group pull- right">
-					<label for="enzselection">Enzyme</label>
-					<input type="text" class="form-control" placeholder="Select Enzyme" /> 
-					<textarea class="form- control" id="enzselection" rows="10"></textarea>
-				</div>
-			  
-            </form>
 			</div>
 			
       	<div id="acctManage" class="tab-pane">
@@ -203,7 +231,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.($admin == 0 ? "no" : "yes").'</td></tr>';
+															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.($admin == 0 ? "No" : "Yes").'</td></tr>';
 															
 													}															
 												}
