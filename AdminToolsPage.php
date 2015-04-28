@@ -46,6 +46,12 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			var mTable = $('#memberEmailTable').DataTable({
 			"scrollX": true
 			})
+			
+			var showTable = $('#manualTable').DataTable({
+				"scrollX": true
+			})
+			
+				
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				if ( $(this).hasClass('selected') ) {
 					$(this).removeClass('selected');
@@ -54,39 +60,24 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				else {
 					mTable.$('tr.selected').removeClass('selected');
 					$(this).addClass('selected');
-					/*var email = $(this).find('td:nth-child(2)').text()
+					var email = $(this).find('td:nth-child(2)').text()
 								
 					$.ajax({
 						type: "POST",
-						url: "delete.php",
+						url: "deleteUsers.php",
 						datatype: 'json',
 						data: {email: email},					
 						success: function (){
-								alert("Record was delated");
+								alert("Record was deleted");
 						}
-					});*/
+					});
+					
+				$('#deleteEmail').click( function () {
+				mTable.row('.selected').remove().draw( false );
+				});
 				}
 
 			});
-			
-			$('#deleteEmail').click( function () {
-				if ( $(this).hasClass('selected') ) {
-				    mTable.row('.selected').remove().draw( false );
-					var email = $(this).find('td:nth-child(2)').text();
-								
-					$.ajax({
-						type: "POST",
-						url: "delete.php",
-						datatype: 'json',
-						data: {email: email},					
-						success: function (){
-								alert("Record was delated");
-						}
-					});
-				}
-				
-			});
-			
 			
 			
 			
@@ -141,8 +132,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 					Description
 				</h3>
 				<p>
-					This tab adds for the direct adding or deleting of enzymes and
-					phages to/from the database.
+					This tab is for the manual adding or deleting of enzymes to/from the database.
 				</p>
 				<h3>
 					Add Phages and Enzymes
@@ -163,37 +153,69 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			  <label for="enzymeEntry">Enzyme:</label> 
 			  <input type="text" class="form-control" name="eChoice" id="eChoice" placeholder="Enter Enzyme"/>
           			
-           	  <input type="submit" id="submitData" name="submitData"/>
+           	  <input type="submit" id="submitData" name="submitData" value="Submit"/>
 			</div>
         </form>
 		
 		
 		
-			<h2>
-              Line Divide Here
-            </h2>
+			
             
 			<h3>
-              Delete Phage or Enzyme
+              Delete Enzyme
             </h3>
 			
-			<button type="button">Delete!</button>
-				
-            <form class="form-horizontal inline-block">
 			
-				<div class="form-group pull-left">
-					<label for="phageSelection" name="phage">Phage</label> 
-					<input type="text" class="form-control" placeholder="Select Phage"/> 
-					<textarea class="form- control" id="phageSelection" rows="10"></textarea>
+				<div class="row">
+					<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
+							<div class="col-md-3">
+								<div class="form-group">
+										<label for="enzselection">Enzyme:</label>
+										<input type="submit" id="enzymeDelete" name="enzymeDelete" value="Delete Enzyme"/>
+										<select multiple class="form-control" id="enzselection" name="enzselection" rows="10">
+											<?php
+												if ($sql = $mysqli->prepare("SELECT `Enzyme` FROM `Admin_Phage`")) {
+													$sql->execute();
+													$sql->bind_result($enzyme);
+													while($sql->fetch()){
+															echo "<option>".$enzyme."</option>";
+													}
+													$sql->close();
+												}
+											?>
+										</select>
+											 									
+								</div>
+							</div>
+						</form>
 				</div>
-			  
-				<div class="form-group pull- right">
-					<label for="enzselection">Enzyme</label>
-					<input type="text" class="form-control" placeholder="Select Enzyme" /> 
-					<textarea class="form- control" id="enzselection" rows="10"></textarea>
-				</div>
-			  
-            </form>
+				 <div class="row">
+						<div class="col-md-12">
+							<table class="table table-bordered table-responsive" id="manualTable">
+									<thead>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>SubCluster</th>
+										<th>Enzyme</th>
+									</thead>
+									<tbody>
+										<?php
+											if($sql = $mysqli->prepare("SELECT `Phage`, `Cluster`, `SubCluster`, `Enzyme` FROM `Admin_Phage`")){													
+												$sql->execute();
+													$sql->bind_result($phage, $cluster, $subcluster, $enzyme);
+													while($sql->fetch()){
+															echo '<tr class= "'.$phage.'"><td>'.$phage.'</td><td class="email">'.$cluster.'</td><td>'.$subcluster.'</td><td>'.$enzyme.'</td></tr>';
+															
+													}															
+												}
+													$sql->close();
+												
+										?>
+									</tbody>
+							</table>
+							
+						</div>
+			</div>
 			</div>
 			
       	<div id="acctManage" class="tab-pane">
@@ -202,10 +224,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               Account Management
             </h3>
 			
-           	<button type="button">Promote user</button>
-            <button type="button">Demote user</button>
+			<div>
             <button type="button" id="deleteEmail">Delete account</button>
-       	
+			</div>
+			
             <div class="row">
 						<div class="col-md-12">
 							<table class="table table-bordered table-responsive" id="memberEmailTable">
@@ -220,8 +242,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.$admin.'</td></tr>';
-													}															}
+															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.($admin == 0 ? "No" : "Yes").'</td></tr>';
+															
+													}															
+												}
 													$sql->close();
 												
 										?>

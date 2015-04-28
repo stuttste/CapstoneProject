@@ -9,14 +9,14 @@ sec_session_start();
 	die();
 }
 
-		$email = $_POST['email'];
-		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE `Email` = '$email'" )) {
-			
+		$phage = $_POST['phageselection'];
+		
+		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Phage` = '$phage'" )) {
+			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 			$sql->execute();
 		}
 			$sql->close();
-	//}
+	
 	
 
 ?> 
-
