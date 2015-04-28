@@ -169,7 +169,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				<div class="row">
 						
 							<div class="col-md-6">
-							<form name="deletePhage" action="deletePhage" action="post">
+							<form name="deletePhage" action="deletePhage.php" action="post">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<input type="submit" id="phageDelete" name="phageDelete" value="Delete Phage"/>
