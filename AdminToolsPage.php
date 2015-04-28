@@ -46,6 +46,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			var mTable = $('#memberEmailTable').DataTable({
 			"scrollX": true
 			})
+			$('#deleteEmail').click( function () {
+				mTable.row('.selected').remove().draw( false );
+				});
+				
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				if ( $(this).hasClass('selected') ) {
 					$(this).removeClass('selected');
@@ -68,27 +72,6 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				}
 
 			});
-			
-			$('#deleteEmail').click( function () {
-				if ( $(this).hasClass('selected') ) {
-				    mTable.row('.selected').remove().draw( false );
-					var email = $(this).find('td:nth-child(2)').text();
-								
-					$.ajax({
-						type: "POST",
-						url: "delete.php",
-						datatype: 'json',
-						data: {email: email},					
-						success: function (){
-								alert("Record was delated");
-						}
-					});
-				}
-				
-			});
-			
-			
-			
 			
 		})
 		
