@@ -164,11 +164,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               Delete Phage or Enzyme
             </h3>
 			
-
-				
+			
 				<div class="row">
-						
-							<form name="deletePhage" action="deletePhage.php" action="post">
+				
+				<form name="deletePhage" action="deletePhage.php" action="post">
 							<div class="col-md-9">
 								<div class="form-group">
 									<label for="phageselection">Phage:</label>
@@ -188,8 +187,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								</div>
 							</div>
 							</form>
-							
-							<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
+				</div>
+				
+				<div class="row">
+						<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
 							<div class="col-md-9">
 								<div class="form-group">
 										<label for="enzselection">Enzyme:</label>
@@ -209,7 +210,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 											 									
 								</div>
 							</div>
-							</form>
+						</form>
 				</div>
 			</div>
 			
