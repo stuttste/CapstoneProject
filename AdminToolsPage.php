@@ -173,7 +173,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								<div class="form-group">
 									<label for="phage">Phage:</label>
 									<input type="submit" id="phageDelete" name="phageDelete" value="Delete Phage"/>
-									<select multiple class="form-control" id="phage" name="phage" rows="10">
+									<select multiple class="form-control" id="phageselection" name="phageselection" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Phage` FROM `Admin_Phage`")) {
 											$sql->execute();
