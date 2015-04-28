@@ -150,7 +150,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			  <label for="enzymeEntry">Enzyme:</label> 
 			  <input type="text" class="form-control" name="eChoice" id="eChoice" placeholder="Enter Enzyme"/>
           			
-           	  <input type="submit" id="submitData" name="submitData"/>
+           	  <input type="submit" id="submitData" name="submitData" value="Submit"/>
 			</div>
         </form>
 		
@@ -168,7 +168,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				
 				<div class="row">
 						
-							<div class="col-md-3">
+							<div class="col-md-12">
 							<form name="deletePhage" action="deletePhage" action="post">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
@@ -190,7 +190,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 							<form>
 							
 							<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
-							<div class="col-md-3">
+							<div class="col-md-12">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
 										<input type="submit" id="enzymeDelete" name="enzymeDelete" value="Delete Enzyme"/>
