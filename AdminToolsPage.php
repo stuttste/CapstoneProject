@@ -70,7 +70,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			});
 			
 			$('#deleteEmail').click( function () {
-				mTable.row('.selected').remove().draw( false );
+				if ( $(this).hasClass('selected') ) {
+				    mTable.row('.selected').remove().draw( false );
 					var email = $(this).find('td:nth-child(2)').text();
 								
 					$.ajax({
@@ -82,6 +83,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								alert("Record was delated");
 						}
 					});
+				}
 				
 			});
 			
