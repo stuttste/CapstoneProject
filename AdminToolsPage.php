@@ -203,13 +203,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 												$sql->execute();
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.$admin.'</td></tr>';
-																if($admin == 1){
-																	$admin = 'yes';
-																}
-																else if($admin == 0){
-																	$admin = 'no';
-																}
+															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.($admin == 0 ? "no" : "yes").'</td></tr>';
+															
 													}															
 												}
 													$sql->close();
