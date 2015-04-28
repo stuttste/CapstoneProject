@@ -167,7 +167,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 							<form name="PhageForm" class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<input type="text" class="form-control" placeholder = "Select Phage" id="phageSelect">
+									<!--<input type="text" class="form-control" placeholder = "Select Phage" id="phageSelect">-->
 									<select name= "phageSelectBox" multiple class="form-control" id="phage" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
@@ -187,7 +187,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
-										<input type="text" class="form-control" placeholder = "Select Enzyme" id="enzSelect">
+										<!--<input type="text" class="form-control" placeholder = "Select Enzyme" id="enzSelect">-->
 										<select name="enzSelectBox" multiple class="form-control" id="enzselection" rows="10">
 											<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
