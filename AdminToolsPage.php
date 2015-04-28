@@ -190,17 +190,18 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 						<div class="col-md-12">
 							<table class="table table-bordered table-responsive" id="memberEmailTable">
 									<thead>
-										<th>Username</th>
-										<th>Email</th>
-										<th>Admin</th>
+										<th>Phage</th>
+										<th>Cluster</th>
+										<th>SubCluster</th>
+										<th>Enzyme</th>
 									</thead>
 									<tbody>
 										<?php
-											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin` FROM `MEMBERS`")){													
+											if($sql = $mysqli->prepare("SELECT `Phage`, `Cluster`, `SubCluster`, `Enzyme` FROM `Admin_Phage`")){													
 												$sql->execute();
-													$sql->bind_result($username, $email, $admin);
+													$sql->bind_result($phage, $cluster, $subcluster, $enzyme);
 													while($sql->fetch()){
-															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.($admin == 0 ? "No" : "Yes").'</td></tr>';
+															echo '<tr class= "'.$phage.'"><td>'.$phage.'</td><td class="email">'.$cluster.'</td><td>'.$subcluster.'</td><td>'.$enzyme.'</td></tr>';
 															
 													}															
 												}
