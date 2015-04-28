@@ -229,7 +229,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
        	
             <div class="row">
 						<div class="col-md-12">
-							<table class="table table-bordered table-responsive" id="memberemailTable">
+							<table class="table table-bordered table-responsive" id="memberEmailTable">
 									<thead>
 										<th>Username</th>
 										<th>Email</th>
