@@ -11,7 +11,7 @@ sec_session_start();
 
 		$enzyme = $_POST['enzselection'];
 		
-		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Enzyme` = '$enzyme'" )) {
+		if ($sql = $mysqli->prepare("Update `Admin_Phage` SET `Enzyme` = 'none' WHERE `Enzyme` = '$enzyme'" )) {
 			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 			$sql->execute();
 		}
