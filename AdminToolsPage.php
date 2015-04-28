@@ -224,9 +224,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               Account Management
             </h3>
 			
-    
+			<div>
             <button type="button" id="deleteEmail">Delete account</button>
-       	
+			</div>
+			
             <div class="row">
 						<div class="col-md-12">
 							<table class="table table-bordered table-responsive" id="memberEmailTable">
