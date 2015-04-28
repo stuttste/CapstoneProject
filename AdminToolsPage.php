@@ -211,7 +211,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.$admin.'</td></tr>';
 													}															}
 													$sql->close();
-												}
+												
 										?>
 									</tbody>
 							</table>
