@@ -9,7 +9,7 @@ sec_session_start();
 	die();
 }
 
-		$email = $_POST['email'];
+		$enzyme = $_POST['enzyme'];
 		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Enzyme` = '$enzyme'" )) {
 			
 			$sql->execute();
