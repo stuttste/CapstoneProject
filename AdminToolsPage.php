@@ -176,9 +176,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Phage` FROM `Admin_Phage`")) {
 											$sql->execute();
-											$sql->bind_result($name);
+											$sql->bind_result($phage);
 											while($sql->fetch()){
-													echo "<option>".$name."</option>";
+													echo "<option>".$phage."</option>";
 											}
 											$sql->close();
 										}
@@ -199,9 +199,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 											<?php
 												if ($sql = $mysqli->prepare("SELECT `Enzyme` FROM `Admin_Phage`")) {
 													$sql->execute();
-													$sql->bind_result($name);
+													$sql->bind_result($enzyme);
 													while($sql->fetch()){
-															echo "<option>".$name."</option>";
+															echo "<option>".$enzyme."</option>";
 													}
 													$sql->close();
 												}
