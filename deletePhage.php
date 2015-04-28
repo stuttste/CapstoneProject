@@ -11,7 +11,7 @@ sec_session_start();
 
 		$phage = $_POST['phageselection'];
 		
-		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Phage` = '$phage'" )) {
+		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Admin_Phage`.`Phage` = '$phage'" )) {
 			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 			$sql->execute();
 		}
