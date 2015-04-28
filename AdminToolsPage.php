@@ -58,7 +58,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				else {
 					mTable.$('tr.selected').removeClass('selected');
 					$(this).addClass('selected');
-					/*var email = $(this).find('td:nth-child(2)').text()
+					var email = $(this).find('td:nth-child(2)').text()
 								
 					$.ajax({
 						type: "POST",
@@ -68,7 +68,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 						success: function (){
 								alert("Record was delated");
 						}
-					});*/
+					});
 				}
 
 			});
