@@ -187,29 +187,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 							</form>
 				</div>
 				
-				<div class="row">
-						<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
-							<div class="col-md-9">
-								<div class="form-group">
-										<label for="enzselection">Enzyme:</label>
-										<input type="submit" id="enzymeDelete" name="enzymeDelete" value="Delete Enzyme"/>
-										<select multiple class="form-control" id="enzselection" name="enzselection" rows="10">
-											<?php
-												if ($sql = $mysqli->prepare("SELECT `Enzyme` FROM `Admin_Phage`")) {
-													$sql->execute();
-													$sql->bind_result($enzyme);
-													while($sql->fetch()){
-															echo "<option>".$enzyme."</option>";
-													}
-													$sql->close();
-												}
-											?>
-										</select>
-											 									
-								</div>
-							</div>
-						</form>
-				</div>
+				
 			</div>
 			
       	<div id="acctManage" class="tab-pane">
