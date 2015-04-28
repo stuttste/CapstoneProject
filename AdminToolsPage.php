@@ -191,7 +191,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				</div>
 				 <div class="row">
 						<div class="col-md-12">
-							<table class="table table-bordered table-responsive" id="memberEmailTable">
+							<table class="table table-bordered table-responsive" id="manualTable">
 									<thead>
 										<th>Phage</th>
 										<th>Cluster</th>
@@ -229,7 +229,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
        	
             <div class="row">
 						<div class="col-md-12">
-							<table class="table table-bordered table-responsive" id="manualTable">
+							<table class="table table-bordered table-responsive" id="memberemailTable">
 									<thead>
 										<th>Username</th>
 										<th>Email</th>
