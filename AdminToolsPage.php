@@ -47,6 +47,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			"scrollX": true
 			})
 			
+			var showTable = $('#manualTable').DataTable({
+				"scrollX": true
+			})
+			
 				
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				if ( $(this).hasClass('selected') ) {
@@ -227,7 +231,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
        	
             <div class="row">
 						<div class="col-md-12">
-							<table class="table table-bordered table-responsive" id="memberEmailTable">
+							<table class="table table-bordered table-responsive" id="manualTable">
 									<thead>
 										<th>Username</th>
 										<th>Email</th>
