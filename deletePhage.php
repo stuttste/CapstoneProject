@@ -9,7 +9,7 @@ sec_session_start();
 	die();
 }
 
-		$phage = $_POST['phage'];
+		$phage = $_POST['phageDelete'];
 		
 		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Phage` = '$phage'" )) {
 			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
