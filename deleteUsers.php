@@ -15,7 +15,7 @@ sec_session_start();
 			$sql->execute();
 		}
 			$sql->close();
-	//}
+	
 	
 
 ?> 

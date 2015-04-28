@@ -14,7 +14,7 @@ sec_session_start();
 		$subCluster = $_POST['sChoice'];
 		$enzyme = $_POST['eChoice'];
 		
-		if(!$_POST['submit']){
+		if(!$_POST['submitData']){
 			echo "Fill out form";
 			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 		}
