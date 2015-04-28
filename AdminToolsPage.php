@@ -71,7 +71,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 			$('#deleteEmail').click( function () {
 				mTable.row('.selected').remove().draw( false );
-					var email = $(this).find('td:nth-child(2)').text()
+					var email = $(this).find('td:nth-child(2)').text();
 								
 					$.ajax({
 						type: "POST",
