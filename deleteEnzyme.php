@@ -10,8 +10,9 @@ sec_session_start();
 }
 
 		$enzyme = $_POST['enzyme'];
+		
 		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Enzyme` = '$enzyme'" )) {
-			
+			header('Location: http://g3cap.tk/staging/AdminToolsPage.php');
 			$sql->execute();
 		}
 			$sql->close();
