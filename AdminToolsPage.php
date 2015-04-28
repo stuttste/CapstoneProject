@@ -75,6 +75,8 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 
 			});
 			
+			
+			
 		})
 		
 		
@@ -162,15 +164,15 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               Delete Phage or Enzyme
             </h3>
 			
-			<button type="button">Delete!</button>
+
 				
 				<div class="row">
-						<button type="button">Delete Phage</button>
+						
 							<div class="col-md-3">
 							<form name="PhageForm" class="inline-block">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<!--<input type="text" class="form-control" placeholder = "Select Phage" id="phageSelect">-->
+									<button type="button">Delete Phage</button>
 									<select name= "phageSelectBox" multiple class="form-control" id="phage" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
@@ -186,11 +188,11 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								</div>
 							</div>
 				
-						<button type="button">Delete Enzyme</button>
+						
 							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
-										<!--<input type="text" class="form-control" placeholder = "Select Enzyme" id="enzSelect">-->
+										<button type="button">Delete Phage</button>
 										<select name="enzSelectBox" multiple class="form-control" id="enzselection" rows="10">
 											<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
