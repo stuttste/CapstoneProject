@@ -185,8 +185,9 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								</div>
 							</div>
 							</form>
-							
-						
+				</div>
+				
+				<div class="row">
 						<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
 							<div class="col-md-9">
 								<div class="form-group">
@@ -208,10 +209,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 								</div>
 							</div>
 						</form>
-					</div>
 				</div>
-				
-				
 			</div>
 			
       	<div id="acctManage" class="tab-pane">
