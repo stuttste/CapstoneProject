@@ -164,31 +164,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 			
 				<div class="row">
-				
-				<!--<form name="deletePhage" action="deletePhage.php" action="post">
-							<div class="col-md-9">
-								<div class="form-group">
-									<label for="phageselection">Phage:</label>
-									<input type="submit" id="phageDelete" name="phageDelete" value="Delete Phage"/>
-									<select multiple class="form-control" id="phageselection" name="phageselection" rows="10">
-									<?php
-										if ($sql = $mysqli->prepare("SELECT `Phage` FROM `Admin_Phage`")) {
-											$sql->execute();
-											$sql->bind_result($phage);
-											while($sql->fetch()){
-													echo "<option>".$phage."</option>";
-											}
-											$sql->close();
-										}
-										?>
-									</select>									
-								</div>
-							</div>
-				</form>-->
-				
-				
-				
-						<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
+					<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
 							<div class="col-md-9">
 								<div class="form-group">
 										<label for="enzselection">Enzyme:</label>
@@ -210,6 +186,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 							</div>
 						</form>
 				</div>
+				
 			</div>
 			
       	<div id="acctManage" class="tab-pane">
