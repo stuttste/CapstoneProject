@@ -168,10 +168,10 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				
 				<div class="row">
 						
-							<div class="col-md-6">
 							<form name="deletePhage" action="deletePhage.php" action="post">
+							<div class="col-md-6">
 								<div class="form-group">
-									<label for="phage">Phage:</label>
+									<label for="phageselection">Phage:</label>
 									<input type="submit" id="phageDelete" name="phageDelete" value="Delete Phage"/>
 									<select multiple class="form-control" id="phageselection" name="phageselection" rows="10">
 									<?php
