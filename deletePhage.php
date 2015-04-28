@@ -9,13 +9,13 @@ sec_session_start();
 	die();
 }
 
-		$email = $_POST['email'];
-		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE `Email` = '$email'" )) {
+		$phage = $_POST['phage'];
+		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Phage` = '$phage'" )) {
 			
 			$sql->execute();
 		}
 			$sql->close();
-	//}
+	
 	
 
 ?> 

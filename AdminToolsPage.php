@@ -169,11 +169,11 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 				<div class="row">
 						
 							<div class="col-md-3">
-							<form name="PhageForm" class="inline-block">
+							<form name="deletePhage" action="deletePhage" action="post">
 								<div class="form-group">
 									<label for="phage">Phage:</label>
-									<button type="button">Delete Phage</button>
-									<select name= "phageSelectBox" multiple class="form-control" id="phage" rows="10">
+									<input type="submit" id="phageDelete" name="phageDelete" value="Delete Phage"/>
+									<select name= "phageSelectBox" multiple class="form-control" id="phage" name="phage" rows="10">
 									<?php
 										if ($sql = $mysqli->prepare("SELECT `Name` FROM `PHAGE`")) {
 											$sql->execute();
@@ -187,13 +187,14 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 									</select>									
 								</div>
 							</div>
-				
-						
+							<form>
+							
+							<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
 							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme</label>
-										<button type="button">Delete Phage</button>
-										<select name="enzSelectBox" multiple class="form-control" id="enzselection" rows="10">
+										<input type="submit" id="enzymeDelete" name="enzymeDelete" value="Delete Enzyme"/>
+										<select name="enzSelectBox" multiple class="form-control" id="enzselection" name="enzselection" rows="10">
 											<?php
 												if ($sql = $mysqli->prepare("SELECT `Name` FROM `ENZYME`")) {
 													$sql->execute();

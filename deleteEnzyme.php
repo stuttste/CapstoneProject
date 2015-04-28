@@ -10,7 +10,7 @@ sec_session_start();
 }
 
 		$email = $_POST['email'];
-		if ($sql = $mysqli->prepare("DELETE FROM `MEMBERS` WHERE `Email` = '$email'" )) {
+		if ($sql = $mysqli->prepare("DELETE FROM `Admin_Phage` WHERE `Enzyme` = '$enzyme'" )) {
 			
 			$sql->execute();
 		}
