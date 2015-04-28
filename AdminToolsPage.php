@@ -128,7 +128,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 					Description
 				</h3>
 				<p>
-					This tab adds for the direct adding or deleting of enzymes and
+					This tab is for the manual adding or deleting of enzymes and
 					phages to/from the database.
 				</p>
 				<h3>
@@ -156,9 +156,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 		
 		
 		
-			<h2>
-              Line Divide Here
-            </h2>
+			
             
 			<h3>
               Delete Phage or Enzyme
