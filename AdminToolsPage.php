@@ -132,8 +132,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 					Description
 				</h3>
 				<p>
-					This tab is for the manual adding or deleting of enzymes and
-					phages to/from the database.
+					This tab is for the manual adding or deleting of enzymes to/from the database.
 				</p>
 				<h3>
 					Add Phages and Enzymes
@@ -225,8 +224,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
               Account Management
             </h3>
 			
-           	<button type="button">Promote user</button>
-            <button type="button">Demote user</button>
+    
             <button type="button" id="deleteEmail">Delete account</button>
        	
             <div class="row">
