@@ -47,10 +47,6 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			"scrollX": true
 			})
 			
-			var showTable = $('#manualTable').DataTable({
-				"scrollX": true
-			})
-			
 				
 			$('#memberEmailTable tbody').on( 'click', 'tr', function () {
 				if ( $(this).hasClass('selected') ) {
@@ -188,7 +184,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 									</select>									
 								</div>
 							</div>
-				</form>-->
+				</form>
 				
 				
 				
@@ -214,35 +210,6 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 							</div>
 						</form>
 				</div>
-				
-			
-						<div class="col-md-12">
-							<table class="table table-bordered table-responsive" id="manualTable">
-									<thead>
-										<th>Phage</th>
-										<th>Cluster</th>
-										<th>SubCluster</th>
-										<th>Enzyme</th>
-									</thead>
-									<tbody>
-										<?php
-											if($sql = $mysqli->prepare("SELECT `Phage`, `Cluster`, `SubCluster`, `Enzyme` FROM `Admin_Phage`")){													
-												$sql->execute();
-													$sql->bind_result($phage, $cluster, $subcluster, $enzyme);
-													while($sql->fetch()){
-															echo '<tr class= "'.$phage.'"><td>'.$phage.'</td><td class="email">'.$cluster.'</td><td>'.$subcluster.'</td><td>'.$enzyme.'</td></tr>';
-															
-													}															
-												}
-													$sql->close();
-												
-										?>
-									</tbody>
-							</table>
-							
-						</div>
-			
-		
 			</div>
 			
       	<div id="acctManage" class="tab-pane">
