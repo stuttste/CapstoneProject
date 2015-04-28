@@ -165,7 +165,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 				<div class="row">
 					<form  name="deleteEnzyme" action = "deleteEnzyme.php" method="post">
-							<div class="col-md-9">
+							<div class="col-md-3">
 								<div class="form-group">
 										<label for="enzselection">Enzyme:</label>
 										<input type="submit" id="enzymeDelete" name="enzymeDelete" value="Delete Enzyme"/>
@@ -186,7 +186,32 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 							</div>
 						</form>
 				</div>
-				
+				 <div class="row">
+						<div class="col-md-12">
+							<table class="table table-bordered table-responsive" id="memberEmailTable">
+									<thead>
+										<th>Username</th>
+										<th>Email</th>
+										<th>Admin</th>
+									</thead>
+									<tbody>
+										<?php
+											if($sql = $mysqli->prepare("SELECT `Username`, `Email`, `Admin` FROM `MEMBERS`")){													
+												$sql->execute();
+													$sql->bind_result($username, $email, $admin);
+													while($sql->fetch()){
+															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.($admin == 0 ? "No" : "Yes").'</td></tr>';
+															
+													}															
+												}
+													$sql->close();
+												
+										?>
+									</tbody>
+							</table>
+							
+						</div>
+			</div>
 			</div>
 			
       	<div id="acctManage" class="tab-pane">
