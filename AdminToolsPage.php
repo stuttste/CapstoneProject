@@ -71,6 +71,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 			
 			$('#deleteEmail').click( function () {
 				mTable.row('.selected').remove().draw( false );
+				
 			});
 			
 			
@@ -208,7 +209,7 @@ href="jQuery/jquery-1.11.2.min.js"></script>
 													$sql->bind_result($username, $email, $admin);
 													while($sql->fetch()){
 															echo '<tr class= "'.$username.'"><td>'.$username.'</td><td class="email">'.$email.'</td><td>'.$admin.'</td></tr>';
-															}
+													}															}
 													$sql->close();
 												}
 										?>
