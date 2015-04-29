@@ -88,6 +88,7 @@ demoToCSV($mysqli);
 			.legend(dc.legend().x(400).y(10).itemHeight(13).gap(5))
 		dataTable.width(800)
 		.height(800)
+		
 		.dimension(tDimension)
 		.group(function(d) { return d;})
 		.size(150)
@@ -96,9 +97,10 @@ demoToCSV($mysqli);
 			function(d) { return d.University; },
 			function(d) { return d.State; }
 		]);
-
-		
+var body = d3.select("body").append("p").text("The total number of users fitting the current criteria is: "+function (d){d.size()})		
 		dc.renderAll();})
+
+
 			</script>
 	<body>
 	<p> Instructions: Click sections of either graph to sort the data in more detail or to narrow down the returned data. If labels are not displaying or you wish to see the total users per state/university, hover the mouse over the color until a popup appears with the data along with a total appears.(EX: MN:6) The data table provides more detailed information for individual members of the selected groups.
