@@ -97,7 +97,7 @@ demoToCSV($mysqli);
 			function(d) { return d.ID; },
 			function(d) { return d.University; },
 			function(d) { return d.State; },
-			function(d){return d.size();}		]);
+			function(d){return d.size;}		]);
 
 		dc.renderAll();})
 
