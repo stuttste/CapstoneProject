@@ -58,6 +58,7 @@ demoToCSV($mysqli);
 			</nav>
 	<script>
 	d3.csv("data/Demo.csv", function (demo) {
+		var body = d3.select("body").append("p").text("The total number of users fitting the current criteria is: ").append(function (d){return d.size()})	
 	var pieChart = dc.pieChart("#dc-pie-graph");
 	var univChart = dc.pieChart("#dc-Univ-graph");
 	var dataTable = dc.dataTable("#dc-table-graph");
