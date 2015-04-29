@@ -111,7 +111,7 @@ demoToCSV($mysqli);
 								</div>
 							   <div class='row-fluid'>
 										<div class='pie-graph span4 col-md-5' id='dc-Univ-graph'>
-										<h4>Division by University(Pie)</h4>
+										<h4>Division by Organization(Pie)</h4>
 										</div>
 									</div>
 									   <div class='row-fluid'>
@@ -121,7 +121,7 @@ demoToCSV($mysqli);
 											<thead>
 												<tr class='header'>
 													<th>User ID </th>
-													<th>University</th>
+													<th>Organization</th>
 													<th> State </th>
 													
 												</tr>

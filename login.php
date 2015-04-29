@@ -120,7 +120,7 @@ if (login_check($mysqli) == true) {
 						
 						<input type='text' 
 									name='Univ' 
-									id='Univ' class="form-control" placeholder="University"/>
+									id='Univ' class="form-control" placeholder="Organization"/>
 						<label for="Univ" class="sr-only">Univ</label>
 						
 					<input type="button" 
