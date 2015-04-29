@@ -97,7 +97,7 @@ demoToCSV($mysqli);
 			function(d) { return d.University; },
 			function(d) { return d.State; }
 		]);
-var body = d3.select("body").append("p").text("The total number of users fitting the current criteria is: "+function (d){d.size()})		
+
 		dc.renderAll();})
 
 
