@@ -97,15 +97,14 @@ demoToCSV($mysqli);
 			function(d) { return d.ID; },
 			function(d) { return d.University; },
 			function(d) { return d.State; }
-			function(d)
-			{return d.size()}		]);
+			function(d){return d.size()}		]);
 
 		dc.renderAll();})
 
 
 			</script>
 	<body>
-	<p> Instructions: Click sections of either graph to sort the data in more detail or to narrow down the returned data. If labels are not displaying or you wish to see the total users per state/university, hover the mouse over the color until a popup appears with the data along with a total appears.(EX: MN:6) The data table provides more detailed information for individual members of the selected groups.
+	<p> Instructions: Click sections of either graph to sort the data in more detail or to narrow down the returned data. If labels are not displaying or you wish to see the total users per state/university, hover the mouse over the color until a popup appears with the data along with a total appears.(EX: MN:6) The data table provides more detailed information for individual members of the selected groups. 
 	<div class="container-fluid">
 	  <div class='row-fluid'>
 								<div class='pie-graph span4' id='dc-pie-graph'>
