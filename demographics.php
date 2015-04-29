@@ -96,8 +96,7 @@ demoToCSV($mysqli);
 		.columns([
 			function(d) { return d.ID; },
 			function(d) { return d.University; },
-			function(d) { return d.State; },
-			function(d){return d.size;}		]);
+			function(d) { return d.State; ]);
 
 		dc.renderAll();})
 
@@ -124,7 +123,7 @@ demoToCSV($mysqli);
 													<th>User ID </th>
 													<th>University</th>
 													<th> State </th>
-													<th> Total items in table </th>
+													
 												</tr>
 											</thead>
 										</table>
